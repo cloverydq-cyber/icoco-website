@@ -1,0 +1,42 @@
+[
+  {
+    "source": "frontend/src/styles/icoco-titanium.css",
+    "destination": "src/styles/icoco-titanium.css",
+    "sha256": "757761361bef49d4e6b0da67a65fcbda4565d62e9f1c8cd3f1c1ff268a50fd58"
+  },
+  {
+    "source": "frontend/src/styles/icoco-token-presets.css",
+    "destination": "src/styles/icoco-token-presets.css",
+    "sha256": "ff6d681819b6e140e1e3b1ff1c02145a6ee4791031c9e958ce1b1ab786799a31"
+  },
+  {
+    "source": "frontend/src/config/uiTokenPreset.json",
+    "destination": "src/config/uiTokenPreset.json",
+    "sha256": "7e8cea0618417b540f27b10929b8f149ff0bae893f8fa1e2ce8ba3a829607969"
+  },
+  {
+    "source": "frontend/src/components/base/IcocoButton.vue",
+    "destination": "src/components/base/IcocoButton.vue",
+    "sha256": "aa545416c44aec3ba05c6abdaf08ce66c6ebac488b2138042dc488c6adc935af"
+  },
+  {
+    "source": "frontend/src/components/IconSet.vue",
+    "destination": "src/components/IconSet.vue",
+    "sha256": "f2f15a585fe8d45f767aeee701f62cad8248269f0341f1d04fbe8bfec3ce8e34"
+  },
+  {
+    "source": "frontend/src/assets/brand/icoco-logo-titanium-minimal.svg",
+    "destination": "src/assets/brand/icoco-logo-titanium-minimal.svg",
+    "sha256": "2a0cf1b727335779a1f5a9614df2d4ccb67daec86e6fd5a3351562fadc6d36fa"
+  },
+  {
+    "source": "frontend/src/components/base/BUTTON_GUIDE.md",
+    "destination": "docs/BUTTON_GUIDE.md",
+    "sha256": "e81879203c79ca8bbf29c5e30dfdaf08a663326515928f6863f2a1c57daaddd1"
+  },
+  {
+    "source": ".codex/skills/icoco-ui-tokens/SKILL.md",
+    "destination": "docs/UI_TOKEN_SKILL.md",
+    "sha256": "54c9c30e6cbbfa6e1e1f83da040ef25e959a60e2e00a3061e4e4d3b49bf96d53"
+  }
+]

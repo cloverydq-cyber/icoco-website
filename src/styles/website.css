@@ -1,0 +1,7 @@
+/* 官网基础样式；不导入原工作台 main.css（其 overflow:hidden 会禁止网页滚动）。 */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; line-height: 1.6; }
+a { color: inherit; }
+.website-start { max-width: 960px; margin: 0 auto; padding: 64px 24px; }
+.website-logo { width: 160px; height: auto; }
+p { font-size: var(--ico-text-base, 14px); }

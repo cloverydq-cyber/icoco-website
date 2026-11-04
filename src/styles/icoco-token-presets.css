@@ -1,0 +1,240 @@
+/* ============================================================
+   ICOCO UI token presets
+   Loaded after legacy/global styles so selected values win once.
+   The classic preset intentionally has no overrides.
+   ============================================================ */
+
+:root[data-ico-token-preset='refined-compact'] {
+  --ico-text-2xs: 9px;
+  --ico-text-xs: 10px;
+  --ico-text-sm: 11px;
+  --ico-text-md: 12px;
+  --ico-text-base: 13px;
+  --ico-text-lg: 18px;
+  --ico-text-xl: 22px;
+
+  --ico-radius-xs: 4px;
+  --ico-radius-sm: 6px;
+  --ico-radius-md: 10px;
+  --ico-radius-lg: 14px;
+  --ico-radius-xl: 18px;
+
+  --ico-page-gutter: 14px;
+  --ico-management-panel-w: 300px;
+  --ico-management-panel-w-compact: 280px;
+  --ico-management-panel-pad-x: 14px;
+  --ico-management-panel-pad-y: 14px;
+  --ico-management-panel-gap: 12px;
+
+  --ico-button-gap: 5px;
+  --ico-button-padding-sm: 3px 7px;
+  --ico-button-padding-md: 4px 9px;
+  --ico-button-padding-lg: 6px 14px;
+  --ico-button-padding-icon: 4px;
+  --ico-button-height-md: 26px;
+  --ico-button-height-lg: 32px;
+  --ico-button-icon-size: 13px;
+
+  --ico-button-bg-primary: rgba(0, 0, 0, 0.56);
+  --ico-button-border-primary: rgba(184, 182, 176, 0.52);
+  --ico-button-bg-primary-hover: rgba(0, 0, 0, 0.70);
+  --ico-button-border-primary-hover: rgba(184, 182, 176, 0.68);
+  --ico-button-bg-secondary: rgba(0, 0, 0, 0.40);
+  --ico-button-border-secondary: rgba(255, 255, 255, 0.24);
+  --ico-button-bg-secondary-hover: rgba(0, 0, 0, 0.54);
+  --ico-button-border-secondary-hover: rgba(255, 255, 255, 0.38);
+  --ico-button-bg-ghost: rgba(0, 0, 0, 0.26);
+  --ico-button-border-ghost: rgba(255, 255, 255, 0.18);
+  --ico-button-bg-ghost-hover: rgba(0, 0, 0, 0.42);
+  --ico-button-border-ghost-hover: rgba(255, 255, 255, 0.32);
+}
+
+/* Daccord Community UI — extracted from Figma Desktop + Components pages.
+   This preset only defines design values. Components consume these tokens
+   directly, so switching themes does not add wrappers or duplicate layouts. */
+:root[data-ico-token-preset='daccord-glass'] {
+  color-scheme: dark;
+
+  --ico-black: #17192f;
+  --ico-obsidian: #1d203e;
+  --ico-graphite: #272a45;
+  --ico-panel: #2c2f48;
+  --ico-panel-elevated: #393d5e;
+
+  --ico-bg-root: #17192f;
+  --ico-bg-shell: #1d203e;
+  --ico-bg-panel: rgba(44, 47, 72, 0.76);
+  --ico-bg-panel-2: rgba(44, 47, 72, 0.88);
+  --ico-bg-panel-3: rgba(57, 61, 94, 0.92);
+
+  --ico-surface-1: rgba(255, 255, 255, 0.04);
+  --ico-surface-2: rgba(255, 255, 255, 0.07);
+  --ico-surface-3: rgba(255, 255, 255, 0.11);
+
+  --ico-border-faint: rgba(255, 255, 255, 0.06);
+  --ico-border-soft: rgba(255, 255, 255, 0.10);
+  --ico-border: rgba(255, 255, 255, 0.16);
+  --ico-border-strong: rgba(1, 183, 197, 0.56);
+  --ico-line: rgba(255, 255, 255, 0.10);
+  --ico-line-strong: rgba(1, 183, 197, 0.56);
+
+  --ico-ivory: #ffffff;
+  --ico-silver: #ebebf5;
+  --ico-silver-muted: rgba(235, 235, 245, 0.55);
+  --ico-text-main: rgba(255, 255, 255, 0.96);
+  --ico-text-primary: var(--ico-text-main);
+  --ico-text-secondary: rgba(255, 255, 255, 0.55);
+  --ico-text-muted: rgba(255, 255, 255, 0.30);
+  --ico-text-faint: rgba(255, 255, 255, 0.25);
+
+  --ico-accent-cyan: #01b7c5;
+  --ico-accent-blue: #5b7fd6;
+  --ico-accent-violet: #8f6de6;
+  --ico-accent-magenta: #d44db8;
+  --ico-accent-champagne: #8f6de6;
+  --ico-accent-silver: #01b7c5;
+  --ico-champagne: #8f6de6;
+  --ico-haze: #7f87a9;
+  --ico-ai-haze: #7f87a9;
+
+  --ico-font-sans: "Lato", "SF Pro Display", "Noto Sans SC", sans-serif;
+  --ico-font-brand: "SF Compact Rounded", "SF Pro Rounded", "Noto Sans SC", sans-serif;
+
+  --ico-radius-xs: 5px;
+  --ico-radius-sm: 5px;
+  --ico-radius-md: 12px;
+  --ico-radius-lg: 16px;
+  --ico-radius-xl: 20px;
+  --ico-control-radius: 5px;
+  --ico-panel-radius: 20px;
+  --ico-card-radius: 20px;
+
+  --ico-shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.28);
+  --ico-shadow-md: 0 10px 20px rgba(0, 0, 0, 0.42);
+  --ico-shadow-lg: 0 18px 42px rgba(0, 0, 0, 0.50);
+  --ico-shadow-panel: 0 10px 20px rgba(0, 0, 0, 0.50), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --ico-shadow-float: 0 18px 42px rgba(0, 0, 0, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  --ico-glass-blur: 10px;
+  --ico-glass-saturation: 118%;
+  --ico-glass-surface: rgba(29, 32, 62, 0.30);
+  --ico-glass-panel: rgba(44, 47, 72, 0.50);
+  --ico-card-surface: rgba(44, 47, 72, 0.76);
+  --ico-card-border: 1px solid rgba(1, 183, 197, 0.72);
+  --ico-card-shadow: 0 10px 20px rgba(0, 0, 0, 0.50);
+  --ico-card-shadow-active: inset 0 0 0 1px rgba(1, 183, 197, 0.48), 0 24px 56px rgba(6, 8, 28, 0.58);
+  --ico-popover-surface: rgba(44, 47, 72, 0.88);
+  --ico-control-surface: rgba(255, 255, 255, 0.06);
+  --ico-control-hover: rgba(255, 255, 255, 0.10);
+  --ico-control-active: rgba(0, 0, 0, 0.34);
+
+  --ico-accent-gradient: linear-gradient(134deg, #5b7fd6 0%, #1bb1d0 41%, #8f49ba 100%);
+  --ico-accent-gradient-soft: linear-gradient(134deg, rgba(91, 127, 214, 0.34), rgba(27, 177, 208, 0.28) 46%, rgba(143, 73, 186, 0.30));
+  --ico-cyber-grad: var(--ico-accent-gradient);
+  --ico-cyber-grad-soft: var(--ico-accent-gradient-soft);
+
+  --ico-home-background:
+    radial-gradient(900px 620px at 52% 105%, rgba(247, 203, 253, 0.34), transparent 62%),
+    radial-gradient(780px 520px at 18% 16%, rgba(151, 117, 220, 0.30), transparent 68%),
+    linear-gradient(145deg, #17192f 0%, #1d203e 52%, #28254f 100%);
+  --ico-home-ambient:
+    radial-gradient(860px 440px at 50% 16%, rgba(143, 109, 230, 0.20), transparent 70%),
+    radial-gradient(540px 300px at 16% 36%, rgba(1, 183, 197, 0.10), transparent 72%),
+    radial-gradient(540px 300px at 84% 36%, rgba(212, 77, 184, 0.10), transparent 72%);
+  --ico-home-grid-color: rgba(160, 150, 220, 0.055);
+  --ico-home-overlay: linear-gradient(180deg, rgba(23, 25, 47, 0.04), rgba(23, 25, 47, 0.34) 62%, rgba(13, 15, 36, 0.58));
+  --ico-home-image-saturation: 1.02;
+  --ico-home-image-saturation-active: 1.12;
+  --ico-home-slogan-size: 24px;
+  --ico-home-card-title-size: 22px;
+  --ico-home-glass-overlay: linear-gradient(180deg, rgba(29, 32, 62, 0.04) 38%, rgba(29, 32, 62, 0.84) 100%);
+
+  --ico-login-shade:
+    linear-gradient(90deg, rgba(20, 18, 48, 0.16) 0%, rgba(20, 18, 48, 0.30) 42%, rgba(17, 18, 43, 0.84) 72%, rgba(12, 13, 34, 0.96) 100%),
+    radial-gradient(720px 520px at 77% 45%, rgba(143, 109, 230, 0.18), transparent 66%),
+    linear-gradient(180deg, rgba(12, 13, 34, 0.22), rgba(12, 13, 34, 0.72));
+  --ico-login-panel-surface: rgba(44, 47, 72, 0.68);
+  --ico-login-panel-hover: rgba(44, 47, 72, 0.76);
+  --ico-login-panel-border: rgba(255, 255, 255, 0.12);
+  --ico-login-input-surface: rgba(255, 255, 255, 0.06);
+  --ico-login-input-hover: rgba(255, 255, 255, 0.09);
+  --ico-auth-modal-overlay:
+    radial-gradient(760px 520px at 50% 48%, rgba(143, 109, 230, 0.14), transparent 68%),
+    rgba(9, 10, 27, 0.72);
+  --ico-auth-modal-surface: rgba(44, 47, 72, 0.76);
+  --ico-auth-modal-border: rgba(255, 255, 255, 0.12);
+  --ico-auth-modal-shadow: 0 24px 64px rgba(4, 6, 24, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --ico-auth-input-surface: rgba(255, 255, 255, 0.06);
+  --ico-auth-input-hover: rgba(255, 255, 255, 0.09);
+  --ico-auth-input-border: rgba(255, 255, 255, 0.12);
+  --ico-auth-autofill-surface: #30334f;
+
+  --ico-rail-surface:
+    linear-gradient(180deg, rgba(73, 67, 126, 0.74) 0%, rgba(44, 47, 72, 0.72) 42%, rgba(29, 32, 62, 0.78) 100%);
+  --ico-rail-border: rgba(1, 183, 197, 0.22);
+  --ico-rail-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.05), 10px 0 28px rgba(7, 9, 30, 0.28);
+  --ico-rail-item-hover: rgba(255, 255, 255, 0.07);
+  --ico-rail-item-active: linear-gradient(135deg, rgba(91, 127, 214, 0.32), rgba(27, 177, 208, 0.20) 55%, rgba(143, 73, 186, 0.30));
+  --ico-rail-item-active-border: rgba(1, 183, 197, 0.42);
+  --ico-rail-item-active-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.10), 0 8px 18px rgba(6, 8, 28, 0.34);
+  --ico-rail-indicator: linear-gradient(180deg, #5b7fd6, #01b7c5 52%, #d44db8);
+
+  --ico-management-panel-bg:
+    linear-gradient(180deg, rgba(44, 47, 72, 0.72), rgba(29, 32, 62, 0.66));
+  --ico-management-panel-border: 1px solid rgba(1, 183, 197, 0.18);
+  --ico-management-panel-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.045), 12px 0 30px rgba(6, 8, 28, 0.24);
+  --ico-menu-row-hover: rgba(255, 255, 255, 0.065);
+  --ico-menu-row-active: linear-gradient(135deg, rgba(91, 127, 214, 0.24), rgba(27, 177, 208, 0.14) 56%, rgba(143, 73, 186, 0.24));
+  --ico-menu-row-active-border: rgba(1, 183, 197, 0.34);
+  --ico-menu-row-active-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 7px 16px rgba(6, 8, 28, 0.24);
+  --ico-footer-surface: rgba(29, 32, 62, 0.72);
+
+  --ico-button-bg-primary: linear-gradient(134deg, rgba(91, 127, 214, 0.86), rgba(27, 177, 208, 0.76) 58%, rgba(143, 73, 186, 0.82));
+  --ico-button-border-primary: rgba(1, 183, 197, 0.72);
+  --ico-button-bg-primary-hover: linear-gradient(134deg, rgba(105, 142, 229, 0.96), rgba(35, 195, 209, 0.88) 58%, rgba(158, 83, 199, 0.92));
+  --ico-button-border-primary-hover: rgba(92, 229, 238, 0.88);
+  --ico-button-bg-secondary: rgba(44, 47, 72, 0.72);
+  --ico-button-border-secondary: rgba(255, 255, 255, 0.18);
+  --ico-button-bg-secondary-hover: rgba(57, 61, 94, 0.86);
+  --ico-button-border-secondary-hover: rgba(1, 183, 197, 0.54);
+  --ico-button-bg-ghost: rgba(29, 32, 62, 0.36);
+  --ico-button-border-ghost: rgba(255, 255, 255, 0.12);
+  --ico-button-bg-ghost-hover: rgba(57, 61, 94, 0.58);
+  --ico-button-border-ghost-hover: rgba(1, 183, 197, 0.42);
+}
+
+:root[data-ico-token-preset='high-contrast'] {
+  --ico-bg-root: #030405;
+  --ico-bg-shell: #070809;
+  --ico-bg-panel: rgba(12, 14, 16, 0.94);
+  --ico-bg-panel-2: rgba(18, 20, 22, 0.96);
+  --ico-bg-panel-3: rgba(24, 26, 28, 0.98);
+
+  --ico-border-faint: rgba(235, 232, 224, 0.10);
+  --ico-border-soft: rgba(235, 232, 224, 0.18);
+  --ico-border: rgba(235, 232, 224, 0.26);
+  --ico-border-strong: rgba(235, 232, 224, 0.40);
+  --ico-line: rgba(235, 232, 224, 0.18);
+  --ico-line-strong: rgba(235, 232, 224, 0.34);
+
+  --ico-text-main: rgba(255, 253, 248, 0.98);
+  --ico-text-primary: var(--ico-text-main);
+  --ico-text-secondary: rgba(240, 237, 228, 0.82);
+  --ico-text-muted: rgba(220, 216, 206, 0.62);
+  --ico-text-faint: rgba(210, 206, 196, 0.42);
+
+  --ico-button-bg-primary: rgba(8, 9, 10, 0.92);
+  --ico-button-border-primary: rgba(235, 232, 224, 0.72);
+  --ico-button-bg-primary-hover: rgba(20, 22, 24, 0.98);
+  --ico-button-border-primary-hover: rgba(255, 253, 248, 0.92);
+  --ico-button-bg-secondary: rgba(8, 9, 10, 0.74);
+  --ico-button-border-secondary: rgba(235, 232, 224, 0.46);
+  --ico-button-bg-secondary-hover: rgba(20, 22, 24, 0.92);
+  --ico-button-border-secondary-hover: rgba(255, 253, 248, 0.70);
+  --ico-button-bg-ghost: rgba(8, 9, 10, 0.50);
+  --ico-button-border-ghost: rgba(235, 232, 224, 0.34);
+  --ico-button-bg-ghost-hover: rgba(20, 22, 24, 0.82);
+  --ico-button-border-ghost-hover: rgba(255, 253, 248, 0.60);
+  --ico-button-border-active: rgba(255, 253, 248, 0.78);
+  --ico-button-border-pressed: rgba(255, 253, 248, 0.66);
+}
