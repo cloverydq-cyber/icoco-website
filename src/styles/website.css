@@ -592,7 +592,7 @@ ul{margin:0;padding:0;list-style:none}
   font-size:9.5px;line-height:1.6;font-weight:300;letter-spacing:.02em;color:rgba(120,140,165,.6)}
 
 .contact__media{position:relative;overflow:hidden;background:#03060b;min-height:0}
-.contact__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 38%;
+.contact__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 9%;
   filter:saturate(.82) contrast(1.05) brightness(.92)}
 .contact__media::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:
