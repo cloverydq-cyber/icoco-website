@@ -561,16 +561,18 @@ ul{margin:0;padding:0;list-style:none}
 .contact__sub{margin-top:9px;font-size:clamp(11.5px,1.02vw,13px);line-height:1.62;font-weight:300;
   color:rgba(150,172,200,.72)}
 
-.contact__people{display:flex;align-items:flex-start;gap:clamp(20px,2.6vw,36px);
+.contact__people{--qr-pad:0px;display:flex;align-items:stretch;gap:clamp(22px,2.8vw,40px);
   margin-top:auto;padding-top:clamp(30px,4vw,52px)}
-.contact__qr{position:relative;flex:none;width:clamp(96px,8.6vw,122px);aspect-ratio:1/1;padding:7px;border-radius:4px;
-  margin-top:3px;
-  background:linear-gradient(178deg,rgba(238,243,250,.94) 0%,rgba(206,217,232,.9) 100%);
+.contact__qr{position:relative;flex:0 0 auto;width:auto;height:auto;min-width:0;min-height:0;aspect-ratio:1/1;
+  padding:0;border-radius:5px;max-height:180px;max-height:180px;
+  background:linear-gradient(178deg,rgba(243,247,252,.94) 0%,rgba(214,224,238,.9) 100%);
   box-shadow:
     0 0 0 1px rgba(190,212,240,.12),
     0 0 34px 6px rgba(96,150,235,.10),
     0 18px 36px -24px rgba(0,0,0,.9)}
-.contact__qr img{display:block;width:100%;height:100%;object-fit:contain;border-radius:3px;mix-blend-mode:multiply}
+.contact__qr img{position:absolute;left:var(--qr-pad,0px);top:var(--qr-pad,0px);
+  width:calc(100% - var(--qr-pad,0px)*2);height:calc(100% - var(--qr-pad,0px)*2);
+  object-fit:contain;border-radius:5px;mix-blend-mode:multiply}
 .contact__who{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding-top:0;min-width:0}
 .contact__name{font-size:clamp(16px,1.3vw,18px);font-weight:500;letter-spacing:.008em;line-height:1.16;
   color:#8fe4ff;transition:color .3s}
@@ -604,8 +606,8 @@ ul{margin:0;padding:0;list-style:none}
   .contact__lead{margin-top:clamp(22px,4vw,32px)}
 }
 @media (max-width:560px){
-  .contact__people{gap:14px}
-  .contact__qr{width:88px;padding:7px}
+  .contact__people{gap:16px}
+  .contact__qr{align-self:flex-start;flex:0 0 96px;width:96px;height:96px;max-height:none;--qr-pad:6px}
   .contact__name{font-size:15.5px}
   .contact__role{font-size:11.5px}
   .contact__line{font-size:11.5px}
