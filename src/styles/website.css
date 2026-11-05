@@ -546,13 +546,15 @@ ul{margin:0;padding:0;list-style:none}
 .eco__card p{font-size:12px;line-height:1.68;color:var(--muted)}
 
 /* ---------------- 07 contact ---------------- */
-.contact{position:relative;z-index:2;border-top:1px solid var(--line-2);background:var(--bg);overflow:hidden;scroll-margin-top:66px}
-.contact__grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:clamp(600px,74vh,690px)}
+.contact{position:relative;z-index:2;border-top:1px solid var(--line-2);background:var(--bg);overflow:hidden;scroll-margin-top:66px;padding:clamp(26px,3.4vw,54px) 0}
+.contact__grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:clamp(560px,70vh,666px);
+  border:1px solid var(--line-2);background:#04060a;overflow:hidden}
 .contact__panel{position:relative;display:flex;flex-direction:column;
   padding:clamp(40px,4vw,58px) clamp(26px,4.4vw,84px) clamp(24px,2.8vw,38px);
   background:
     radial-gradient(120% 90% at 4% 0%,rgba(120,140,170,.12),rgba(4,6,10,0) 60%),
     linear-gradient(170deg,#090c11 0%,#05070b 58%,#04060a 100%)}
+.contact__panel>*{flex:0 0 auto}
 .contact__lead{margin-top:clamp(48px,13vh,140px);padding-bottom:clamp(6px,1vw,14px)}
 .contact__title{font-size:clamp(40px,5.7vw,72px);line-height:1.06;letter-spacing:-.021em;color:#eef4fb;font-weight:300;
   text-shadow:0 22px 70px rgba(0,0,0,.55)}
@@ -592,16 +594,22 @@ ul{margin:0;padding:0;list-style:none}
   font-size:9.5px;line-height:1.6;font-weight:300;letter-spacing:.02em;color:rgba(120,140,165,.6)}
 
 .contact__media{position:relative;overflow:hidden;background:#03060b;min-height:0}
-.contact__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 9%;
+.contact__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:100% 50%;
   filter:saturate(.82) contrast(1.05) brightness(.92)}
 .contact__media::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:
-    linear-gradient(90deg,rgba(4,8,14,.96) 0%,rgba(4,8,14,.55) 12%,rgba(4,8,14,0) 34%),
-    linear-gradient(0deg,rgba(4,6,10,.42),rgba(4,6,10,0) 42%)}
+    linear-gradient(90deg,rgba(4,8,14,.92) 0%,rgba(4,8,14,.42) 9%,rgba(4,8,14,0) 26%),
+    linear-gradient(0deg,rgba(4,6,10,.34),rgba(4,6,10,0) 34%)}
 
+@media (max-width:1100px){
+  .contact__people{gap:clamp(16px,2vw,22px)}
+  .contact__qr{max-height:clamp(112px,13vw,136px)}
+  .contact__line,.contact__role{font-size:11px}
+}
 @media (max-width:960px){
   .contact__grid{grid-template-columns:1fr;min-height:0}
   .contact__media{order:-1;height:clamp(210px,44vw,330px)}
+  .contact__media img{object-fit:cover;object-position:52% 12%}
   .contact__media::after{background:
     linear-gradient(0deg,rgba(4,6,10,.92) 0%,rgba(4,6,10,.35) 38%,rgba(4,6,10,0) 70%)}
   .contact__panel{padding:clamp(30px,5vw,44px) clamp(20px,5vw,32px) clamp(26px,4vw,34px)}

@@ -454,7 +454,7 @@ onMounted(() => {
 
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
-  <div class="contact__grid">
+  <div class="wrap contact__grid">
     <div class="contact__panel">
       <div class="contact__lead">
         <h2 class="contact__title reveal">Contact Us</h2>
