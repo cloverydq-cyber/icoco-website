@@ -434,7 +434,7 @@ ul{margin:0;padding:0;list-style:none}
 
 /* ---------------- 03 disciplines ---------------- */
 .disc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2)}
-.disc__item{background:var(--bg);padding:clamp(22px,2.3vw,32px);transition:background .5s}
+.disc__item{background:var(--bg);padding:clamp(22px,2.3vw,32px);transition:background .5s;display:flex;flex-direction:column}
 .disc__item:hover{background:rgba(13,21,34,.8)}
 .disc__num{font-family:var(--font-m);font-size:9.5px;letter-spacing:.18em;color:rgba(90,168,255,.75)}
 .disc__item h3{margin:14px 0 10px;font-size:clamp(15px,1.3vw,18px);color:#eef5fc;font-weight:400}
@@ -556,6 +556,116 @@ ul{margin:0;padding:0;list-style:none}
 .footer__bottom{display:flex;justify-content:space-between;gap:16px;padding-top:22px;border-top:1px solid var(--line-2);
   font-family:var(--font-m);font-size:9.5px;letter-spacing:.1em;color:rgba(120,145,175,.62)}
 
+/* ---------------- 02 workflow strip ---------------- */
+.enginetag{font-family:var(--font-m);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(150,205,255,.9);padding:3px 7px;border:1px solid rgba(90,168,255,.26);border-radius:1px;white-space:nowrap}
+
+.wf{margin-top:clamp(26px,3.2vw,46px);border:1px solid var(--line-2);background:rgba(6,10,17,.55)}
+.wf__head{padding:15px 20px;border-bottom:1px solid var(--line-2);
+  font-family:var(--font-m);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(150,180,215,.62)}
+.wf__steps{display:grid;grid-template-columns:repeat(4,1fr)}
+.wf__step{display:flex;flex-direction:column;gap:9px;padding:19px 20px;border-right:1px solid var(--line-2)}
+.wf__step:last-child{border-right:0}
+.wf__step b{font-family:var(--font-m);font-size:9px;letter-spacing:.16em;color:rgba(90,168,255,.85);font-weight:400}
+.wf__step span{font-size:13px;line-height:1.4;color:#e2eefb}
+.wf__notes{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line-2)}
+.wf__note{padding:17px 20px;border-right:1px solid var(--line-2)}
+.wf__note:last-child{border-right:0}
+.wf__note h4{font-size:12.5px;color:#dbe9f8;font-weight:400;margin-bottom:7px}
+.wf__note p{font-size:11.5px;line-height:1.62;color:var(--muted)}
+
+/* ---------------- 03 discipline meta + validation ladder ---------------- */
+.disc__meta{display:flex;flex-wrap:wrap;gap:5px 13px;margin-top:auto;padding-top:12px;border-top:1px solid rgba(150,185,235,.07);
+  font-family:var(--font-m);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:rgba(120,158,200,.62)}
+
+.ladder{margin-top:clamp(28px,3.6vw,50px);padding-top:clamp(22px,2.6vw,34px);border-top:1px solid var(--line-2);
+  display:grid;grid-template-columns:minmax(0,1.45fr) minmax(230px,.55fr);gap:clamp(20px,3vw,48px);align-items:start}
+.ladder__head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:14px}
+.ladder__title{font-size:clamp(14px,1.25vw,17px);color:#eff7ff;font-weight:400}
+.ladder__badge{font-family:var(--font-m);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(140,200,255,.9);padding:3px 7px;border:1px solid rgba(90,168,255,.28);border-radius:1px}
+.ladder__table{display:flex;flex-direction:column}
+.ladder__row{display:grid;grid-template-columns:40px minmax(140px,.85fr) 1.15fr;gap:clamp(10px,1.4vw,20px);
+  padding:11px 0;border-bottom:1px solid rgba(150,185,235,.07);align-items:baseline}
+.ladder__row:last-child{border-bottom:0}
+.ladder__lvl{font-family:var(--font-m);font-size:9.5px;letter-spacing:.14em;color:rgba(90,168,255,.85)}
+.ladder__req{font-size:12.5px;line-height:1.4;color:#e4effa}
+.ladder__cap{font-size:11.5px;line-height:1.55;color:var(--muted)}
+.ladder__aside{border:1px solid var(--line);background:linear-gradient(180deg,rgba(11,18,29,.75),rgba(5,8,13,.9));
+  padding:clamp(16px,1.8vw,22px)}
+.ladder__k{font-family:var(--font-m);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(90,168,255,.8);margin-bottom:7px}
+.ladder__aside p{font-size:11.5px;line-height:1.65;color:var(--muted);margin-bottom:16px}
+.ladder__aside p:last-child{margin-bottom:0}
+
+/* ---------------- 04 metrics note + AI+CAE flow ---------------- */
+.metrics__note{grid-column:1/-1;margin-top:2px;font-size:11px;line-height:1.62;color:rgba(140,168,200,.72);
+  border-left:1px solid var(--line);padding-left:clamp(14px,1.6vw,22px)}
+
+.flow{margin-top:clamp(30px,3.8vw,54px);padding-top:clamp(22px,2.6vw,34px);border-top:1px solid var(--line-2)}
+.flow__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin-bottom:16px}
+.flow__label{font-family:var(--font-m);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(90,168,255,.85)}
+.flow__hint{font-size:11.5px;color:rgba(140,168,200,.72)}
+.flow__track{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line-2);background:rgba(6,10,17,.5)}
+.flow__step{padding:17px 16px;border-right:1px solid var(--line-2)}
+.flow__step:last-child{border-right:0}
+.flow__num{font-family:var(--font-m);font-size:8.5px;letter-spacing:.16em;color:rgba(90,168,255,.8)}
+.flow__step h4{margin:9px 0 10px;font-size:12.5px;line-height:1.3;color:#e9f3ff;font-weight:400}
+.flow__step ul{display:flex;flex-direction:column;gap:5px}
+.flow__step li{position:relative;padding-left:10px;font-size:10.5px;line-height:1.45;color:rgba(150,175,205,.78)}
+.flow__step li::before{content:"";position:absolute;left:0;top:.55em;width:3px;height:1px;background:rgba(90,168,255,.6)}
+.flow__note{margin-top:12px;font-size:11px;line-height:1.6;color:rgba(140,168,200,.7)}
+
+/* ---------------- 05 credential cards ---------------- */
+.news__ref{margin-top:auto;padding-top:14px;font-family:var(--font-m);font-size:8.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(120,158,200,.6)}
+
+/* ---------------- 06 architecture + deployment ---------------- */
+.duo{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(10px,1.2vw,18px);margin-bottom:clamp(28px,3.4vw,46px);align-items:start}
+.duo__panel{padding:clamp(22px,2.4vw,32px);border:1px solid var(--line-2);background:rgba(8,13,21,.6);
+  display:flex;flex-direction:column}
+.duo__panel--alt{background:linear-gradient(180deg,rgba(12,20,33,.72),rgba(5,8,13,.92))}
+.duo__k{font-family:var(--font-m);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(90,168,255,.8)}
+.duo__panel h3{margin:14px 0 18px;font-size:clamp(15px,1.35vw,19px);line-height:1.35;color:#eef6ff;font-weight:400;max-width:34ch}
+.duo__lede{margin-bottom:18px;font-size:12px;line-height:1.65;color:rgba(160,190,220,.8)}
+.duo__list{display:flex;flex-direction:column;gap:12px}
+.duo__list li{position:relative;padding-left:13px;font-size:11.5px;line-height:1.62;color:var(--muted)}
+.duo__list li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:1px;background:rgba(90,168,255,.55)}
+.duo__list b{font-weight:400;color:#dfeaf7}
+.duo__note{margin-top:auto;padding-top:14px;border-top:1px solid var(--line-2);font-size:10.5px;line-height:1.6;color:rgba(130,158,190,.7)}
+.duo__specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);margin:18px 0}
+.duo__specs>div{background:rgba(10,16,26,.85);padding:12px}
+.duo__specs span{display:block;font-family:var(--font-m);font-size:8px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(120,158,200,.62);margin-bottom:6px}
+.duo__specs b{font-weight:400;font-size:11.5px;color:#e2eefb}
+
+.chain{display:flex;flex-direction:column;gap:8px;margin:0 0 20px}
+.chain__top,.chain__mid{display:flex;flex-direction:column;gap:5px;padding:12px 14px;font-size:12px;color:#e2eefb;
+  border:1px solid rgba(90,168,255,.26);background:rgba(18,34,58,.5)}
+.chain__mid{border-color:rgba(90,168,255,.4);background:rgba(22,44,76,.55)}
+.chain__top span,.chain__mid span,.chain__node em{font-style:normal;font-family:var(--font-m);font-size:8.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:rgba(140,180,220,.72)}
+.chain__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chain__node{display:flex;flex-direction:column;gap:5px;padding:11px 12px;font-size:11.5px;color:#d5e4f5;
+  border:1px dashed rgba(120,158,200,.28)}
+.chain__node em{color:rgba(120,158,200,.65)}
+
+/* ---------------- 07 beyond automotive ---------------- */
+.beyond{margin-top:clamp(44px,5.4vw,76px);padding-top:clamp(26px,3.2vw,38px);border-top:1px solid var(--line-2);width:100%}
+.beyond__label{font-family:var(--font-m);font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(150,180,215,.62);text-align:center}
+.beyond__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2);
+  border:1px solid var(--line-2);margin-top:18px}
+.beyond__item{background:rgba(6,10,17,.72);padding:clamp(16px,1.8vw,22px);text-align:center}
+.beyond__item h4{font-size:13.5px;color:#e9f3ff;font-weight:400;margin-bottom:8px}
+.beyond__item p{font-size:11.5px;line-height:1.6;color:var(--muted)}
+.beyond__modes{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;margin-top:18px}
+.beyond__modes span{font-family:var(--font-m);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(170,200,235,.8);padding:5px 10px;border:1px solid var(--line);border-radius:1px}
+
+.footer__brand p.footer__cities{margin-top:10px;font-family:var(--font-m);font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(120,150,185,.6)}
+
 /* ---------------- responsive ---------------- */
 @media (max-width:1180px){
   .news{grid-template-columns:repeat(2,1fr)}
@@ -599,6 +709,24 @@ ul{margin:0;padding:0;list-style:none}
   .about__stats{grid-template-columns:repeat(2,1fr)}
   .cards{grid-template-columns:1fr}
 }
+@media (max-width:1180px){
+  .flow__track{grid-template-columns:repeat(2,1fr)}
+  .flow__step:nth-child(2n){border-right:0}
+  .flow__step:nth-child(n+3){border-top:1px solid var(--line-2)}
+  .flow__step:nth-child(5){grid-column:1/-1}
+  .ladder{grid-template-columns:1fr}
+  .duo{grid-template-columns:1fr}
+}
+@media (max-width:960px){
+  .wf__steps,.wf__notes,.flow__track,.chain__grid,.beyond__grid{grid-template-columns:1fr}
+  .wf__step,.wf__note,.flow__step{border-right:0;border-bottom:1px solid var(--line-2)}
+  .wf__step:last-child,.wf__note:last-child,.flow__step:last-child{border-bottom:0}
+  .flow__step:nth-child(n+3){border-top:0}
+  .ladder__row{grid-template-columns:34px 1fr;gap:4px 12px}
+  .ladder__cap{grid-column:2}
+  .ladder__aside{margin-top:6px}
+}
+
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001s!important;transition-duration:.001s!important}
   html{scroll-behavior:auto}
