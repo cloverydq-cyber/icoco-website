@@ -453,18 +453,37 @@ onMounted(() => {
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="cta" id="contact">
-  <div class="cta__glow" aria-hidden="true"></div>
-  <div class="wrap cta__inner">
-    <div class="eyebrow reveal"><span>07</span>Partnership</div>
-    <h2 class="reveal" style="--d:.06s">An industrial AI partnership<br>for your next vehicle.</h2>
-    <p class="reveal" style="--d:.12s">Talk to the team behind the platform — engineering-led, design-native.</p>
-    <div class="cta__actions reveal" style="--d:.18s">
-      <a href="mailto:enea.colombo@icona-designgroup.com" class="btn btn--primary" data-magnetic>
-        <span>enea.colombo@icona-designgroup.com</span>
-        <svg viewBox="0 0 16 16"><path d="M4 12L12 4M12 4H6M12 4V10"/></svg>
-      </a>
-      <a href="#products" class="btn btn--ghost" data-magnetic><span>Explore the platform</span></a>
+<section class="contact" id="contact">
+  <div class="contact__grid">
+    <div class="contact__panel">
+      <div class="contact__brands reveal">
+        <img src="../assets/img/group-icona.png" alt="ICONA" class="contact__logo contact__logo--icona" />
+        <img src="../assets/img/logo.png" alt="ICOCO META" class="contact__logo contact__logo--meta" />
+      </div>
+
+      <div class="contact__lead">
+        <h2 class="contact__title reveal">Contact Us</h2>
+        <p class="contact__claim reveal" style="--d:.06s">Where Iconic Styling Meets Engineering Reality.</p>
+        <p class="contact__sub reveal" style="--d:.1s">Engineering-Grounded AI for Automotive Design &amp; Development</p>
+      </div>
+
+      <div class="contact__people reveal" style="--d:.16s">
+        <div class="contact__qr"><img src="../assets/img/contact-qr.png" alt="ICOCO META contact QR code" /></div>
+        <div class="contact__who">
+          <a class="contact__name" href="mailto:enea.colombo@icona-designgroup.com">Enea Colombo</a>
+          <span class="contact__role">Founder &amp; CEO</span>
+          <a class="contact__line contact__line--mail" href="mailto:enea.colombo@icona-designgroup.com">enea.colombo@icona-designgroup.com</a>
+          <span class="contact__line contact__line--loc">Turin · Shanghai · Los Angeles</span>
+          <a class="contact__line" href="https://www.icona-designgroup.com" target="_blank" rel="noopener">www.icona-designgroup.com</a>
+          <a class="contact__line" href="https://www.icoco.art" target="_blank" rel="noopener">www.icoco.art</a>
+        </div>
+      </div>
+
+      <p class="contact__note">Powered by ICONA Design Group / 15+ years of automotive design experience</p>
+    </div>
+
+    <div class="contact__media reveal" style="--d:.08s">
+      <img src="../assets/img/contact-studio.jpg" alt="ICOCO META engineering studio" />
     </div>
   </div>
 </section>
