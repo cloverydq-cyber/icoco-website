@@ -547,13 +547,13 @@ ul{margin:0;padding:0;list-style:none}
 
 /* ---------------- 07 contact ---------------- */
 .contact{position:relative;z-index:2;border-top:1px solid var(--line-2);background:var(--bg);overflow:hidden;scroll-margin-top:66px}
-.contact__grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:clamp(580px,76vh,800px)}
+.contact__grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:clamp(600px,74vh,690px)}
 .contact__panel{position:relative;display:flex;flex-direction:column;
-  padding:clamp(52px,5.2vw,84px) clamp(26px,4.4vw,84px) clamp(26px,3vw,40px);
+  padding:clamp(40px,4vw,58px) clamp(26px,4.4vw,84px) clamp(24px,2.8vw,38px);
   background:
     radial-gradient(120% 90% at 4% 0%,rgba(120,140,170,.12),rgba(4,6,10,0) 60%),
     linear-gradient(170deg,#090c11 0%,#05070b 58%,#04060a 100%)}
-.contact__lead{margin-top:0}
+.contact__lead{margin-top:clamp(48px,13vh,140px);padding-bottom:clamp(6px,1vw,14px)}
 .contact__title{font-size:clamp(40px,5.7vw,72px);line-height:1.06;letter-spacing:-.021em;color:#eef4fb;font-weight:300;
   text-shadow:0 22px 70px rgba(0,0,0,.55)}
 .contact__claim{margin-top:clamp(15px,1.9vw,24px);font-size:clamp(15px,1.55vw,20px);line-height:1.42;
@@ -562,9 +562,9 @@ ul{margin:0;padding:0;list-style:none}
   color:rgba(150,172,200,.72)}
 
 .contact__people{--qr-pad:0px;display:flex;align-items:stretch;gap:clamp(22px,2.8vw,40px);
-  margin-top:auto;padding-top:clamp(30px,4vw,52px)}
+  margin-top:auto;padding-top:clamp(18px,2.4vw,32px)}
 .contact__qr{position:relative;flex:0 0 auto;width:auto;height:auto;min-width:0;min-height:0;aspect-ratio:1/1;
-  padding:0;border-radius:5px;max-height:180px;max-height:180px;
+  padding:0;border-radius:5px;max-height:150px;
   background:linear-gradient(178deg,rgba(243,247,252,.94) 0%,rgba(214,224,238,.9) 100%);
   box-shadow:
     0 0 0 1px rgba(190,212,240,.12),
@@ -591,8 +591,8 @@ ul{margin:0;padding:0;list-style:none}
 .contact__note{margin:0;margin-top:clamp(22px,2.6vw,32px);padding-top:14px;border-top:1px solid var(--line-2);
   font-size:9.5px;line-height:1.6;font-weight:300;letter-spacing:.02em;color:rgba(120,140,165,.6)}
 
-.contact__media{position:relative;overflow:hidden;background:#03060b}
-.contact__media img{width:100%;height:100%;object-fit:cover;object-position:52% 40%;
+.contact__media{position:relative;overflow:hidden;background:#03060b;min-height:0}
+.contact__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 38%;
   filter:saturate(.82) contrast(1.05) brightness(.92)}
 .contact__media::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:
