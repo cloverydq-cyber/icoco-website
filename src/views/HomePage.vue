@@ -29,7 +29,7 @@ onMounted(() => {
     <nav class="nav__links" id="navLinks" aria-label="Main">
       <a href="#home" class="nav__link is-active" data-nav="home">Home</a>
       <a href="#products" class="nav__link" data-nav="products">Products</a>
-      <a href="#news" class="nav__link" data-nav="news">Credentials</a>
+      <a href="#news" class="nav__link" data-nav="news">News</a>
       <a href="#about" class="nav__link" data-nav="about">About</a>
       <span class="nav__ink" id="navInk" aria-hidden="true"></span>
     </nav>
@@ -48,7 +48,7 @@ onMounted(() => {
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home">Home</a>
   <a href="#products">Products</a>
-  <a href="#news">Credentials</a>
+  <a href="#news">News</a>
   <a href="#about">About</a>
   <a href="#contact">Request a demo</a>
 </div>
@@ -145,7 +145,7 @@ onMounted(() => {
     <div class="sec-head reveal">
       <div class="eyebrow"><span>01</span>The gap</div>
       <h2 class="h2">Specialized tools span the workflow.<br><span class="dim">Innovation gets lost between them.</span></h2>
-      <p class="lede">Disciplines, data models and interfaces differ. AIGC images, CAD models and CAE meshes live in separate worlds — and every handover costs time, intent and engineering truth.</p>
+      <p class="lede">Disciplines, data models and interfaces differ. Every handover costs time, intent and engineering truth.</p>
     </div>
 
     <div class="stack">
@@ -159,13 +159,13 @@ onMounted(() => {
         <article class="stack__col reveal" style="--d:.12s">
           <div class="stack__label">CAD / Geometry</div>
           <h3>Surfaces, parts &amp; assemblies</h3>
-          <div class="chips"><span>Alias</span><span>CATIA</span><span>Siemens NX</span><span>Rhino</span><span>ICEM Surf</span></div>
+          <div class="chips"><span>Alias</span><span>CATIA</span><span>Siemens NX</span><span>Rhino</span><span>CrownStyling</span></div>
           <div class="stack__out"><span>Output</span>NURBS / B-rep / feature models</div>
         </article>
         <article class="stack__col reveal" style="--d:.19s">
           <div class="stack__label">CAE / Physics</div>
           <h3>Simulation, optimization &amp; validation</h3>
-          <div class="chips"><span>Ansys</span><span>SIMULIA</span><span>Simcenter</span><span>Star-CCM+</span><span>LS-DYNA</span></div>
+          <div class="chips"><span>Ansys</span><span>SIMULIA</span><span>Simcenter</span><span>COMSOL</span><span>FastCAE</span></div>
           <div class="stack__out"><span>Output</span>Meshes / physics models / results</div>
         </article>
       </div>
@@ -186,7 +186,7 @@ onMounted(() => {
     <div class="sec-head reveal">
       <div class="eyebrow"><span>02</span>The platform</div>
       <h2 class="h2">From vehicle design to<br><span class="grad">engineering intelligence.</span></h2>
-      <p class="lede">Three intelligence layers — AIGC, AI + CAD and AI + CAE — share one vehicle model, so styling intent survives into geometry and physics.</p>
+      <p class="lede">Three intelligence layers, one continuous workflow — from the first styling sketch to validated engineering evidence.</p>
     </div>
 
     <div class="engines">
@@ -194,7 +194,6 @@ onMounted(() => {
         <div class="engine__top">
           <span class="engine__num">01</span>
           <span class="engine__line"></span>
-          <span class="enginetag">AIGC</span>
         </div>
         <h3>Generative Styling<br>Intelligence</h3>
         <p>Explore bold styling directions guided by brand DNA, DRG signatures and vehicle package constraints.</p>
@@ -205,7 +204,6 @@ onMounted(() => {
         <div class="engine__top">
           <span class="engine__num">02</span>
           <span class="engine__line"></span>
-          <span class="enginetag">AI + CAD</span>
         </div>
         <h3>Geometric &amp;<br>Surface Intelligence</h3>
         <p>Bridge styling intent and editable engineering geometry through view calibration, parametric part definition and local Mesh-to-NURBS reconstruction.</p>
@@ -216,32 +214,11 @@ onMounted(() => {
         <div class="engine__top">
           <span class="engine__num">03</span>
           <span class="engine__line"></span>
-          <span class="enginetag">AI + CAE</span>
         </div>
         <h3>Physics &amp;<br>Validation Intelligence</h3>
         <p>Bring physics feedback into early design with DeepPhysic and Yugong — aerodynamics, forming and crash feasibility assessed before costly rework.</p>
         <ul class="tags"><li>DeepPhysic</li><li>Yugong</li><li>Early feasibility</li></ul>
       </article>
-    </div>
-
-    <div class="wf reveal" style="--d:.26s">
-      <div class="wf__head">Standard workflow · brand DNA governance</div>
-      <div class="wf__steps">
-        <div class="wf__step"><b>01</b><span>Brief &amp; constraints</span></div>
-        <div class="wf__step"><b>02</b><span>Design exploration</span></div>
-        <div class="wf__step"><b>03</b><span>Consistency review</span></div>
-        <div class="wf__step"><b>04</b><span>Engineering handover</span></div>
-      </div>
-      <div class="wf__notes">
-        <div class="wf__note">
-          <h4>Shared context</h4>
-          <p>Package constraints, moodboards and branched alternatives live in one visual workspace.</p>
-        </div>
-        <div class="wf__note">
-          <h4>Brand DNA review</h4>
-          <p>Compare DRG, lighting signatures, stance and surface character across vehicle studies.</p>
-        </div>
-      </div>
     </div>
 
     <div class="classes reveal">
@@ -253,6 +230,25 @@ onMounted(() => {
         <div class="classes__item"><span>+ Your platform</span><i></i></div>
       </div>
     </div>
+
+    <div class="arch reveal">
+      <div class="arch__label">ICOCO architecture</div>
+      <div class="arch__stack">
+        <div class="arch__layer">
+          <span class="arch__k">Workspace</span>
+          <span class="arch__v">AIGC styling › CAD geometry › CAE validation</span>
+        </div>
+        <div class="arch__layer arch__layer--core">
+          <span class="arch__k">Core gateway</span>
+          <span class="arch__v">Identity · jobs · revisions · release registry</span>
+        </div>
+        <div class="arch__layer">
+          <span class="arch__k">Adapters</span>
+          <span class="arch__v">CAD kernel · CAE solver · shared data services</span>
+        </div>
+      </div>
+      <p class="arch__note">On-premises when required — multi-GPU, air-gapped VPC.</p>
+    </div>
   </div>
 </section>
 
@@ -262,71 +258,42 @@ onMounted(() => {
     <div class="sec-head sec-head--split">
       <div class="reveal">
         <div class="eyebrow"><span>03</span>Coverage</div>
-        <h2 class="h2">Six disciplines.<br><span class="dim">One controlled baseline.</span></h2>
+        <h2 class="h2">Six disciplines.<br><span class="dim">One development thread.</span></h2>
       </div>
-      <p class="lede reveal" style="--d:.1s">Design, engineering and manufacturing work from the same baseline — so decisions made in styling stay traceable through release.</p>
+      <p class="lede reveal" style="--d:.1s">Design, engineering and manufacturing share the same baseline — so decisions made in styling remain traceable through release.</p>
     </div>
 
     <div class="disc">
       <article class="disc__item reveal" style="--d:.03s">
         <span class="disc__num">01</span>
         <h3>CAD development</h3>
-        <p>Class-A topology, control nets, local surface reconstruction and release-ready geometry.</p>
-        <div class="disc__meta"><span>Control net 6 × 6</span><span>Pre-gate audit</span></div>
+        <p>Class-A surface architecture, control-net inspection and release-ready geometry.</p>
       </article>
       <article class="disc__item reveal" style="--d:.07s">
         <span class="disc__num">02</span>
         <h3>HMI development</h3>
-        <p>Experience architecture, cluster / IVI hierarchy, vehicle-state communication and a consistent cockpit design system.</p>
-        <div class="disc__meta"><span>Human factors</span><span>Clickable prototypes</span></div>
+        <p>Experience architecture, screen hierarchy and interaction validation.</p>
       </article>
       <article class="disc__item reveal" style="--d:.11s">
         <span class="disc__num">03</span>
         <h3>Styling convergence</h3>
-        <p>Review DRG, character lines and stance against package constraints and the design-release baseline.</p>
-        <div class="disc__meta"><span>DRG</span><span>Stance</span><span>Surface character</span></div>
+        <p>Align rendered references with source meshes against a controlled release baseline.</p>
       </article>
       <article class="disc__item reveal" style="--d:.15s">
         <span class="disc__num">04</span>
         <h3>Manufacturability / DFM</h3>
-        <p>Draft, undercuts, split lines and material limits connected to proposed processes.</p>
-        <div class="disc__meta"><span>Draft</span><span>Split lines</span><span>Binder pressure</span></div>
+        <p>Draft, undercuts, split lines and part boundaries linked to stamping or molding.</p>
       </article>
       <article class="disc__item reveal" style="--d:.19s">
         <span class="disc__num">05</span>
         <h3>Assembly sequences</h3>
-        <p>Build dependencies, full pin-entry routes, tool access and interface checks before release.</p>
-        <div class="disc__meta"><span>Pin entry</span><span>Tool access</span><span>Swept volumes</span></div>
+        <p>Dependencies, pin-entry routes, tool access and interface checks.</p>
       </article>
       <article class="disc__item reveal" style="--d:.23s">
         <span class="disc__num">06</span>
-        <h3>Supplier definition</h3>
-        <p>Commodity priorities, Tier-1 / Tier-2 interfaces and supplier SORs against industrial milestones.</p>
-        <div class="disc__meta"><span>SOR</span><span>Tier-1 / Tier-2</span></div>
+        <h3>Supply chain definition</h3>
+        <p>Commodity priorities, Tier-1 / Tier-2 interfaces and supplier SORs.</p>
       </article>
-    </div>
-
-    <div class="ladder reveal" style="--d:.06s">
-      <div>
-        <div class="ladder__head">
-          <span class="ladder__title">Package &amp; multi-view validation</span>
-          <span class="ladder__badge">CN121527329B · Granted</span>
-        </div>
-        <div class="ladder__table">
-          <div class="ladder__row"><span class="ladder__lvl">L0</span><span class="ladder__req">Three-view generation</span><span class="ladder__cap">Registered exterior three-view algorithm</span></div>
-          <div class="ladder__row"><span class="ladder__lvl">L1</span><span class="ladder__req">Six-point anchoring</span><span class="ladder__cap">Automated 6-point hardpoint anchoring</span></div>
-          <div class="ladder__row"><span class="ladder__lvl">L2</span><span class="ladder__req">Proportion estimation</span><span class="ladder__cap">AI-assisted proportion &amp; overhang audit</span></div>
-          <div class="ladder__row"><span class="ladder__lvl">L3</span><span class="ladder__req">Multi-view consistency</span><span class="ladder__cap">Granted invention patent</span></div>
-          <div class="ladder__row"><span class="ladder__lvl">L4</span><span class="ladder__req">Multi-round regeneration</span><span class="ladder__cap">Closed-loop multi-round regeneration</span></div>
-          <div class="ladder__row"><span class="ladder__lvl">L5</span><span class="ladder__req">CAD / CAS + hardpoint</span><span class="ladder__cap">Direct synchronization — enterprise roadmap</span></div>
-        </div>
-      </div>
-      <aside class="ladder__aside">
-        <div class="ladder__k">Engineering-constrained views</div>
-        <p>Package constraints guide view calibration and Pre-CAS consistency checks across every review round.</p>
-        <div class="ladder__k">Separate review tasks</div>
-        <p>Normalize display scale and ground contact before reviewing package changes and proportions.</p>
-      </aside>
     </div>
   </div>
 </section>
@@ -356,21 +323,20 @@ onMounted(() => {
       <div class="metrics">
         <div class="metric reveal" style="--d:.02s">
           <div class="metric__val"><span data-count="80">0</span><i>%</i></div>
-          <p>Higher full-vehicle modeling efficiency</p>
+          <p>Higher modeling efficiency</p>
         </div>
         <div class="metric reveal" style="--d:.08s">
           <div class="metric__val"><span data-count="3" data-prefix="2–">0</span><i>wks</i></div>
-          <p>Shorter CAS modeling cycle</p>
+          <p>Shorter modeling cycle</p>
         </div>
         <div class="metric reveal" style="--d:.14s">
           <div class="metric__val"><span data-count="20" data-prefix="10–">0</span><i>%</i></div>
-          <p>BIW structural weight reduction</p>
+          <p>Vehicle weight reduction</p>
         </div>
         <div class="metric reveal" style="--d:.2s">
           <div class="metric__val"><span data-count="70">0</span><i>%</i></div>
           <p>Design cycle reduction</p>
         </div>
-        <p class="metrics__note reveal" style="--d:.24s">Production OEM case studies. 10–20% BIW component weight reduction and $700K+ USD annual R&amp;D savings through physics-informed optimization.</p>
       </div>
 
       <aside class="audit reveal" style="--d:.16s">
@@ -385,43 +351,8 @@ onMounted(() => {
           <div class="audit__row"><span>Vertices checked</span><strong>31,883</strong></div>
           <div class="audit__row"><span>X-plane sections</span><strong>7</strong></div>
         </div>
-        <p class="audit__note">Archived local diagnostic. Automated pre-screening flags deviation zones above 0.5 mm before final Class-A sign-off — geometric metrics inform decisions, they do not establish Class-A acceptance.</p>
+        <p class="audit__note">Archived local diagnostic. Geometric metrics inform development decisions — they do not establish Class-A acceptance.</p>
       </aside>
-    </div>
-
-    <div class="flow reveal" style="--d:.08s">
-      <div class="flow__head">
-        <span class="flow__label">AI + CAE workflow</span>
-        <span class="flow__hint">Early physics screening, solver comparison and traceable engineering decisions</span>
-      </div>
-      <div class="flow__track">
-        <div class="flow__step">
-          <span class="flow__num">01</span>
-          <h4>Engineering inputs</h4>
-          <ul><li>Geometry revision</li><li>Materials and load cases</li><li>Acceptance criteria</li></ul>
-        </div>
-        <div class="flow__step">
-          <span class="flow__num">02</span>
-          <h4>AI assistance</h4>
-          <ul><li>Retrieve reviewed rules</li><li>Prepare case alternatives</li><li>Prioritize candidates</li></ul>
-        </div>
-        <div class="flow__step">
-          <span class="flow__num">03</span>
-          <h4>Physics screening</h4>
-          <ul><li>Domain predictions</li><li>Early feasibility</li><li>Uncertainty assessment</li></ul>
-        </div>
-        <div class="flow__step">
-          <span class="flow__num">04</span>
-          <h4>Solver / test checks</h4>
-          <ul><li>Convergence and error</li><li>Reference comparisons</li><li>Correlation evidence</li></ul>
-        </div>
-        <div class="flow__step">
-          <span class="flow__num">05</span>
-          <h4>Engineering review</h4>
-          <ul><li>Compare design options</li><li>Approve next revision</li><li>Record the decision</li></ul>
-        </div>
-      </div>
-      <p class="flow__note">Pilot focus: exterior CFD and forming. Setup time, iteration count and prediction error are evaluated against an agreed baseline.</p>
     </div>
   </div>
 </section>
@@ -431,41 +362,41 @@ onMounted(() => {
   <div class="wrap">
     <div class="sec-head sec-head--split">
       <div class="reveal">
-        <div class="eyebrow"><span>05</span>Credentials</div>
-        <h2 class="h2">Proven in production.</h2>
+        <div class="eyebrow"><span>05</span>News</div>
+        <h2 class="h2">What's moving.</h2>
       </div>
-      <a href="#contact" class="link-arrow reveal" style="--d:.08s">Request the full deck
+      <a href="#news" class="link-arrow reveal" style="--d:.08s">All updates
         <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
     </div>
 
     <div class="news">
       <article class="news__card reveal" style="--d:.04s">
-        <div class="news__meta"><span>IP · Granted</span><span class="tagpill">Patent</span></div>
-        <h3>Two invention patents granted for constraint-led generation</h3>
-        <p>CN121527329B covers exterior view generation &amp; calibration; CN122046604B covers generative modular interior design with hidden-structure compensation. Both under a global PCT architecture.</p>
-        <span class="news__ref">CN121527329B · CN122046604B</span>
+        <div class="news__meta"><span>2026.10</span><span class="tagpill">Patent</span></div>
+        <h3>Two invention patents granted for constraint-led view generation</h3>
+        <p>CN121527329B and CN122046604B cover multi-view contour generation, conflict detection and adaptive calibration.</p>
+        <span class="news__more">Read note <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
       </article>
 
       <article class="news__card reveal" style="--d:.1s">
-        <div class="news__meta"><span>CAS agent</span><span class="tagpill">Case study</span></div>
-        <h3>80% higher modeling efficiency, 2–3 weeks out of the CAS cycle</h3>
-        <p>Validated in a commercial passenger-vehicle program, reducing early CAS-to-CAD iteration cycles.</p>
-        <span class="news__ref">Production OEM program</span>
+        <div class="news__meta"><span>2026.09</span><span class="tagpill">Platform</span></div>
+        <h3>Full-vehicle modeling agent shortens the modeling cycle</h3>
+        <p>Early programs report 80% higher modeling efficiency and 2–3 weeks removed from the modeling cycle.</p>
+        <span class="news__more">Read note <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
       </article>
 
       <article class="news__card reveal" style="--d:.16s">
-        <div class="news__meta"><span>CAE agent</span><span class="tagpill">Case study</span></div>
-        <h3>10–20% BIW weight reduction, 70% shorter design cycles</h3>
-        <p>Physics-informed optimization delivered component weight savings and $700K+ USD annual R&amp;D savings on the same program.</p>
-        <span class="news__ref">Production OEM program</span>
+        <div class="news__meta"><span>2026.07</span><span class="tagpill">Security</span></div>
+        <h3>ISO/IEC 27001:2022 certification maintained</h3>
+        <p>Information security management covers platform development, customer data handling and model operations.</p>
+        <span class="news__more">Read note <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
       </article>
 
       <article class="news__card reveal" style="--d:.22s">
-        <div class="news__meta"><span>Governance</span><span class="tagpill">Certification</span></div>
-        <h3>ISO/IEC 27001:2022, aligned with OEM data governance</h3>
-        <p>Information security management compliant with European &amp; US OEM TISAX / ISO requirements across platform development and customer data handling.</p>
-        <span class="news__ref">ISO/IEC 27001:2022</span>
+        <div class="news__meta"><span>2026.05</span><span class="tagpill">Recognition</span></div>
+        <h3>Design innovation recognised in Shanghai</h3>
+        <p>ICOCO META's design and engineering work sits within ICONA's award-winning design practice and Shanghai design network.</p>
+        <span class="news__more">Read note <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
       </article>
     </div>
   </div>
@@ -481,7 +412,7 @@ onMounted(() => {
       </div>
       <div class="about__copy reveal" style="--d:.08s">
         <p>ICOCO META brings design, geometry and physical engineering intelligence into one product. It is built on 15+ years of automotive design experience and 300+ production-vehicle projects — not on generic models retrained for a picture of a car.</p>
-        <p>Our vision is one connected development loop: styling, geometry and physics reading from the same vehicle truth, joined through qualified adapters and shared engineering rules.</p>
+        <p>Our vision is to connect the toolchain through qualified adapters, shared engineering rules and one continuous workflow.</p>
       </div>
     </div>
 
@@ -489,46 +420,7 @@ onMounted(() => {
       <div><strong>15+</strong><span>Years in automotive design</span></div>
       <div><strong>300+</strong><span>Production-vehicle projects</span></div>
       <div><strong>2</strong><span>Granted invention patents</span></div>
-      <div><strong>7</strong><span>Validation gates</span></div>
-    </div>
-
-    <div class="duo">
-      <div class="duo__panel reveal" style="--d:.04s">
-        <div class="duo__k">ICOCO architecture</div>
-        <h3>Enterprise microservices connecting AIGC, CAD kernels and CAE solvers.</h3>
-        <div class="chain">
-          <div class="chain__top">ICOCO Workspace<span>AIGC Styling → CAD Geometry → CAE Validation</span></div>
-          <div class="chain__mid">Core Gateway &amp; Orchestrator<span>Identity · jobs · revisions · release registry</span></div>
-          <div class="chain__grid">
-            <div class="chain__node">CAD Kernel<em>Geometry</em></div>
-            <div class="chain__node">CAE Adapter<em>Validation</em></div>
-            <div class="chain__node">Shared adapters<em>Assets · review · slicer</em></div>
-          </div>
-        </div>
-        <ul class="duo__list">
-          <li><b>One application gateway.</b> Every workspace action passes the unified API gateway — role-based access, progress and release records.</li>
-          <li><b>Separate engineering providers.</b> The Geometry Engine produces B-rep / mesh assets; the Validation Engine executes policy checks.</li>
-          <li><b>Traceable release control.</b> Frozen revision IDs and file hashes bind the selected parts to their validation evidence.</li>
-          <li><b>Adapter-based integration.</b> Enterprise adapters connect OEM PLM, CATIA, NX and CAE solvers.</li>
-        </ul>
-      </div>
-
-      <div class="duo__panel duo__panel--alt reveal" style="--d:.1s">
-        <div class="duo__k">Deployment</div>
-        <h3>Local &amp; private by design.</h3>
-        <p class="duo__lede">Turnkey on-premises AI appliance · multi-GPU compute · air-gapped VPC ready.</p>
-        <ul class="duo__list">
-          <li><b>On-premises option.</b> Run selected AI workflows inside the customer's network boundary.</li>
-          <li><b>Controlled data access.</b> Design assets and engineering context stay under customer access policies.</li>
-          <li><b>Existing toolchains.</b> Connect deployed services through the platform's geometry and validation adapters.</li>
-        </ul>
-        <div class="duo__specs">
-          <div><span>Compute</span><b>Multi-GPU</b></div>
-          <div><span>Network</span><b>Air-gapped VPC</b></div>
-          <div><span>Delivery</span><b>Turnkey</b></div>
-        </div>
-        <p class="duo__note">Deployment scope, hardware sizing and connected tools are agreed for each pilot.</p>
-      </div>
+      <div><strong>7</strong><span>Validation domains</span></div>
     </div>
 
     <div class="eco">
@@ -565,24 +457,14 @@ onMounted(() => {
   <div class="cta__glow" aria-hidden="true"></div>
   <div class="wrap cta__inner">
     <div class="eyebrow reveal"><span>07</span>Partnership</div>
-    <h2 class="reveal" style="--d:.06s">Where iconic styling<br>meets engineering reality.</h2>
-    <p class="reveal" style="--d:.12s">Engineering-grounded AI for automotive design and development. Talk to the team behind the platform.</p>
+    <h2 class="reveal" style="--d:.06s">An industrial AI partnership<br>for your next vehicle.</h2>
+    <p class="reveal" style="--d:.12s">Talk to the team behind the platform — engineering-led, design-native.</p>
     <div class="cta__actions reveal" style="--d:.18s">
       <a href="mailto:enea.colombo@icona-designgroup.com" class="btn btn--primary" data-magnetic>
         <span>enea.colombo@icona-designgroup.com</span>
         <svg viewBox="0 0 16 16"><path d="M4 12L12 4M12 4H6M12 4V10"/></svg>
       </a>
       <a href="#products" class="btn btn--ghost" data-magnetic><span>Explore the platform</span></a>
-    </div>
-
-    <div class="beyond reveal" style="--d:.24s">
-      <div class="beyond__label">Beyond automotive, the physics stays relevant</div>
-      <div class="beyond__grid">
-        <div class="beyond__item"><h4>Automotive</h4><p>Styling, geometry and validation on one continuous loop.</p></div>
-        <div class="beyond__item"><h4>Clean energy</h4><p>Embed proprietary design and physics rules in new product workflows.</p></div>
-        <div class="beyond__item"><h4>Robotics</h4><p>Benchmark cycle and cost reduction on one real engineering task.</p></div>
-      </div>
-      <div class="beyond__modes"><span>Co-development</span><span>Joint validation</span><span>Ecosystem integration</span></div>
     </div>
   </div>
 </section>
@@ -593,7 +475,6 @@ onMounted(() => {
     <div class="footer__brand">
       <img src="../assets/img/logo.png" alt="ICOCO META" />
       <p>The Tri-Engine AI Platform.<br>One platform. Broader industries. A brighter tomorrow.</p>
-      <p class="footer__cities">Turin · Shanghai · Los Angeles</p>
     </div>
     <div class="footer__cols">
       <div>
@@ -605,19 +486,19 @@ onMounted(() => {
       <div>
         <h4>Company</h4>
         <a href="#about">About</a>
-        <a href="#news">Credentials</a>
+        <a href="#news">News</a>
         <a href="#contact">Contact</a>
       </div>
       <div>
         <h4>Legal</h4>
         <a href="#about">ISO/IEC 27001:2022</a>
-        <a href="#news">Patents</a>
+        <a href="#about">Patents</a>
       </div>
     </div>
   </div>
   <div class="wrap footer__bottom">
     <span>© 2026 ICOCO META. Powered by ICONA Design Group.</span>
-    <span>www.icoco.art</span>
+    <span>Shanghai · China</span>
   </div>
 </footer>
 </template>
