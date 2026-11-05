@@ -469,8 +469,8 @@ onMounted(() => {
           <span class="contact__role">Founder &amp; CEO</span>
           <a class="contact__line contact__line--mail" href="mailto:enea.colombo@icona-designgroup.com">enea.colombo@icona-designgroup.com</a>
           <span class="contact__line contact__line--loc">Turin · Shanghai · Los Angeles</span>
-          <a class="contact__line" href="https://www.icona-designgroup.com" target="_blank" rel="noopener">www.icona-designgroup.com</a>
-          <a class="contact__line" href="https://www.icoco.art" target="_blank" rel="noopener">www.icoco.art</a>
+          <a class="contact__line" href="https://www.icona-designgroup.com/" target="_blank" rel="noopener">www.icona-designgroup.com</a>
+          <a class="contact__line" href="https://www.icoco.art/" target="_blank" rel="noopener">www.icoco.art</a>
         </div>
       </div>
 
