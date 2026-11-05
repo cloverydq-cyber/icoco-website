@@ -553,14 +553,9 @@ ul{margin:0;padding:0;list-style:none}
   background:
     radial-gradient(120% 90% at 4% 0%,rgba(120,140,170,.12),rgba(4,6,10,0) 60%),
     linear-gradient(170deg,#090c11 0%,#05070b 58%,#04060a 100%)}
-.contact__brands{display:flex;align-items:center;gap:clamp(18px,2vw,30px);height:32px}
-.contact__logo{display:block;object-fit:contain;object-position:left center;opacity:.92}
-.contact__logo--icona{height:24px;width:auto}
-.contact__logo--meta{height:28px;width:auto}
-
-.contact__lead{margin-top:clamp(26px,3.6vw,54px)}
-.contact__title{font-size:clamp(40px,5.7vw,72px);line-height:1.04;letter-spacing:-.02em;color:#f4f8fd;font-weight:500;
-  text-shadow:0 22px 70px rgba(0,0,0,.6)}
+.contact__lead{margin-top:0}
+.contact__title{font-size:clamp(40px,5.7vw,72px);line-height:1.06;letter-spacing:-.021em;color:#eef4fb;font-weight:300;
+  text-shadow:0 22px 70px rgba(0,0,0,.55)}
 .contact__claim{margin-top:clamp(15px,1.9vw,24px);font-size:clamp(15px,1.55vw,20px);line-height:1.42;
   font-weight:400;color:#8fe4ff;letter-spacing:.002em}
 .contact__sub{margin-top:9px;font-size:clamp(11.5px,1.02vw,13px);line-height:1.62;font-weight:300;
@@ -568,11 +563,17 @@ ul{margin:0;padding:0;list-style:none}
 
 .contact__people{display:flex;align-items:flex-start;gap:clamp(20px,2.6vw,36px);
   margin-top:auto;padding-top:clamp(30px,4vw,52px)}
-.contact__qr{flex:none;width:clamp(100px,9.2vw,130px);aspect-ratio:1/1;padding:9px;background:#fff;border-radius:2px;
-  box-shadow:0 16px 40px rgba(0,0,0,.5)}
-.contact__qr img{display:block;width:100%;height:100%;object-fit:contain}
-.contact__who{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding-top:1px;min-width:0}
-.contact__name{font-size:clamp(16px,1.3vw,18px);font-weight:500;letter-spacing:.008em;color:#8fe4ff;transition:color .3s}
+.contact__qr{position:relative;flex:none;width:clamp(96px,8.6vw,122px);aspect-ratio:1/1;padding:7px;border-radius:4px;
+  margin-top:3px;
+  background:linear-gradient(178deg,rgba(238,243,250,.94) 0%,rgba(206,217,232,.9) 100%);
+  box-shadow:
+    0 0 0 1px rgba(190,212,240,.12),
+    0 0 34px 6px rgba(96,150,235,.10),
+    0 18px 36px -24px rgba(0,0,0,.9)}
+.contact__qr img{display:block;width:100%;height:100%;object-fit:contain;border-radius:3px;mix-blend-mode:multiply}
+.contact__who{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding-top:0;min-width:0}
+.contact__name{font-size:clamp(16px,1.3vw,18px);font-weight:500;letter-spacing:.008em;line-height:1.16;
+  color:#8fe4ff;transition:color .3s}
 .contact__name:hover{color:#fff}
 .contact__role{font-size:clamp(11.5px,1vw,12.5px);font-weight:300;letter-spacing:.01em;
   color:rgba(186,203,222,.78);margin-bottom:6px}

@@ -456,11 +456,6 @@ onMounted(() => {
 <section class="contact" id="contact">
   <div class="contact__grid">
     <div class="contact__panel">
-      <div class="contact__brands reveal">
-        <img src="../assets/img/group-icona.png" alt="ICONA" class="contact__logo contact__logo--icona" />
-        <img src="../assets/img/logo.png" alt="ICOCO META" class="contact__logo contact__logo--meta" />
-      </div>
-
       <div class="contact__lead">
         <h2 class="contact__title reveal">Contact Us</h2>
         <p class="contact__claim reveal" style="--d:.06s">Where Iconic Styling Meets Engineering Reality.</p>
