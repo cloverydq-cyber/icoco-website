@@ -1,7 +1,11 @@
 # ICOCO 独立官网交接项目
 
 此目录可以单独作为 Git 仓库根目录，不依赖原 icoco.art 仓库。
-这是可运行的开发起点，不是已完成的官网设计。只包含官网所需框架、UI token、按钮及图标组件和现有 Logo；不包含工作台、后端、客户素材或任何登录凭据。
+只包含官网所需框架、UI token、按钮及图标组件和现有 Logo；不包含工作台、后端、客户素材或任何登录凭据。
+
+## 已完成：首页落地页
+`src/views/HomePage.vue` 现在是已确认的 ICOCO META 落地页（WebGL 地球首屏、三段式标题、能力卡片、产品 / 数据 / 新闻 / 关于 / 联系），视觉与此前的静态原型逐屏一致。
+WebGL 与滚动交互在 `src/site/`，视觉系统在 `src/styles/website.css`。目录对照、构建与发布方式见 `docs/DEPLOY.md`。
 
 ## 安装与启动（Mac / Windows / Linux）
 
