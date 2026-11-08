@@ -6,4 +6,6 @@ import './styles/page-boundary.css'
 
 document.documentElement.classList.add('icoco-public-page')
 document.body.classList.add('icoco-public-page')
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+app.use(router)
+router.isReady().then(() => app.mount('#app'))
