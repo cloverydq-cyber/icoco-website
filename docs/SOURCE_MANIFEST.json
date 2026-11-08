@@ -22,7 +22,7 @@
   {
     "source": "frontend/src/components/IconSet.vue",
     "destination": "src/components/IconSet.vue",
-    "sha256": "f2f15a585fe8d45f767aeee701f62cad8248269f0341f1d04fbe8bfec3ce8e34"
+    "sha256": "1fea5e0b6eb4edd516739b9f39beec6bcf2e155aa933ee046761465e2f0adaad"
   },
   {
     "source": "frontend/src/assets/brand/icoco-logo-titanium-minimal.svg",
@@ -38,5 +38,20 @@
     "source": ".codex/skills/icoco-ui-tokens/SKILL.md",
     "destination": "docs/UI_TOKEN_SKILL.md",
     "sha256": "54c9c30e6cbbfa6e1e1f83da040ef25e959a60e2e00a3061e4e4d3b49bf96d53"
+  },
+  {
+    "source": "frontend/src/components/LanguageToggleButton.vue",
+    "destination": "src/components/LanguageToggleButton.vue",
+    "sha256": "ddc9767e261c52906d3ab9c6bdd880d44675ec44d6aa3c1d29740b7a699d072f"
+  },
+  {
+    "source": "frontend/src/components/GlobalFooter.vue",
+    "destination": "src/components/GlobalFooter.vue",
+    "sha256": "c22808bd0ba99bb2dbebcb557c4958631a9eb9262f7646d978659fd07a58a254"
+  },
+  {
+    "source": "frontend/src/i18n/modules/legal.js",
+    "destination": "src/i18n/legal.js",
+    "sha256": "68fd17d0ae9aaf2dbab579a1f49c79d94a92f6eee20d5107078ee9e15e0cad1a"
   }
 ]

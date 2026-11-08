@@ -1,12 +1,9 @@
 import { createApp } from 'vue'
 import router from './router/index.js'
 import App from './App.vue'
+import './styles/standalone.css'
+import './styles/page-boundary.css'
 
-// The approved ICOCO META design ships its own visual system, so the site
-// stylesheet is imported directly. The handover token files
-// (icoco-titanium.css / icoco-token-presets.css) stay in the repo for future
-// pages, but are intentionally not imported here: loading them would override
-// the approved landing page.
-import './styles/website.css'
-
+document.documentElement.classList.add('icoco-public-page')
+document.body.classList.add('icoco-public-page')
 createApp(App).use(router).mount('#app')

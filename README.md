@@ -1,102 +1,97 @@
-# ICOCO 独立官网交接项目
+# ICOCO META 独立官网
 
-此目录可以单独作为 Git 仓库根目录，不依赖原 icoco.art 仓库。
-只包含官网所需框架、UI token、按钮及图标组件和现有 Logo；不包含工作台、后端、客户素材或任何登录凭据。
+Vue 3 + Vite 的公开官网项目，保持已确认的深色 UI、Montserrat 字体、地球首屏和能力卡片。默认英文，支持中文、英文、意大利语；页面、新闻、指南及页脚随语言切换，选择会保存在浏览器中。
 
-## 已完成：首页落地页
-`src/views/HomePage.vue` 现在是已确认的 ICOCO META 落地页（WebGL 地球首屏、三段式标题、能力卡片、产品 / 数据 / 新闻 / 关于 / 联系），视觉与此前的静态原型逐屏一致。
-WebGL 与滚动交互在 `src/site/`，视觉系统在 `src/styles/website.css`。目录对照、构建与发布方式见 `docs/DEPLOY.md`。
+此仓库只包含官网前端、公开图片、字体、UI token 与通用展示组件，不包含原工作台、鉴权实现、业务 API、后端、数据库或账号凭据。登录按钮跳转到主应用的 `https://www.icoco.art/login`；本地启动本项目不会启动登录服务。
 
-## 安装与启动（Mac / Windows / Linux）
+## 安装与启动
 
-先安装 Git 和 Node.js。支持 Node.js 20.19+（20.x）或 22.12+；建议使用 Node.js 22 LTS。npm 随 Node.js 安装。
-本仓库为私有仓库：仓库所有者需要先在 GitHub Settings → Collaborators 邀请开发者，开发者接受邀请后才能克隆。请使用你自己的 GitHub 账号认证，不要共享账号或密钥。
+安装 Git 和 Node.js 20.19+（20.x）或 22.12+。私有仓库需先接受协作邀请，并使用自己的 GitHub 账号认证。
 
 【在哪台机器执行】
-开发者自己的电脑终端（Windows 可使用 PowerShell）。选择准备存放项目的目录，然后执行。
+开发者自己的 Mac、Windows 或 Linux 电脑，打开准备存放项目的目录。
 
 【复制哪一段完整命令】
 ```bash
 git clone https://github.com/cloverydq-cyber/icoco-website.git
 cd icoco-website
 node --version
-npm --version
 npm ci
 npm run dev
 ```
 
 【预期看到什么结果】
-终端显示 Vite 启动地址。打开 http://localhost:5173/ 可看到 ICOCO 官网开发起点，Logo 和按钮样式正常。端口被占用时以终端输出为准。按 Ctrl+C 停止服务。
-不需要 .env、业务后端、数据库或线上工作台账号；安装依赖时需要能访问 npm registry。
-如果 GitHub 报 Repository not found，请检查是否已接受仓库邀请，以及当前 Git 使用的账号是否正确。HTTPS 认证使用 GitHub 支持的凭据管理方式，不能直接用账户密码；已配置 SSH 的开发者也可使用 `git@github.com:cloverydq-cyber/icoco-website.git`。
+终端显示本地预览地址，默认 http://127.0.0.1:5173/；端口被占用时以终端输出为准。无需 .env、后端、数据库或线上账号，按 Ctrl+C 停止。
+
+## 页面结构
+
+| 路径 | 内容 |
+| --- | --- |
+| `/` | 地球首屏、能力卡片、快捷链接及全局备案页脚 |
+| `/product` | 原长页中的产品、工作流、工程问题及证据区块 |
+| `/news`、`/news/:slug` | 支持分类的新闻列表与来源可追溯的详情 |
+| `/about` | 原 About 区块；`/company` 重定向到这里 |
+| `/contact` | 原 Contact 区块与项目联系入口 |
+| `/resources`、`/resources/:slug` | 指南与 FAQ |
+| `/signup` | 注册说明，继续前往主应用创建账号 |
+| `/careers` | 人才联系；未虚构招聘岗位 |
+
+登录、隐私政策、用户协议链接均指向主应用。更改账户入口时，统一检查 `src/data/site.js` 和页头、页脚，避免链接回本官网形成循环。
+
+## 代码与维护
+
+- `src/views/`：官网首页及子页面。
+- `src/components/site/SiteHeader.vue`、`SiteFooter.vue`：所有官网页面共用的页头、页脚。
+- `src/components/LanguageToggleButton.vue`、`GlobalFooter.vue`、`IconSet.vue`：与主应用同步的全局展示组件。版权、ICP备案、网信算法备案只在 GlobalFooter 维护。
+- `src/composables/useLanguage.js`：独立官网使用的轻量语言适配层，不含用户或鉴权逻辑；语言键和三个语言代码与主应用一致。
+- `src/i18n/messages.json`：官网中文和意大利语文案，英文源文案作为默认值；品牌、原始新闻标题与海报保留原文。
+- `src/data/site.js`：新闻、指南和 FAQ；`docs/NEWS_SOURCES.json`：新闻原始来源、发布日期和素材记录。
+- `src/site/`：地球 WebGL 与首页交互，组件卸载时清理动画和事件。
+- `src/styles/source/`：原官网样式及新增页面样式的可编辑版本。生成 CSS 将选择器限定在 `.icoco-marketing` 内；字体和动画名称也会隔离。
+- `src/styles/standalone.css`：独立官网的基础文档边界，不使用原工作台的全屏/禁止滚动样式。
+- `src/assets/`：公开官网图片与自托管 Montserrat 字体，字体许可信息见字体目录中的 OFL.txt。
+
+交接用的 `src/styles/icoco-titanium.css`、`icoco-token-presets.css`、`src/components/base/IcocoButton.vue` 和 UI token 文档继续保留。保持现有官网设计，不将工作台的全局样式直接叠加到官网。
 
 ## 构建与本地预览
 
 【在哪台机器执行】
-自己的电脑终端，进入克隆得到的 icoco-website 项目根目录。
+自己的电脑终端，进入本项目根目录。
 
 【复制哪一段完整命令】
 ```bash
+node scripts/scope-marketing-css.mjs
 npm run build
 npm run preview
 ```
 
 【预期看到什么结果】
-构建成功，产物生成到 dist/，终端显示本地预览地址。dist/ 不提交 Git，构建和预览都不会发布到线上。
+构建生成 `dist/` 并显示预览地址。编辑 `src/styles/source/` 后应先生成 CSS，不要直接编辑生成文件。构建和预览不会发布网站，dist/ 不提交 Git。
 
-## 开发目录
+检查桌面、手机、三种语言、子页面直接打开、新闻筛选、语言切换及外部账户链接。构建成功不代表主应用登录、模型生成等业务已验证。
 
-- `src/views/`：官网首页和新增子页面。
-- `src/router/index.js`：官网路由；新增子页面时在此注册。
-- `src/components/`：复用组件。
-- `src/styles/website.css`：官网基础样式。
-- `src/assets/brand/`：已有品牌 Logo；新素材须确认使用授权。
-- `AGENTS.md`：修改边界及验证要求。
+## Git 协作
 
-## UI token
-基础文件 src/styles/icoco-titanium.css，覆盖文件 src/styles/icoco-token-presets.css，当前选择 src/config/uiTokenPreset.json（daccord-glass）。导入顺序见 src/main.js。
-组件 src/components/base/IcocoButton.vue 及依赖 src/components/IconSet.vue。
-Logo 在 src/assets/brand/。来源及 SHA-256 见 docs/SOURCE_MANIFEST.json。
-未复制原 main.css：其工作台全屏/禁止滚动规则不适合官网。现有 token 未批量清理，以保留当前基线。
-字体名称来自 token；此包未附带字体文件，默认使用系统回退，需要品牌字体时另行确认授权。
-
-## Git 协作与同步
-
-官网采用独立历史，不包含原 icoco.art 业务仓库历史。默认分支为 main。
+官网使用独立历史，默认分支为 main。开始新修改前先确认工作区没有未提交内容。
 
 【在哪台机器执行】
-开发者本地克隆目录（icoco-website 根目录）。开始工作前先确认 `git status --short` 没有未提交修改。
-
-【复制哪一段完整命令】
-```bash
-git switch main
-git pull --ff-only origin main
-git switch -c feature/website-ui
-```
-
-【预期看到什么结果】
-main 更新到最新代码，并进入自己的开发分支。后续工作使用新的分支名；不要重复创建已有分支。
-
-完成改动后先 `npm run build`、检查桌面和手机布局，再执行：
-
-【在哪台机器执行】
-同一台开发电脑、同一个 icoco-website 根目录。
+开发者自己的 icoco-website 克隆目录。
 
 【复制哪一段完整命令】
 ```bash
 git status --short
-git diff
+git switch main
+git pull --ff-only origin main
+git switch -c feature/website-update
 ```
 
 【预期看到什么结果】
-确认只有本次官网源码与授权素材变动，不含 .env、node_modules、dist、日志或客户资料。确认后用明确的文件路径执行 `git add`，再 `git commit` 和 `git push -u origin feature/website-ui`。在 GitHub 创建 Pull Request，由维护者审核后合并到 main。
+获取最新 main 并进入自己的新分支。分支名已存在时使用新的名称；有未提交修改或冲突时先保留和处理，不使用 reset --hard、clean -fd 或强制推送。
 
-另一个人同步已合并代码：在干净的本地 main 分支执行 `git pull --ff-only origin main`；依赖发生变化后运行 `npm ci`。如果有未提交修改或冲突，先保留并处理，不要使用 reset --hard、clean -fd 或强制推送覆盖。
-首次提交如提示作者身份未配置，请在本仓库配置自己的 `git config user.name` 和 `git config user.email`，不要使用他人身份。
+完成后先构建、检查页面，再查看 `git status --short` 和 `git diff`；按明确路径提交源码和授权素材，推送自己的分支并创建 PR。不要提交 node_modules、dist、密钥、日志或客户资料。
 
-只同步这个独立官网仓库，不向原 icoco.art 仓库推送，也不要操作服务器。Git 同步源码不等于网站上线。
+## 与 icoco.art 的关系
 
-## 接入边界
-当前演示按钮指向 https://www.icoco.art/（现有登录入口）。官网日后占用该地址时，维护者必须同步确定工作台入口并更新此按钮，避免自循环；此包不修改原系统路由或登录重定向。
-正式托管需要支持 SPA 子路径刷新；由主项目维护者统一规划，协作者不改 nginx。
-交付：修改文件清单、路由清单、桌面/手机截图、构建结果。官网栏目和正式文案待产品方确认。
+主仓库 `icoco.art` 包含官网整合版及原业务应用；这里仅提供可独立运行的公开官网。两边同步官网页面、文案、素材和展示组件，保留各自的入口与语言适配层，不向本仓库复制主应用源码或历史。
+
+Git 提交、推送均不等于上线。SPA history 子路径刷新需要托管端支持 fallback；部署由维护者另行执行，本项目不修改服务器、nginx 或业务服务。更多信息见 `docs/DEPLOY.md` 和 `AGENTS.md`。

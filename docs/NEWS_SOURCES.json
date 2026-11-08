@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "ciie-2026",
+    "source": "https://www.xiaohongshu.com/explore/6ae8085d0000000025038e43",
+    "publishedDate": "2026-11-02",
+    "reviewedDate": "2026-11-08",
+    "dateBasis": "Publication date displayed in the ICOCO creator dashboard; distinct from event date and edit date.",
+    "asset": "src/assets/news/ciie-2026.jpg",
+    "sha256": "043e7f6f06b6e1bba901ee7386e3e4536485c839792fdacb018286d71a5ca424",
+    "acquisition": "Downloaded through the image download control on the public ICOCO post.",
+    "status": "English summary for local review; no unsupported awards, certification or performance claims."
+  },
+  {
+    "slug": "design-100",
+    "source": "https://www.xiaohongshu.com/explore/6abb5f24000000001500ea84",
+    "publishedDate": "2026-09-29",
+    "reviewedDate": "2026-11-08",
+    "dateBasis": "Publication date displayed in the ICOCO creator dashboard; distinct from event date and edit date.",
+    "asset": "src/assets/news/design-100.jpg",
+    "sha256": "45ebe72963b96e47c50d3d76548aabebf045fce03b801c2ce753d91554d83ad8",
+    "acquisition": "Downloaded through the image download control on the public ICOCO post.",
+    "status": "English summary for local review; no unsupported awards, certification or performance claims."
+  },
+  {
+    "slug": "wdcc-2026",
+    "source": "https://www.xiaohongshu.com/explore/6ab4ca940000000002012e1a",
+    "publishedDate": "2026-09-24",
+    "reviewedDate": "2026-11-08",
+    "dateBasis": "Publication date displayed in the ICOCO creator dashboard; distinct from event date and edit date.",
+    "asset": "src/assets/news/wdcc-2026.jpg",
+    "sha256": "25e6f127f8433d5a125c646995b6d27b12935a000f5a492a956c5b2435a8e44e",
+    "acquisition": "Downloaded through the image download control on the public ICOCO post.",
+    "status": "English summary for local review; no unsupported awards, certification or performance claims."
+  }
+]

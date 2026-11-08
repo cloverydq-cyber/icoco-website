@@ -1,0 +1,2 @@
+/* Public site only. Do not import the application's fullscreen body rules. */
+html, body { margin: 0; padding: 0; background: #04060a; }

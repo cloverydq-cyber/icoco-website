@@ -1,7 +1,9 @@
+import { createEffectScope } from './lifecycle.js'
 /* =========================================================
    ICOCO META — interactions
    ========================================================= */
 export function initInteractions() {
+  const scope = createEffectScope();
 
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
   const easeOut = t => 1 - Math.pow(1 - t, 3);
@@ -34,10 +36,10 @@ export function initInteractions() {
     };
     const links = Array.from(navLinks.querySelectorAll('.nav__link'));
     links.forEach(l => {
-      l.addEventListener('mouseenter', () => moveInk(l));
-      l.addEventListener('focus', () => moveInk(l));
+      scope.listen(l, 'mouseenter', () => moveInk(l));
+      scope.listen(l, 'focus', () => moveInk(l));
     });
-    navLinks.addEventListener('mouseleave', () => {
+    scope.listen(navLinks, 'mouseleave', () => {
       const active = navLinks.querySelector('.nav__link.is-active');
       if (active) moveInk(active); else navInk.style.opacity = '0';
     });
@@ -51,7 +53,7 @@ export function initInteractions() {
     news: document.getElementById('news'),
     about: document.getElementById('about')
   };
-  const navObserver = new IntersectionObserver(entries => {
+  const navObserver = scope.observer(entries => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
       const id = e.target.id;
@@ -73,10 +75,10 @@ export function initInteractions() {
       burger.classList.toggle('is-open', open);
       mobileMenu.classList.toggle('is-open', open);
       burger.setAttribute('aria-expanded', String(open));
-      document.body.classList.toggle('is-locked', open);
+      document.getElementById('marketing-root').classList.toggle('is-locked', open);
     };
-    burger.addEventListener('click', () => toggle(!mobileMenu.classList.contains('is-open')));
-    items.forEach(a => a.addEventListener('click', () => toggle(false)));
+    scope.listen(burger, 'click', () => toggle(!mobileMenu.classList.contains('is-open')));
+    items.forEach(a => scope.listen(a, 'click', () => toggle(false)));
   }
 
   /* ---------------------------------------------------
@@ -86,7 +88,7 @@ export function initInteractions() {
   if (glow && finePointer) {
     let gx = window.innerWidth / 2, gy = window.innerHeight / 2;
     let tx = gx, ty = gy, active = false;
-    window.addEventListener('pointermove', e => {
+    scope.listen(window, 'pointermove', e => {
       tx = e.clientX; ty = e.clientY;
       if (!active) { active = true; glow.style.opacity = '1'; }
     }, { passive: true });
@@ -94,7 +96,7 @@ export function initInteractions() {
       gx += (tx - gx) * 0.12;
       gy += (ty - gy) * 0.12;
       glow.style.transform = `translate(${gx}px, ${gy}px) translate(-50%,-50%)`;
-      requestAnimationFrame(loop);
+      scope.frame(loop);
     })();
   }
 
@@ -161,7 +163,7 @@ export function initInteractions() {
   function onScroll() {
     if (ticking) return;
     ticking = true;
-    requestAnimationFrame(() => {
+    scope.frame(() => {
       ticking = false;
       onScrollNav();
       updateHero();
@@ -170,10 +172,10 @@ export function initInteractions() {
       if (scrollBar) scrollBar.style.width = (clamp(window.scrollY / Math.max(docH, 1), 0, 1) * 100).toFixed(2) + '%';
     });
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
+  scope.listen(window, 'scroll', onScroll, { passive: true });
 
   let rz;
-  window.addEventListener('resize', () => {
+  scope.listen(window, 'resize', () => {
     clearTimeout(rz);
     rz = setTimeout(() => {
       heroMobile = window.innerWidth <= 960;
@@ -187,7 +189,7 @@ export function initInteractions() {
   --------------------------------------------------- */
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduce) {
-    const io = new IntersectionObserver((entries, obs) => {
+    const io = scope.observer((entries, obs) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('is-in');
@@ -204,7 +206,7 @@ export function initInteractions() {
      6. Counters
   --------------------------------------------------- */
   const counters = document.querySelectorAll('[data-count]');
-  const countObserver = new IntersectionObserver((entries, obs) => {
+  const countObserver = scope.observer((entries, obs) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
       const el = e.target;
@@ -216,9 +218,9 @@ export function initInteractions() {
         const k = clamp((now - t0) / dur, 0, 1);
         const v = Math.round(target * easeOut(k));
         el.textContent = prefix + v;
-        if (k < 1) requestAnimationFrame(step);
+        if (k < 1) scope.frame(step);
       }
-      requestAnimationFrame(step);
+      scope.frame(step);
       obs.unobserve(el);
     });
   }, { threshold: 0.6 });
@@ -230,7 +232,7 @@ export function initInteractions() {
   if (finePointer && !reduce) {
     document.querySelectorAll('[data-tilt]').forEach(el => {
       const strength = el.classList.contains('hcard') ? 7 : 5;
-      el.addEventListener('pointermove', e => {
+      scope.listen(el, 'pointermove', e => {
         const r = el.getBoundingClientRect();
         const nx = (e.clientX - r.left) / r.width;
         const ny = (e.clientY - r.top) / r.height;
@@ -239,7 +241,7 @@ export function initInteractions() {
         el.style.setProperty('--rx', ((0.5 - ny) * strength).toFixed(2) + 'deg');
         el.style.setProperty('--ry', ((nx - 0.5) * strength).toFixed(2) + 'deg');
       });
-      el.addEventListener('pointerleave', () => {
+      scope.listen(el, 'pointerleave', () => {
         el.style.setProperty('--rx', '0deg');
         el.style.setProperty('--ry', '0deg');
       });
@@ -249,7 +251,7 @@ export function initInteractions() {
   /* spotlight for buttons */
   if (finePointer) {
     document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('pointermove', e => {
+      scope.listen(btn, 'pointermove', e => {
         const r = btn.getBoundingClientRect();
         btn.style.setProperty('--mx', (e.clientX - r.left) + 'px');
         btn.style.setProperty('--my', (e.clientY - r.top) + 'px');
@@ -263,13 +265,13 @@ export function initInteractions() {
   if (finePointer && !reduce) {
     document.querySelectorAll('[data-magnetic]').forEach(el => {
       const base = el.style.transform;
-      el.addEventListener('pointermove', e => {
+      scope.listen(el, 'pointermove', e => {
         const r = el.getBoundingClientRect();
         const x = (e.clientX - r.left - r.width / 2) * 0.18;
         const y = (e.clientY - r.top - r.height / 2) * 0.28;
         el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
       });
-      el.addEventListener('pointerleave', () => { el.style.transform = base || ''; });
+      scope.listen(el, 'pointerleave', () => { el.style.transform = base || ''; });
     });
   }
 
@@ -279,7 +281,7 @@ export function initInteractions() {
   if (finePointer && !reduce) {
     const title = document.querySelector('.hero__title');
     if (title) {
-      window.addEventListener('pointermove', e => {
+      scope.listen(window, 'pointermove', e => {
         const nx = e.clientX / window.innerWidth - 0.5;
         const ny = e.clientY / window.innerHeight - 0.5;
         title.style.transform = `translate(${(-nx * 14).toFixed(1)}px, ${(-ny * 8).toFixed(1)}px)`;
@@ -291,4 +293,9 @@ export function initInteractions() {
   updateHero();
   updateCaps();
   onScroll();
+  return () => {
+    scope.dispose();
+    clearTimeout(rz);
+    delete window.__moveInk;
+  };
 }

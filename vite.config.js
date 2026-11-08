@@ -2,10 +2,10 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// base './' keeps every emitted asset relative, so the same dist/ works at a
-// domain root or under a sub-path (sandbox previews, temporary review links).
+// Absolute root assets keep direct SPA page refreshes working.
+// Sub-path hosting needs an explicit --base=/repository/ build and SPA fallback.
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [vue()],
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) }

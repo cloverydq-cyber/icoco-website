@@ -1,0 +1,1134 @@
+{
+  "About": {
+    "zh": "关于我们",
+    "it": "Chi siamo"
+  },
+  "Powered by": {
+    "zh": "源自",
+    "it": "Con il supporto di"
+  },
+  "ICONA Design Group.": {
+    "zh": "ICONA 设计集团。",
+    "it": "ICONA Design Group."
+  },
+  "ICOCO META brings design, geometry and physical-AI workflows into one integrated product, informed by ICONA’s automotive design and engineering practice.": {
+    "zh": "ICOCO META 基于 ICONA 的汽车设计与工程实践，将设计、几何开发和物理 AI 工作流整合为同一款产品。",
+    "it": "ICOCO META integra design, geometria e flussi di lavoro di AI fisica in un unico prodotto, attingendo all’esperienza di ICONA nel design e nell’ingegneria automobilistica."
+  },
+  "Our starting point is automotive exterior design: carry design intent from concept exploration into aligned views, engineering review and geometry development. Broader applications are evaluated against specific project needs.": {
+    "zh": "我们从汽车外饰设计出发，让设计意图从概念探索延续到视图对齐、工程校核与几何开发。更广泛的应用按具体项目需求评估。",
+    "it": "Partiamo dal design degli esterni automobilistici, mantenendo l’intento progettuale dall’esplorazione dei concept all’allineamento delle viste, alla verifica ingegneristica e allo sviluppo geometrico. Le applicazioni più ampie sono valutate in base al progetto."
+  },
+  "Design": {
+    "zh": "设计",
+    "it": "Design"
+  },
+  "Automotive exterior focus": {
+    "zh": "聚焦汽车外饰",
+    "it": "Focus sugli esterni auto"
+  },
+  "Geometry": {
+    "zh": "几何",
+    "it": "Geometria"
+  },
+  "Source-aware development": {
+    "zh": "依据源模型开发",
+    "it": "Sviluppo basato sui riferimenti"
+  },
+  "Review": {
+    "zh": "校核",
+    "it": "Verifica"
+  },
+  "Explicit engineering criteria": {
+    "zh": "明确工程判据",
+    "it": "Criteri ingegneristici espliciti"
+  },
+  "Physical AI": {
+    "zh": "物理 AI",
+    "it": "AI fisica"
+  },
+  "Part of one integrated product": {
+    "zh": "同一产品中的能力层",
+    "it": "Parte di un unico prodotto"
+  },
+  "Design & engineering": {
+    "zh": "设计与工程",
+    "it": "Design e ingegneria"
+  },
+  "Automotive design expertise spanning styling, engineering and prototype development.": {
+    "zh": "汽车设计专业实践，涵盖造型、工程与原型开发。",
+    "it": "Competenze nel design automobilistico: stile, ingegneria e sviluppo di prototipi."
+  },
+  "Design innovation": {
+    "zh": "设计创新",
+    "it": "Innovazione nel design"
+  },
+  "Design Innovation Institute Shanghai connects research and cross-disciplinary talent with industry.": {
+    "zh": "上海设计创新研究院连接研究、跨学科人才与产业。",
+    "it": "Il Design Innovation Institute Shanghai collega ricerca, talenti interdisciplinari e industria."
+  },
+  "Innovation incubation": {
+    "zh": "创新孵化",
+    "it": "Incubazione dell’innovazione"
+  },
+  "Design-driven incubation connects emerging ventures with mentors, prototyping and industry networks.": {
+    "zh": "以设计驱动的孵化，连接初创项目与导师、原型开发及产业网络。",
+    "it": "L’incubazione guidata dal design connette nuove imprese con mentor, prototipazione e reti industriali."
+  },
+  "Within ICOCO META": {
+    "zh": "ICOCO META 产品体系内",
+    "it": "All’interno di ICOCO META"
+  },
+  "MetaCreate · Physical AI": {
+    "zh": "MetaCreate · 物理 AI",
+    "it": "MetaCreate · AI fisica"
+  },
+  "The physical-AI layer within ICOCO META connects model reasoning with engineering tools and tasks, including the Yugong, MagiCube and DeepPhysic directions.": {
+    "zh": "ICOCO META 内的物理 AI 层将模型推理与工程工具、任务相连接，包括 Yugong、MagiCube 与 DeepPhysic 方向。",
+    "it": "Il livello di AI fisica di ICOCO META collega il ragionamento dei modelli a strumenti e attività ingegneristiche, comprese le direzioni Yugong, MagiCube e DeepPhysic."
+  },
+  "Source": {
+    "zh": "来源",
+    "it": "Fonte"
+  },
+  "Read the original ICOCO post ↗": {
+    "zh": "查看 ICOCO 原始发布 ↗",
+    "it": "Leggi il post originale di ICOCO ↗"
+  },
+  "Discuss your project ↗": {
+    "zh": "沟通项目需求 ↗",
+    "it": "Parliamo del tuo progetto ↗"
+  },
+  "Story not found.": {
+    "zh": "未找到这篇内容。",
+    "it": "Articolo non trovato."
+  },
+  "Return to the newsroom": {
+    "zh": "返回新闻中心",
+    "it": "Torna alle notizie"
+  },
+  "Discuss your project": {
+    "zh": "聊聊您的项目",
+    "it": "Parliamo del tuo progetto"
+  },
+  "Bring a design challenge. Define the next step.": {
+    "zh": "带来设计问题，一起明确下一步。",
+    "it": "Porta una sfida di design. Definiamo il prossimo passo."
+  },
+  "Share your workflow, constraints and expected outputs so we can scope a relevant demonstration.": {
+    "zh": "分享您的工作流、约束与预期输出，帮助我们确定适合您的演示范围。",
+    "it": "Condividi flusso di lavoro, vincoli e risultati attesi per definire una dimostrazione pertinente."
+  },
+  "ICOCO META contact QR code": {
+    "zh": "ICOCO META 联系二维码",
+    "it": "Codice QR per contattare ICOCO META"
+  },
+  "Founder & CEO": {
+    "zh": "创始人兼 CEO",
+    "it": "Fondatore e CEO"
+  },
+  "Turin · Shanghai · Los Angeles": {
+    "zh": "都灵 · 上海 · 洛杉矶",
+    "it": "Torino · Shanghai · Los Angeles"
+  },
+  "ICOCO META / Design and engineering intelligence, in context.": {
+    "zh": "ICOCO META / 让设计与工程智能融入具体任务。",
+    "it": "ICOCO META / Intelligenza per il design e l’ingegneria, nel contesto del progetto."
+  },
+  "ICOCO META engineering studio": {
+    "zh": "ICOCO META 工程工作室",
+    "it": "Studio di ingegneria ICOCO META"
+  },
+  "Engineering-guided AI for automotive design": {
+    "zh": "以工程约束引导汽车设计 AI",
+    "it": "AI per il design automobilistico guidata dall’ingegneria"
+  },
+  "Connect styling intent, geometry and engineering review in one workflow.": {
+    "zh": "将造型意图、几何开发与工程校核，连接成同一条工作流。",
+    "it": "Un flusso di lavoro che collega intento stilistico, geometria e verifica ingegneristica."
+  },
+  "Intelligence layers": {
+    "zh": "智能能力层",
+    "it": "Livelli di intelligenza"
+  },
+  "Workflow stages": {
+    "zh": "工作流阶段",
+    "it": "Fasi del flusso di lavoro"
+  },
+  "Shared design intent": {
+    "zh": "一致的设计意图",
+    "it": "Intento progettuale condiviso"
+  },
+  "Automotive Design · Engineering Intelligence": {
+    "zh": "汽车设计 · 工程智能",
+    "it": "Design automobilistico · Intelligenza ingegneristica"
+  },
+  "Scroll to explore": {
+    "zh": "向下探索",
+    "it": "Scorri per esplorare"
+  },
+  "Electric vehicle in a studio": {
+    "zh": "工作室中的电动汽车",
+    "it": "Veicolo elettrico in studio"
+  },
+  "Automotive": {
+    "zh": "汽车设计",
+    "it": "Automotive"
+  },
+  "Exterior concepts.": {
+    "zh": "外饰概念探索。",
+    "it": "Concept degli esterni."
+  },
+  "Engineering context.": {
+    "zh": "融入工程背景。",
+    "it": "Contesto ingegneristico."
+  },
+  "Aerodynamic simulation of a car": {
+    "zh": "汽车空气动力学仿真",
+    "it": "Simulazione aerodinamica di un’auto"
+  },
+  "Physics-informed questions.": {
+    "zh": "从物理问题出发。",
+    "it": "Domande basate sulla fisica."
+  },
+  "Evidence-led review.": {
+    "zh": "以证据支撑校核。",
+    "it": "Verifiche basate su evidenze."
+  },
+  "Engineer working on a CAD model": {
+    "zh": "工程师正在处理 CAD 模型",
+    "it": "Ingegnere al lavoro su un modello CAD"
+  },
+  "Digital Engineering": {
+    "zh": "数字工程",
+    "it": "Ingegneria digitale"
+  },
+  "Geometry, parameters": {
+    "zh": "几何、参数",
+    "it": "Geometria, parametri"
+  },
+  "and revision history.": {
+    "zh": "与版本记录。",
+    "it": "e cronologia delle revisioni."
+  },
+  "Robotic arm on an assembly line": {
+    "zh": "装配线上的机械臂",
+    "it": "Braccio robotico su una linea di assemblaggio"
+  },
+  "Connecting AI reasoning": {
+    "zh": "连接 AI 推理",
+    "it": "Collegare il ragionamento AI"
+  },
+  "with engineering tasks.": {
+    "zh": "与工程任务。",
+    "it": "alle attività ingegneristiche."
+  },
+  "Autonomous mobile robot in a warehouse": {
+    "zh": "仓库中的自主移动机器人",
+    "it": "Robot mobile autonomo in un magazzino"
+  },
+  "Robotics": {
+    "zh": "机器人",
+    "it": "Robotica"
+  },
+  "Exploring applications": {
+    "zh": "探索汽车设计",
+    "it": "Esplorare applicazioni"
+  },
+  "beyond vehicle design.": {
+    "zh": "之外的应用。",
+    "it": "oltre il design automobilistico."
+  },
+  "Industrial software dashboard": {
+    "zh": "工业软件界面",
+    "it": "Interfaccia di software industriale"
+  },
+  "Industrial Software": {
+    "zh": "工业软件",
+    "it": "Software industriale"
+  },
+  "Workflows that connect": {
+    "zh": "通过工作流连接",
+    "it": "Flussi di lavoro che collegano"
+  },
+  "specialist tools.": {
+    "zh": "专业工具。",
+    "it": "strumenti specialistici."
+  },
+  "Your ICOCO account": {
+    "zh": "您的 ICOCO 账号",
+    "it": "Il tuo account ICOCO"
+  },
+  "Start with": {
+    "zh": "创建账号，",
+    "it": "Inizia con"
+  },
+  "a new account.": {
+    "zh": "开始探索。",
+    "it": "un nuovo account."
+  },
+  "Registration takes place in the ICOCO application. Open the account screen, then select its registration option to create your account.": {
+    "zh": "请在 ICOCO 应用内完成注册。打开账号页面，选择注册入口，即可创建账号。",
+    "it": "La registrazione avviene nell’applicazione ICOCO. Apri la schermata dell’account e seleziona l’opzione di registrazione per creare il tuo account."
+  },
+  "Open the ICOCO account screen.": {
+    "zh": "打开 ICOCO 账号页面。",
+    "it": "Apri la schermata dell’account ICOCO."
+  },
+  "Select the registration option below the sign-in form.": {
+    "zh": "选择登录表单下方的注册入口。",
+    "it": "Seleziona l’opzione di registrazione sotto il modulo di accesso."
+  },
+  "Follow the application’s account verification steps.": {
+    "zh": "按应用提示完成账号验证。",
+    "it": "Segui i passaggi di verifica dell’account nell’applicazione."
+  },
+  "Continue to ICOCO ↗": {
+    "zh": "前往 ICOCO ↗",
+    "it": "Continua su ICOCO ↗"
+  },
+  "Already have an account?": {
+    "zh": "已有账号？",
+    "it": "Hai già un account?"
+  },
+  "Log in": {
+    "zh": "登录",
+    "it": "Accedi"
+  },
+  "Careers": {
+    "zh": "加入我们",
+    "it": "Lavora con noi"
+  },
+  "Bring your perspective": {
+    "zh": "让您的视角",
+    "it": "Porta la tua prospettiva"
+  },
+  "to the work.": {
+    "zh": "参与其中。",
+    "it": "nel nostro lavoro."
+  },
+  "Interested in design, geometry or engineering AI? Introduce yourself and the kind of contribution you would like to make.": {
+    "zh": "对设计、几何或工程 AI 感兴趣？欢迎介绍您的背景，以及希望参与的工作方向。",
+    "it": "Ti interessano design, geometria o AI per l’ingegneria? Presentati e raccontaci come vorresti contribuire."
+  },
+  "Introduce yourself ↗": {
+    "zh": "介绍自己 ↗",
+    "it": "Presentati ↗"
+  },
+  "There are no specific job openings published on this website at present.": {
+    "zh": "本站目前尚未发布具体招聘职位。",
+    "it": "Al momento non sono pubblicate posizioni aperte su questo sito."
+  },
+  "Page not found.": {
+    "zh": "页面未找到。",
+    "it": "Pagina non trovata."
+  },
+  "Back to home": {
+    "zh": "返回首页",
+    "it": "Torna alla home"
+  },
+  "Newsroom": {
+    "zh": "新闻中心",
+    "it": "Notizie"
+  },
+  "From the team.": {
+    "zh": "来自团队，",
+    "it": "Dal team."
+  },
+  "From the field.": {
+    "zh": "来自现场。",
+    "it": "Dal campo."
+  },
+  "Company updates, events and product stories from ICOCO’s official channel.": {
+    "zh": "来自 ICOCO 官方渠道的公司动态、活动与产品故事。",
+    "it": "Aggiornamenti aziendali, eventi e storie di prodotto dai canali ufficiali ICOCO."
+  },
+  "News categories": {
+    "zh": "新闻分类",
+    "it": "Categorie delle notizie"
+  },
+  "For the press.": {
+    "zh": "媒体联系",
+    "it": "Per la stampa."
+  },
+  "For company information, interviews or approved imagery, contact the team.": {
+    "zh": "如需公司资料、采访或授权图片，请与团队联系。",
+    "it": "Contatta il team per informazioni aziendali, interviste o immagini approvate."
+  },
+  "Press enquiry ↗": {
+    "zh": "媒体咨询 ↗",
+    "it": "Richiesta stampa ↗"
+  },
+  "The gap": {
+    "zh": "衔接难题",
+    "it": "Il divario"
+  },
+  "Specialized tools span the workflow.": {
+    "zh": "专业工具覆盖整个流程。",
+    "it": "Strumenti specialistici lungo l’intero processo."
+  },
+  "Design intent is harder to carry forward.": {
+    "zh": "设计意图却难以持续传递。",
+    "it": "Mantenere l’intento progettuale è più difficile."
+  },
+  "A concept image does not carry its package constraints into CAD. A mesh does not explain which surfaces need review. Teams need a shared basis for the next decision.": {
+    "zh": "概念图不会自动将总布置约束带入 CAD，网格也无法说明哪些曲面需要复核。团队需要为下一步决策建立共同依据。",
+    "it": "Un’immagine di concept non trasferisce i vincoli di package nel CAD. Una mesh non indica quali superfici verificare. I team hanno bisogno di una base condivisa per la decisione successiva."
+  },
+  "AIGC / Styling": {
+    "zh": "AIGC / 造型",
+    "it": "AIGC / Stile"
+  },
+  "Creative exploration & visual concepts": {
+    "zh": "创意探索与视觉概念",
+    "it": "Esplorazione creativa e concept visivi"
+  },
+  "Output": {
+    "zh": "输出",
+    "it": "Output"
+  },
+  "Images / concept meshes": {
+    "zh": "图像 / 概念网格",
+    "it": "Immagini / mesh di concept"
+  },
+  "CAD / Geometry": {
+    "zh": "CAD / 几何",
+    "it": "CAD / Geometria"
+  },
+  "Surfaces, parts & assemblies": {
+    "zh": "曲面、零件与装配",
+    "it": "Superfici, parti e assiemi"
+  },
+  "NURBS / B-rep / feature models": {
+    "zh": "NURBS / B-rep / 特征模型",
+    "it": "NURBS / B-rep / modelli a feature"
+  },
+  "CAE / Physics": {
+    "zh": "CAE / 物理",
+    "it": "CAE / Fisica"
+  },
+  "Simulation, optimization & validation": {
+    "zh": "仿真、优化与验证",
+    "it": "Simulazione, ottimizzazione e validazione"
+  },
+  "Meshes / physics models / results": {
+    "zh": "网格 / 物理模型 / 结果",
+    "it": "Mesh / modelli fisici / risultati"
+  },
+  "Cross-tool friction": {
+    "zh": "跨工具衔接成本",
+    "it": "Attriti tra strumenti"
+  },
+  "Format conversion": {
+    "zh": "格式转换",
+    "it": "Conversione dei formati"
+  },
+  "Geometry rebuilds": {
+    "zh": "几何重建",
+    "it": "Ricostruzione geometrica"
+  },
+  "Lost constraints": {
+    "zh": "约束丢失",
+    "it": "Perdita dei vincoli"
+  },
+  "Repeated setup": {
+    "zh": "重复设置",
+    "it": "Configurazioni ripetute"
+  },
+  "The platform": {
+    "zh": "产品平台",
+    "it": "La piattaforma"
+  },
+  "From vehicle design to": {
+    "zh": "从汽车设计走向",
+    "it": "Dal design automobilistico"
+  },
+  "engineering intelligence.": {
+    "zh": "工程智能。",
+    "it": "all’intelligenza ingegneristica."
+  },
+  "Three intelligence layers, one continuous workflow — connecting concept exploration, engineering constraints and reviewable outputs.": {
+    "zh": "三层智能能力，一条连续工作流——连接概念探索、工程约束与可供复核的输出。",
+    "it": "Tre livelli di intelligenza, un flusso di lavoro continuo: esplorazione dei concept, vincoli ingegneristici e risultati verificabili."
+  },
+  "Generative Styling": {
+    "zh": "生成式造型",
+    "it": "Styling generativo"
+  },
+  "Intelligence": {
+    "zh": "智能",
+    "it": "intelligente"
+  },
+  "Explore exterior concepts with vehicle package parameters and visual references, then align views to review proportions and design intent.": {
+    "zh": "结合车辆总布置参数与视觉参考探索外饰概念，再通过视图对齐复核比例和设计意图。",
+    "it": "Esplora concept degli esterni con parametri di package e riferimenti visivi, poi allinea le viste per verificare proporzioni e intento progettuale."
+  },
+  "Concept exploration": {
+    "zh": "概念探索",
+    "it": "Esplorazione dei concept"
+  },
+  "View alignment": {
+    "zh": "视图对齐",
+    "it": "Allineamento delle viste"
+  },
+  "Package constraints": {
+    "zh": "总布置约束",
+    "it": "Vincoli di package"
+  },
+  "Geometric &": {
+    "zh": "几何与",
+    "it": "Geometria e"
+  },
+  "Surface Intelligence": {
+    "zh": "曲面智能",
+    "it": "intelligenza delle superfici"
+  },
+  "Develop geometry from aligned references. Local Mesh-to-NURBS work is evaluated through source deviation and editability checks as the workflow develops.": {
+    "zh": "基于对齐的参考推进几何开发。局部 Mesh-to-NURBS 工作随着流程发展，通过源模型偏差与可编辑性检查进行评估。",
+    "it": "Sviluppa la geometria da riferimenti allineati. Il lavoro locale Mesh-to-NURBS è valutato mediante verifiche dello scostamento dal riferimento e della modificabilità, con l’evoluzione del processo."
+  },
+  "View calibration": {
+    "zh": "视图标定",
+    "it": "Calibrazione delle viste"
+  },
+  "Parametric parts": {
+    "zh": "参数化零件",
+    "it": "Parti parametriche"
+  },
+  "Physics &": {
+    "zh": "物理与",
+    "it": "Fisica e"
+  },
+  "Validation Intelligence": {
+    "zh": "校核智能",
+    "it": "intelligenza per la verifica"
+  },
+  "Connect engineering constraints with review tasks. DeepPhysic, Yugong and MagiCube form part of the physical-AI direction within ICOCO META; specialist analyses require their own validation.": {
+    "zh": "将工程约束与复核任务相连接。DeepPhysic、Yugong 和 MagiCube 属于 ICOCO META 的物理 AI 方向；专业分析仍需各自的验证。",
+    "it": "Collega i vincoli ingegneristici alle attività di verifica. DeepPhysic, Yugong e MagiCube fanno parte della direzione di AI fisica di ICOCO META; le analisi specialistiche richiedono validazioni dedicate."
+  },
+  "Engineering constraints": {
+    "zh": "工程约束",
+    "it": "Vincoli ingegneristici"
+  },
+  "Review evidence": {
+    "zh": "复核依据",
+    "it": "Evidenze per la verifica"
+  },
+  "Product screenshot": {
+    "zh": "产品实机截图",
+    "it": "Schermata del prodotto"
+  },
+  "Reserved for an actual workspace screenshot.": {
+    "zh": "预留真实工作台截图。",
+    "it": "Spazio riservato a una schermata reale dell’ambiente di lavoro."
+  },
+  "Project imagery": {
+    "zh": "项目图片",
+    "it": "Immagini di progetto"
+  },
+  "Reserved for approved project or studio photography.": {
+    "zh": "预留已获授权的项目或工作室实拍。",
+    "it": "Spazio riservato a fotografie approvate di progetti o dello studio."
+  },
+  "Generate → Align → Validate → Build": {
+    "zh": "生成 → 对齐 → 校核 → 建模",
+    "it": "Genera → Allinea → Verifica → Costruisci"
+  },
+  "Explore concepts": {
+    "zh": "探索概念",
+    "it": "Esplora i concept"
+  },
+  "Align views": {
+    "zh": "对齐视图",
+    "it": "Allinea le viste"
+  },
+  "Review constraints": {
+    "zh": "复核约束",
+    "it": "Verifica i vincoli"
+  },
+  "Develop geometry": {
+    "zh": "开发几何",
+    "it": "Sviluppa la geometria"
+  },
+  "How the workflow connects": {
+    "zh": "工作流如何连接",
+    "it": "Come si collega il flusso di lavoro"
+  },
+  "Workspace": {
+    "zh": "工作台",
+    "it": "Ambiente di lavoro"
+  },
+  "Concepts · aligned views · engineering review · geometry": {
+    "zh": "概念 · 对齐视图 · 工程校核 · 几何",
+    "it": "Concept · viste allineate · verifica ingegneristica · geometria"
+  },
+  "Core gateway": {
+    "zh": "核心网关",
+    "it": "Gateway centrale"
+  },
+  "Projects · parameters · tasks · revisions": {
+    "zh": "项目 · 参数 · 任务 · 版本",
+    "it": "Progetti · parametri · attività · revisioni"
+  },
+  "Adapters": {
+    "zh": "服务适配",
+    "it": "Adattatori"
+  },
+  "Specialist geometry and analysis services": {
+    "zh": "专业几何与分析服务",
+    "it": "Servizi specialistici di geometria e analisi"
+  },
+  "Integration and deployment requirements are scoped with each project.": {
+    "zh": "集成与部署需求根据各项目范围确定。",
+    "it": "I requisiti di integrazione e distribuzione sono definiti per ciascun progetto."
+  },
+  "Coverage": {
+    "zh": "关注问题",
+    "it": "Ambiti di verifica"
+  },
+  "Six engineering questions.": {
+    "zh": "六类工程问题。",
+    "it": "Sei domande ingegneristiche."
+  },
+  "One design intent.": {
+    "zh": "同一个设计意图。",
+    "it": "Un unico intento progettuale."
+  },
+  "Start with automotive exterior design. Bring downstream questions into early review, with the required expertise and evidence made explicit.": {
+    "zh": "从汽车外饰设计出发，将后续工程问题提前纳入复核，并明确所需的专业知识与证据。",
+    "it": "Parti dal design degli esterni. Anticipa le domande delle fasi successive, esplicitando competenze ed evidenze necessarie."
+  },
+  "CAD development": {
+    "zh": "CAD 开发",
+    "it": "Sviluppo CAD"
+  },
+  "Which geometry can be edited, and how closely does it follow the source? Surface quality needs separate acceptance checks.": {
+    "zh": "哪些几何可以编辑，与源模型的贴合程度如何？曲面质量需要单独的验收检查。",
+    "it": "Quali geometrie sono modificabili e quanto rispettano il riferimento? La qualità delle superfici richiede verifiche di accettazione dedicate."
+  },
+  "Package alignment": {
+    "zh": "总布置对齐",
+    "it": "Allineamento del package"
+  },
+  "Do the views agree with the vehicle dimensions, wheelbase and proportions?": {
+    "zh": "各视图是否与车身尺寸、轴距和比例一致？",
+    "it": "Le viste sono coerenti con dimensioni, passo e proporzioni del veicolo?"
+  },
+  "Styling convergence": {
+    "zh": "造型收敛",
+    "it": "Convergenza dello stile"
+  },
+  "Which design features remain consistent across images, views and geometry revisions?": {
+    "zh": "哪些设计特征在图像、视图和几何版本之间保持一致？",
+    "it": "Quali caratteristiche di design restano coerenti tra immagini, viste e revisioni geometriche?"
+  },
+  "Manufacturability / DFM": {
+    "zh": "可制造性 / DFM",
+    "it": "Producibilità / DFM"
+  },
+  "Which draft, undercut and part-boundary questions need specialist assessment?": {
+    "zh": "哪些拔模、倒扣和零件边界问题需要专业评估？",
+    "it": "Quali problemi di sformo, sottosquadri e confini delle parti richiedono una valutazione specialistica?"
+  },
+  "Assembly sequences": {
+    "zh": "装配顺序",
+    "it": "Sequenze di assemblaggio"
+  },
+  "Can parts be installed and accessed? Motion checks and assembly checks need distinct evidence.": {
+    "zh": "零件能否安装、是否有操作空间？运动检查与装配检查需要分别提供证据。",
+    "it": "Le parti sono installabili e accessibili? Le verifiche del movimento e dell’assemblaggio richiedono evidenze distinte."
+  },
+  "Engineering handoff": {
+    "zh": "工程交接",
+    "it": "Passaggio all’ingegneria"
+  },
+  "What parameters, geometry versions and unresolved issues does the next team need?": {
+    "zh": "下一团队需要哪些参数、几何版本和未解决问题？",
+    "it": "Quali parametri, versioni geometriche e questioni aperte servono al team successivo?"
+  },
+  "Evidence": {
+    "zh": "验证依据",
+    "it": "Evidenze"
+  },
+  "Speed needs": {
+    "zh": "效率需要",
+    "it": "La velocità richiede"
+  },
+  "engineering evidence.": {
+    "zh": "工程证据支撑。",
+    "it": "evidenze ingegneristiche."
+  },
+  "Areas for engineering review": {
+    "zh": "工程复核领域",
+    "it": "Ambiti di verifica ingegneristica"
+  },
+  "Ergonomics": {
+    "zh": "人机工程",
+    "it": "Ergonomia"
+  },
+  "Class-A surfaces": {
+    "zh": "Class-A 曲面",
+    "it": "Superfici di classe A"
+  },
+  "Virtual CAE": {
+    "zh": "虚拟 CAE",
+    "it": "CAE virtuale"
+  },
+  "Digital Mock-Up": {
+    "zh": "数字样机",
+    "it": "Mock-up digitale"
+  },
+  "Perceived quality / GD&T": {
+    "zh": "感知质量 / GD&T",
+    "it": "Qualità percepita / GD&T"
+  },
+  "Alpha prototypes": {
+    "zh": "Alpha 原型",
+    "it": "Prototipi alpha"
+  },
+  "Supplier quality": {
+    "zh": "供应商质量",
+    "it": "Qualità dei fornitori"
+  },
+  "Compare each output with its input references and constraints.": {
+    "zh": "将每项输出与输入参考和约束进行比较。",
+    "it": "Confronta ogni risultato con i riferimenti e i vincoli di ingresso."
+  },
+  "Method": {
+    "zh": "方法",
+    "it": "Metodo"
+  },
+  "Record how a check was run and what it measures.": {
+    "zh": "记录检查如何执行、测量了什么。",
+    "it": "Registra come è stata eseguita la verifica e cosa misura."
+  },
+  "Scope": {
+    "zh": "范围",
+    "it": "Ambito"
+  },
+  "Separate local diagnostics from complete engineering acceptance.": {
+    "zh": "区分局部诊断与完整工程验收。",
+    "it": "Distingui la diagnostica locale dall’accettazione ingegneristica completa."
+  },
+  "Keep unresolved issues visible for the next decision.": {
+    "zh": "保留未解决问题，为下一步决策提供依据。",
+    "it": "Mantieni visibili le questioni aperte per la decisione successiva."
+  },
+  "What a useful evidence record includes": {
+    "zh": "一份有效的验证记录应包含",
+    "it": "Cosa include un registro di evidenze utile"
+  },
+  "Reference": {
+    "zh": "参考",
+    "it": "Riferimento"
+  },
+  "Source version": {
+    "zh": "源数据版本",
+    "it": "Versione del riferimento"
+  },
+  "Check": {
+    "zh": "检查",
+    "it": "Verifica"
+  },
+  "Method & limits": {
+    "zh": "方法与局限",
+    "it": "Metodo e limiti"
+  },
+  "Result": {
+    "zh": "结果",
+    "it": "Risultato"
+  },
+  "Measured output": {
+    "zh": "测量输出",
+    "it": "Risultato misurato"
+  },
+  "Acceptance": {
+    "zh": "验收",
+    "it": "Accettazione"
+  },
+  "Review criteria": {
+    "zh": "复核判据",
+    "it": "Criteri di verifica"
+  },
+  "Next step": {
+    "zh": "下一步",
+    "it": "Prossimo passo"
+  },
+  "Open issues": {
+    "zh": "未解决问题",
+    "it": "Questioni aperte"
+  },
+  "Evidence is specific to the task. A geometric comparison alone does not establish Class-A quality, manufacturability or physical performance.": {
+    "zh": "验证依据取决于具体任务。仅凭几何比较，不能证明 Class-A 品质、可制造性或物理性能。",
+    "it": "Le evidenze dipendono dall’attività. Un confronto geometrico da solo non dimostra qualità di classe A, producibilità o prestazioni fisiche."
+  },
+  "Resources": {
+    "zh": "资源中心",
+    "it": "Risorse"
+  },
+  "Get to know": {
+    "zh": "了解我们的",
+    "it": "Scopri"
+  },
+  "the workflow.": {
+    "zh": "工作流。",
+    "it": "il flusso di lavoro."
+  },
+  "Practical starting points for your next conversation with ICOCO.": {
+    "zh": "为下一次与 ICOCO 的沟通准备实用资料。",
+    "it": "Punti di partenza pratici per il prossimo confronto con ICOCO."
+  },
+  "Frequently asked.": {
+    "zh": "常见问题",
+    "it": "Domande frequenti."
+  },
+  "Read story ↗": {
+    "zh": "阅读详情 ↗",
+    "it": "Leggi l’articolo ↗"
+  },
+  "Engineering-guided AI for automotive design.": {
+    "zh": "以工程约束引导汽车设计 AI。",
+    "it": "AI per il design automobilistico guidata dall’ingegneria."
+  },
+  "Platform": {
+    "zh": "产品平台",
+    "it": "Piattaforma"
+  },
+  "Log in in a new tab": {
+    "zh": "在新标签页中登录",
+    "it": "Accedi in una nuova scheda"
+  },
+  "Sign up": {
+    "zh": "注册",
+    "it": "Registrati"
+  },
+  "Geometric & Surface": {
+    "zh": "几何与曲面",
+    "it": "Geometria e superfici"
+  },
+  "Physics & Validation": {
+    "zh": "物理与校核",
+    "it": "Fisica e verifica"
+  },
+  "Company": {
+    "zh": "公司",
+    "it": "Azienda"
+  },
+  "News": {
+    "zh": "新闻",
+    "it": "Notizie"
+  },
+  "Contact": {
+    "zh": "联系我们",
+    "it": "Contatti"
+  },
+  "Company profile": {
+    "zh": "公司介绍",
+    "it": "Profilo aziendale"
+  },
+  "Resources & quick links": {
+    "zh": "资源与快捷链接",
+    "it": "Risorse e link rapidi"
+  },
+  "Guides & FAQ": {
+    "zh": "指南与常见问题",
+    "it": "Guide e FAQ"
+  },
+  "Press enquiries": {
+    "zh": "媒体咨询",
+    "it": "Richieste stampa"
+  },
+  "Privacy policy ↗": {
+    "zh": "隐私政策 ↗",
+    "it": "Informativa sulla privacy ↗"
+  },
+  "User agreement ↗": {
+    "zh": "用户协议 ↗",
+    "it": "Accordo utente ↗"
+  },
+  "Evidence & acceptance": {
+    "zh": "验证与验收",
+    "it": "Evidenze e accettazione"
+  },
+  "Discuss requirements": {
+    "zh": "沟通需求",
+    "it": "Parliamo delle tue esigenze"
+  },
+  "ICOCO META home": {
+    "zh": "ICOCO META 首页",
+    "it": "Home di ICOCO META"
+  },
+  "Main": {
+    "zh": "主导航",
+    "it": "Navigazione principale"
+  },
+  "Home": {
+    "zh": "首页",
+    "it": "Home"
+  },
+  "Request a demo": {
+    "zh": "预约演示",
+    "it": "Richiedi una demo"
+  },
+  "Log in or sign up in a new tab": {
+    "zh": "在新标签页中登录或注册",
+    "it": "Accedi o registrati in una nuova scheda"
+  },
+  "Log in / Sign up": {
+    "zh": "登录 / 注册",
+    "it": "Accedi / Registrati"
+  },
+  "Menu": {
+    "zh": "菜单",
+    "it": "Menu"
+  },
+  "Log in / Sign up ↗": {
+    "zh": "登录 / 注册 ↗",
+    "it": "Accedi / Registrati ↗"
+  },
+  "All": {
+    "zh": "全部",
+    "it": "Tutte"
+  },
+  "Events": {
+    "zh": "活动",
+    "it": "Eventi"
+  },
+  "Product": {
+    "zh": "产品",
+    "it": "Prodotto"
+  },
+  "ICOCO announces its CIIE 2026 showcase": {
+    "zh": "ICOCO 发布 2026 进博会参展预告",
+    "it": "ICOCO annuncia la sua presenza alla CIIE 2026"
+  },
+  "ICOCO CIIE 2026 invitation poster": {
+    "zh": "ICOCO 2026 进博会邀请海报",
+    "it": "Locandina di invito ICOCO alla CIIE 2026"
+  },
+  "An invitation to explore automotive design AI at the China International Import Expo in Shanghai.": {
+    "zh": "相约上海中国国际进口博览会，探索汽车设计 AI。",
+    "it": "Un invito a esplorare l’AI per il design automobilistico alla China International Import Expo di Shanghai."
+  },
+  "ICOCO announced a showcase with Design Universe at the 9th China International Import Expo, scheduled for 5-10 November 2026 in Shanghai.": {
+    "zh": "ICOCO 宣布将携手 Design Universe 亮相第九届中国国际进口博览会，活动计划于 2026 年 11 月 5 日至 10 日在上海举行。",
+    "it": "ICOCO ha annunciato una presentazione con Design Universe alla nona China International Import Expo, in programma dal 5 al 10 novembre 2026 a Shanghai."
+  },
+  "The announcement names Booth R-L202-2 in the North Bund Pavilion’s City Reception Hall at the National Exhibition and Convention Center. It introduces a workflow beginning with requirements and constraints, followed by design exploration.": {
+    "zh": "预告列出的展位为国家会展中心北外滩馆城市会客厅 R-L202-2。内容介绍了从需求与约束出发，再进入设计探索的工作流。",
+    "it": "L’annuncio indica lo stand R-L202-2 nella City Reception Hall del North Bund Pavilion, presso il National Exhibition and Convention Center. Presenta un processo che parte da requisiti e vincoli per proseguire con l’esplorazione del design."
+  },
+  "This article summarises the original event announcement. It is not a report of completed demonstrations or independently validated product results.": {
+    "zh": "本文为原始活动预告的摘要，并非已完成演示或经独立验证的产品成果报告。",
+    "it": "Questo articolo riassume l’annuncio originale dell’evento. Non è un resoconto di dimostrazioni concluse né di risultati di prodotto validati in modo indipendente."
+  },
+  "On the ground at the Design 100+ ceremony": {
+    "zh": "设计 100+ 颁奖活动现场",
+    "it": "Sul posto alla cerimonia Design 100+"
+  },
+  "Photograph from the Design 100+ ceremony shared by ICOCO": {
+    "zh": "ICOCO 分享的设计 100+ 颁奖活动现场照片",
+    "it": "Fotografia della cerimonia Design 100+ condivisa da ICOCO"
+  },
+  "A moment from Shanghai’s design community, shared by the ICOCO team.": {
+    "zh": "ICOCO 团队分享来自上海设计社区的现场瞬间。",
+    "it": "Un momento della comunità del design di Shanghai, condiviso dal team ICOCO."
+  },
+  "ICOCO shared photographs from the Design 100+ awards ceremony during the World Design Cities Conference.": {
+    "zh": "ICOCO 分享了世界设计之都大会期间设计 100+ 颁奖活动的现场照片。",
+    "it": "ICOCO ha condiviso fotografie della cerimonia di premiazione Design 100+ durante la World Design Cities Conference."
+  },
+  "The post records attendance at the event. It does not state that ICOCO won an award, and no award or celebrity endorsement is implied here.": {
+    "zh": "原帖记录的是参加活动，并未表示 ICOCO 获奖；本文也不暗示任何奖项或名人背书。",
+    "it": "Il post documenta la partecipazione all’evento. Non afferma che ICOCO abbia vinto un premio e non implica premi né endorsement di celebrità."
+  },
+  "From a digital concept to a physical model": {
+    "zh": "从数字概念走向实体模型",
+    "it": "Dal concept digitale al modello fisico"
+  },
+  "ICOCO invitation poster for the WDCC 2026 AI+ exhibition": {
+    "zh": "ICOCO 2026 世界设计之都大会 AI+ 展邀请海报",
+    "it": "Locandina di invito ICOCO alla mostra AI+ della WDCC 2026"
+  },
+  "The WDCC announcement introduces 3D printing tests in the automotive design exploration workflow.": {
+    "zh": "WDCC 活动预告介绍了汽车设计探索工作流中的 3D 打印测试。",
+    "it": "L’annuncio WDCC introduce test di stampa 3D nel processo di esplorazione del design automobilistico."
+  },
+  "In its WDCC 2026 announcement, ICOCO described adding 3D printing tests after 3D model generation, moving beyond images and digital models to physical scale-model review.": {
+    "zh": "在 2026 世界设计之都大会活动预告中，ICOCO 介绍了在 3D 模型生成后增加 3D 打印测试，将图像与数字模型进一步推进到实体比例模型复核。",
+    "it": "Nell’annuncio per WDCC 2026, ICOCO ha descritto l’aggiunta di test di stampa 3D dopo la generazione del modello, passando da immagini e modelli digitali alla verifica di modelli fisici in scala."
+  },
+  "The post announced a joint appearance with DIIS at the AI+ exhibition, with displays planned at A8, booth 0334, 689 Jumen Road, Shanghai.": {
+    "zh": "原帖预告了与 DIIS 共同参加 AI+ 展，计划展示地点为上海局门路 689 号 A8、0334 展位。",
+    "it": "Il post ha annunciato una presenza congiunta con DIIS alla mostra AI+, con esposizione prevista presso A8, stand 0334, 689 Jumen Road, Shanghai."
+  },
+  "A physical scale model can support a design discussion. Its existence alone does not establish production feasibility or vehicle engineering acceptance.": {
+    "zh": "实体比例模型有助于设计讨论，但仅凭模型本身，不能证明生产可行性或整车工程验收通过。",
+    "it": "Un modello fisico in scala può supportare il confronto sul design. La sua sola esistenza non dimostra la fattibilità produttiva né l’accettazione ingegneristica del veicolo."
+  },
+  "Getting started with ICOCO": {
+    "zh": "ICOCO 入门指南",
+    "it": "Iniziare con ICOCO"
+  },
+  "Product guide": {
+    "zh": "产品指南",
+    "it": "Guida al prodotto"
+  },
+  "Account access, project inputs and your first design discussion.": {
+    "zh": "账号入口、项目输入，以及第一次设计沟通。",
+    "it": "Accesso all’account, dati di progetto e primo confronto sul design."
+  },
+  "Open your account": {
+    "zh": "打开账号页面",
+    "it": "Apri il tuo account"
+  },
+  "Log in opens the existing ICOCO application. To create an account, select the registration option on its sign-in screen. This website does not collect credentials.": {
+    "zh": "登录入口会打开原有 ICOCO 应用。创建账号时，请在登录页面选择注册。官网不收集账号凭证。",
+    "it": "Accedi apre l’applicazione ICOCO esistente. Per creare un account, seleziona l’opzione di registrazione nella schermata di accesso. Il sito non raccoglie credenziali."
+  },
+  "Prepare the brief": {
+    "zh": "准备设计任务",
+    "it": "Prepara il brief"
+  },
+  "Bring visual references, vehicle type, dimensions and the design question you want to explore. Identify which constraints must remain fixed.": {
+    "zh": "准备视觉参考、车型、尺寸以及希望探索的设计问题，并明确哪些约束必须保持不变。",
+    "it": "Prepara riferimenti visivi, tipologia di veicolo, dimensioni e la domanda di design da esplorare. Identifica i vincoli che devono restare fissi."
+  },
+  "Review the output": {
+    "zh": "复核输出",
+    "it": "Verifica il risultato"
+  },
+  "Compare each output with its references and parameters. Agree on a bounded next step before extending the task to geometry or specialist analysis.": {
+    "zh": "将每项输出与参考和参数比较。在延伸到几何开发或专业分析之前，先约定范围明确的下一步。",
+    "it": "Confronta ogni risultato con riferimenti e parametri. Concorda un prossimo passo circoscritto prima di estendere l’attività alla geometria o all’analisi specialistica."
+  },
+  "Generate, align, validate, build": {
+    "zh": "生成、对齐、校核、建模",
+    "it": "Genera, allinea, verifica, costruisci"
+  },
+  "Workflow guide": {
+    "zh": "工作流指南",
+    "it": "Guida al flusso di lavoro"
+  },
+  "Four stages for keeping automotive design intent in view.": {
+    "zh": "通过四个阶段持续保留汽车设计意图。",
+    "it": "Quattro fasi per mantenere l’intento del design automobilistico."
+  },
+  "Generate": {
+    "zh": "生成",
+    "it": "Genera"
+  },
+  "Explore exterior concepts using a brief and references. Concept imagery is a starting point for review.": {
+    "zh": "根据任务与参考探索外饰概念。概念图像是后续复核的起点。",
+    "it": "Esplora concept degli esterni con un brief e riferimenti. Le immagini di concept sono un punto di partenza per la verifica."
+  },
+  "Align": {
+    "zh": "对齐",
+    "it": "Allinea"
+  },
+  "Compare views against the same dimensions, wheelbase and package assumptions. Record inconsistencies rather than hiding them.": {
+    "zh": "使用同一套尺寸、轴距与总布置假设比较视图，记录不一致之处，不将其隐藏。",
+    "it": "Confronta le viste con le stesse dimensioni, lo stesso passo e le stesse ipotesi di package. Registra le incoerenze senza nasconderle."
+  },
+  "Validate": {
+    "zh": "校核",
+    "it": "Verifica"
+  },
+  "Check agreed engineering constraints. Record inputs, methods and limitations; specialist checks require their own acceptance criteria.": {
+    "zh": "检查约定的工程约束，记录输入、方法与局限；专业检查需要各自的验收判据。",
+    "it": "Verifica i vincoli ingegneristici concordati. Registra dati di ingresso, metodi e limiti; le verifiche specialistiche richiedono criteri di accettazione dedicati."
+  },
+  "Build": {
+    "zh": "建模",
+    "it": "Costruisci"
+  },
+  "Develop geometry for a defined task, retaining references and versions. Editable geometry and Class-A acceptance are separate outcomes.": {
+    "zh": "针对明确任务开发几何，并保留参考与版本。可编辑几何与 Class-A 验收是不同的结果。",
+    "it": "Sviluppa la geometria per un’attività definita, conservando riferimenti e versioni. La modificabilità e l’accettazione di classe A sono risultati distinti."
+  },
+  "What useful engineering evidence includes": {
+    "zh": "有效的工程证据应包含什么",
+    "it": "Cosa includono evidenze ingegneristiche utili"
+  },
+  "Engineering note": {
+    "zh": "工程说明",
+    "it": "Nota ingegneristica"
+  },
+  "Source references, check methods and clear acceptance criteria.": {
+    "zh": "源参考、检查方法与明确的验收判据。",
+    "it": "Riferimenti di origine, metodi di verifica e criteri di accettazione chiari."
+  },
+  "Start with a reference": {
+    "zh": "从参考开始",
+    "it": "Parti da un riferimento"
+  },
+  "Identify the source version, units and relevant design constraints.": {
+    "zh": "明确源数据版本、单位与相关设计约束。",
+    "it": "Identifica versione del riferimento, unità di misura e vincoli di design rilevanti."
+  },
+  "Describe the check": {
+    "zh": "说明检查方法",
+    "it": "Descrivi la verifica"
+  },
+  "State the method, measurements and acceptance criteria. A local diagnostic cannot establish full vehicle performance.": {
+    "zh": "说明方法、测量值与验收判据。局部诊断不能证明整车性能。",
+    "it": "Indica metodo, misurazioni e criteri di accettazione. Una diagnostica locale non dimostra le prestazioni complete del veicolo."
+  },
+  "Keep the next decision visible": {
+    "zh": "保留下一步决策所需的信息",
+    "it": "Mantieni visibile la decisione successiva"
+  },
+  "Keep unresolved issues attached to the revision. Separate digital checks from physical testing and final acceptance.": {
+    "zh": "将未解决问题关联到相应版本，区分数字检查、实物测试与最终验收。",
+    "it": "Mantieni le questioni aperte associate alla revisione. Distingui le verifiche digitali dai test fisici e dall’accettazione finale."
+  },
+  "What is ICOCO META?": {
+    "zh": "ICOCO META 是什么？",
+    "it": "Che cos’è ICOCO META?"
+  },
+  "An integrated product direction connecting automotive design exploration, geometry development and physical-AI workflows. The current focus is early automotive exterior design.": {
+    "zh": "它是连接汽车设计探索、几何开发与物理 AI 工作流的一体化产品方向，目前聚焦汽车外饰早期设计。",
+    "it": "È una direzione di prodotto integrata che collega esplorazione del design automobilistico, sviluppo geometrico e flussi di AI fisica. Il focus attuale è il design iniziale degli esterni."
+  },
+  "Can I use my existing ICOCO account?": {
+    "zh": "可以继续使用现有 ICOCO 账号吗？",
+    "it": "Posso usare il mio account ICOCO esistente?"
+  },
+  "Yes. Log in opens the existing application in a new tab. Account management stays in the application.": {
+    "zh": "可以。登录入口会在新标签页打开原应用，账号管理仍在应用内完成。",
+    "it": "Sì. Accedi apre l’applicazione esistente in una nuova scheda. La gestione dell’account resta nell’applicazione."
+  },
+  "How do I sign up?": {
+    "zh": "如何注册？",
+    "it": "Come posso registrarmi?"
+  },
+  "Open Sign up for the registration guide, then continue to the ICOCO application and select its registration option.": {
+    "zh": "打开注册指南，继续前往 ICOCO 应用，并在登录页面选择注册入口。",
+    "it": "Apri la guida alla registrazione, poi continua nell’applicazione ICOCO e seleziona l’opzione di registrazione."
+  },
+  "Does a generated image count as an engineering result?": {
+    "zh": "生成的图像算工程成果吗？",
+    "it": "Un’immagine generata vale come risultato ingegneristico?"
+  },
+  "No. Images, geometric checks and physical validation have different purposes and acceptance criteria.": {
+    "zh": "不算。图像、几何检查与物理验证的目的和验收判据各不相同。",
+    "it": "No. Immagini, verifiche geometriche e validazione fisica hanno finalità e criteri di accettazione diversi."
+  },
+  "Can we discuss a pilot or integration?": {
+    "zh": "可以讨论试点或集成项目吗？",
+    "it": "Possiamo discutere un progetto pilota o un’integrazione?"
+  },
+  "Yes. Contact the team with your inputs, expected outputs, constraints and review criteria. Availability and scope are agreed for each project.": {
+    "zh": "可以。请提供输入、预期输出、约束与复核判据，具体可用性和范围按项目约定。",
+    "it": "Sì. Contatta il team con dati di ingresso, risultati attesi, vincoli e criteri di verifica. Disponibilità e ambito sono concordati per ciascun progetto."
+  },
+  "Where can I find news?": {
+    "zh": "在哪里查看新闻？",
+    "it": "Dove posso trovare le notizie?"
+  },
+  "The Newsroom includes selected posts from ICOCO’s official channel, with publication dates and source links.": {
+    "zh": "新闻中心收录 ICOCO 官方渠道的精选内容，并附发布日期与原始来源链接。",
+    "it": "La sezione Notizie raccoglie post selezionati dai canali ufficiali ICOCO, con date di pubblicazione e link alle fonti."
+  }
+}

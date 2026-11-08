@@ -1,3 +1,4 @@
+import { createEffectScope } from './lifecycle.js'
 /* =========================================================
    ICOCO META — orbital view
    A real Earth (NASA Blue Marble + Earth at Night) rendered as
@@ -5,6 +6,7 @@
    turning, the terminator drifts, and the sky answers the mouse.
    ========================================================= */
 export function initSpace() {
+  const scope = createEffectScope();
 
   const canvas = document.getElementById('spaceCanvas');
   if (!canvas) return;
@@ -18,7 +20,7 @@ export function initSpace() {
   });
 
   if (!gl) {
-    document.documentElement.classList.add('no-webgl');
+    document.getElementById('marketing-root').classList.add('no-webgl');
     return;
   }
 
@@ -391,31 +393,31 @@ export function initSpace() {
   }
 
   resize();
-  window.addEventListener('resize', resize);
+  scope.listen(window, 'resize', resize);
 
   if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
-    window.addEventListener('pointermove', e => {
+    scope.listen(window, 'pointermove', e => {
       state.tx = (e.clientX / window.innerWidth - 0.5) * 2;
       state.ty = (e.clientY / window.innerHeight - 0.5) * 2;
     }, { passive: true });
   }
 
-  canvas.addEventListener('pointerdown', e => {
+  scope.listen(canvas, 'pointerdown', e => {
     state.drag = true;
     state.lastX = e.clientX;
     canvas.setPointerCapture(e.pointerId);
     canvas.classList.add('is-dragging');
   });
-  canvas.addEventListener('pointermove', e => {
+  scope.listen(canvas, 'pointermove', e => {
     if (!state.drag) return;
     state.spinVel += (e.clientX - state.lastX) * 0.00042;
     state.lastX = e.clientX;
   });
   const endDrag = () => { state.drag = false; canvas.classList.remove('is-dragging'); };
-  canvas.addEventListener('pointerup', endDrag);
-  canvas.addEventListener('pointercancel', endDrag);
+  scope.listen(canvas, 'pointerup', endDrag);
+  scope.listen(canvas, 'pointercancel', endDrag);
 
-  window.addEventListener('scroll', () => {
+  scope.listen(window, 'scroll', () => {
     state.scroll = Math.min(1, window.scrollY / Math.max(window.innerHeight, 1));
   }, { passive: true });
 
@@ -446,8 +448,12 @@ export function initSpace() {
     gl.uniform1f(U.scroll, state.scroll);
 
     gl.drawArrays(gl.TRIANGLES, 0, 3);
-    requestAnimationFrame(frame);
+    scope.frame(frame);
   }
 
-  requestAnimationFrame(frame);
+  scope.frame(frame);
+  return () => {
+    scope.dispose();
+    gl.getExtension('WEBGL_lose_context')?.loseContext();
+  };
 }
