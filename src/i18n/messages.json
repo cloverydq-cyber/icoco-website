@@ -1130,5 +1130,37 @@
   "The Newsroom includes selected posts from ICOCO’s official channel, with publication dates and source links.": {
     "zh": "新闻中心收录 ICOCO 官方渠道的精选内容，并附发布日期与原始来源链接。",
     "it": "La sezione Notizie raccoglie post selezionati dai canali ufficiali ICOCO, con date di pubblicazione e link alle fonti."
+  },
+  "Disciplines": {
+    "zh": "六大领域",
+    "it": "Discipline"
+  },
+  "Six disciplines.": {
+    "zh": "六大领域，",
+    "it": "Sei discipline."
+  },
+  "One shared design intent.": {
+    "zh": "同一个设计意图。",
+    "it": "Un unico intento progettuale."
+  },
+  "Every tool in the workflow reads and writes the same intent, so a concept can move into geometry and engineering review without being rebuilt.": {
+    "zh": "工作流中的每个工具都读取并写入同一个设计意图，概念因此可以直接进入几何开发与工程校核，无需重建。",
+    "it": "Ogni strumento del flusso di lavoro legge e scrive lo stesso intento, così un concept arriva alla geometria e alla verifica ingegneristica senza essere ricostruito."
+  },
+  "Bring the next program": {
+    "zh": "让下一个项目",
+    "it": "Porta il prossimo programma"
+  },
+  "into one workflow.": {
+    "zh": "进入同一个工作流。",
+    "it": "in un unico flusso di lavoro."
+  },
+  "Tell us where design intent gets lost today — tools, handoffs, review loops. We will show how ICOCO META closes the gap.": {
+    "zh": "告诉我们设计意图目前在哪个环节流失——工具切换、交接、评审循环。我们会演示 ICOCO META 如何补上这一段。",
+    "it": "Raccontaci dove oggi si perde l’intento progettuale — strumenti, passaggi di consegne, cicli di revisione. Ti mostriamo come ICOCO META colma il divario."
+  },
+  "Explore the platform": {
+    "zh": "了解平台",
+    "it": "Esplora la piattaforma"
   }
 }

@@ -88,7 +88,9 @@
 /* ---------------- nav ---------------- */
 .icoco-marketing .nav{
   position:fixed;top:0;left:0;right:0;z-index:60;
-  padding:clamp(16px,2.4vh,26px) clamp(18px,4.6vw,66px);
+  /* side padding falls back to the `.wrap` column, so the logo and the
+     primary action sit on the same vertical axis as every page section */
+  padding:clamp(16px,2.4vh,26px) max(clamp(18px,4.6vw,66px), calc((100% - min(1320px,88vw)) / 2));
   transition:background .5s var(--ease),backdrop-filter .5s,border-color .5s,padding .4s;
   border-bottom:1px solid transparent;
 }
@@ -111,16 +113,23 @@
   position:absolute;left:0;bottom:-3px;height:1px;width:0;background:linear-gradient(90deg,#5aa8ff,#bfe9ff);
   opacity:0;transition:transform .45s var(--ease),width .45s var(--ease),opacity .3s;
 }
+.icoco-marketing .nav__account{display:flex;align-items:center;gap:clamp(10px,1.5vw,22px)}
+.icoco-marketing .nav__login{
+  font-family:var(--font-m);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(214,228,245,.58);white-space:nowrap;transition:color .35s;
+}
+.icoco-marketing .nav__login:hover{color:#fff}
 .icoco-marketing .nav__cta{
   display:inline-flex;align-items:center;gap:9px;
-  padding:9px 16px;margin-left:clamp(10px,1.6vw,24px);
-  font-family:var(--font-m);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(226,238,252,.88);
-  border:1px solid rgba(160,200,255,.24);border-radius:2px;
+  padding:9px 16px;
+  font-family:var(--font-m);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(236,245,255,.96);
+  border:1px solid rgba(160,200,255,.34);border-radius:2px;
+  background:rgba(90,168,255,.09);
   transition:border-color .4s,background .4s,color .4s;
   will-change:transform;
 }
 .icoco-marketing .nav__cta svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.4}
-.icoco-marketing .nav__cta:hover{background:rgba(90,168,255,.1);border-color:rgba(160,200,255,.5);color:#fff}
+.icoco-marketing .nav__cta:hover{background:rgba(90,168,255,.2);border-color:rgba(170,210,255,.6);color:#fff}
 .icoco-marketing .nav__burger{display:none}
 
 .icoco-marketing .mobile-menu{
@@ -292,8 +301,11 @@
 .icoco-marketing .hero__cards{
   display:grid;grid-template-columns:repeat(6,1fr);
   gap:clamp(7px,.8vw,13px);
-  padding:0 clamp(20px,3.4vw,48px);
 }
+/* section head that introduces the six disciplines — same rhythm as the
+   inner pages, so the strip reads as a section rather than a stray row */
+.icoco-marketing .caps__head{padding-bottom:clamp(32px,4.2vw,62px)}
+.icoco-marketing .caps__head .lede{margin-top:0;padding-bottom:6px;max-width:38ch}
 .icoco-marketing .capcard{
   position:relative;display:flex;flex-direction:column;overflow:hidden;
   --p:1;--lift:0px;
@@ -331,10 +343,10 @@
   padding:clamp(11px,1.05vw,17px) clamp(10px,.95vw,15px) clamp(12px,1.1vw,17px);
 }
 .icoco-marketing .capcard__body h3{
-  font-size:clamp(12.5px,.98vw,16px);font-weight:500;letter-spacing:.005em;color:#fff;line-height:1.2;
+  font-size:clamp(13.5px,1.05vw,17px);font-weight:500;letter-spacing:.005em;color:#fff;line-height:1.2;
 }
 .icoco-marketing .capcard__rule{width:26px;height:1px;background:rgba(255,255,255,.34);margin:clamp(8px,.9vh,12px) 0 clamp(7px,.8vh,11px)}
-.icoco-marketing .capcard__body p{font-size:clamp(10.5px,.76vw,12.5px);line-height:1.52;color:var(--muted);font-weight:300}
+.icoco-marketing .capcard__body p{font-size:clamp(11px,.82vw,13px);line-height:1.5;color:var(--muted);font-weight:300}
 
 .icoco-marketing .capcard:hover{--lift:-9px;border-color:rgba(140,200,255,.5);box-shadow:inset 0 1px 0 rgba(190,220,255,.12),0 30px 70px rgba(0,0,0,.65),0 0 44px rgba(60,130,230,.12)}
 .icoco-marketing .capcard:hover .capcard__media img{transform:scale(1.07);filter:saturate(1.0) contrast(1.06) brightness(.95)}
@@ -633,6 +645,21 @@
 .icoco-marketing .btn--ghost{border:1px solid rgba(160,200,255,.26);color:rgba(226,238,252,.9)}
 .icoco-marketing .btn--ghost:hover{background:rgba(90,168,255,.1);border-color:rgba(160,200,255,.5)}
 
+/* ---------------- closing call to action ---------------- */
+.icoco-marketing .close-band{
+  position:relative;z-index:2;border-top:1px solid var(--line-2);overflow:hidden;
+  padding:clamp(52px,6.6vw,92px) 0;
+  background:
+    radial-gradient(70% 130% at 12% 0%,rgba(40,96,182,.18),rgba(4,6,10,0) 62%),
+    radial-gradient(52% 96% at 88% 104%,rgba(24,58,120,.16),rgba(4,6,10,0) 66%),
+    var(--bg);
+}
+.icoco-marketing .close-band__inner{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:clamp(26px,4vw,72px)}
+.icoco-marketing .close-band__copy{min-width:0}
+.icoco-marketing .close-band .h2{font-size:clamp(25px,2.85vw,40px);letter-spacing:-.02em}
+.icoco-marketing .close-band__sub{margin-top:clamp(12px,1.4vw,18px);font-size:clamp(12.5px,1.02vw,15px);line-height:1.68;color:var(--muted);max-width:46ch}
+.icoco-marketing .close-band__actions{display:flex;align-items:center;gap:clamp(10px,1.2vw,16px);flex-wrap:wrap;padding-bottom:2px}
+
 /* ---------------- footer ---------------- */
 .icoco-marketing .footer{position:relative;z-index:2;border-top:1px solid var(--line-2);background:var(--bg);padding:clamp(46px,6vw,74px) 0 26px}
 .icoco-marketing .footer__inner{display:grid;grid-template-columns:1.4fr 2fr;gap:clamp(30px,5vw,70px);padding-bottom:clamp(30px,4vw,50px)}
@@ -647,6 +674,14 @@
 
 /* ---------------- responsive ---------------- */
 @media (max-width:1180px){
+  /* the nav has to hold four links plus the demo action on a narrower grid */
+  .icoco-marketing .nav__inner{gap:clamp(14px,2vw,26px)}
+  .icoco-marketing .nav__links{gap:clamp(12px,1.6vw,22px)}
+  .icoco-marketing .nav__link{font-size:10px;letter-spacing:.12em}
+  .icoco-marketing .nav__login{display:none}
+  .icoco-marketing .nav__cta{font-size:10px;letter-spacing:.1em;padding:8px 13px}
+  .icoco-marketing .footer__cols h4{letter-spacing:.14em}
+  .icoco-marketing .capcard__body{padding:11px 11px 13px}
   .icoco-marketing .news{grid-template-columns:repeat(2,1fr)}
   .icoco-marketing .eco{grid-template-columns:repeat(2,1fr)}
   .icoco-marketing .about__stats{grid-template-columns:repeat(2,1fr)}
@@ -654,7 +689,7 @@
   .icoco-marketing .metrics{grid-template-columns:repeat(4,1fr);gap:18px}
 }
 @media (max-width:960px){
-  .icoco-marketing .nav__links,.icoco-marketing .nav__cta{display:none}
+  .icoco-marketing .nav__links,.icoco-marketing .nav__cta,.icoco-marketing .nav__login{display:none}
   .icoco-marketing .nav__burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:34px;height:34px;
     margin-left:auto;background:none;border:0;padding:0;cursor:pointer}
   .icoco-marketing .nav__burger span{display:block;width:20px;height:1px;background:rgba(230,240,255,.85);transition:.35s var(--ease)}
@@ -672,8 +707,13 @@
   .icoco-marketing .hero__stage::after{background:linear-gradient(180deg,rgba(2,4,9,.72) 0%,rgba(2,4,9,.34) 40%,rgba(2,4,9,.1) 70%,rgba(2,4,9,.65) 100%)}
   .icoco-marketing .hero__side{display:none}
   .icoco-marketing .caps{padding:clamp(18px,3.4vh,40px) 0 clamp(46px,7vh,72px)}
-  .icoco-marketing .hero__cards{grid-template-columns:repeat(2,1fr);gap:8px;padding:0 6vw}
+  .icoco-marketing .caps__head{padding-bottom:clamp(22px,4vw,32px)}
+  .icoco-marketing .caps__head .h2{max-width:none}
+  .icoco-marketing .hero__cards{grid-template-columns:repeat(2,1fr);gap:8px}
   .icoco-marketing .capcard__media{aspect-ratio:16/11}
+  .icoco-marketing .close-band{padding:clamp(40px,7vw,60px) 0}
+  .icoco-marketing .close-band__inner{grid-template-columns:1fr;gap:26px;align-items:start}
+  .icoco-marketing .close-band__copy,.icoco-marketing .close-band__sub{max-width:none}
   .icoco-marketing .hero__hint{bottom:clamp(14px,3vh,30px)}
   .icoco-marketing .hero__grade{background:linear-gradient(180deg,rgba(3,5,9,.82) 0%,rgba(3,5,9,.1) 26%,rgba(3,5,9,.05) 46%,rgba(4,6,10,.5) 78%,#04060a 100%)}
 
@@ -687,6 +727,11 @@
   .icoco-marketing .eco,.icoco-marketing .news{grid-template-columns:1fr}
   .icoco-marketing .about__stats{grid-template-columns:repeat(2,1fr)}
   .icoco-marketing .cards{grid-template-columns:1fr}
+  /* three link groups in a phone-width column become unreadable */
+  .icoco-marketing .footer__cols{grid-template-columns:repeat(2,1fr);gap:20px}
+  .icoco-marketing .footer__cols > div:nth-child(3){grid-column:1/-1}
+  .icoco-marketing .close-band__actions{width:100%}
+  .icoco-marketing .close-band .btn{flex:1 1 auto;justify-content:center}
 }
 @media (prefers-reduced-motion:reduce){
   #marketing-root.icoco-marketing *{animation-duration:.001s;transition-duration:.001s}
