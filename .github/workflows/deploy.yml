@@ -1,9 +1,10 @@
-# Deploy ICOCO website to GitHub Pages on every push to main.
+# Deploy ICOCO website to GitHub Pages on every push to main,
+# and on pushes to collab-1108 so design iterations get a shareable preview.
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, collab-1108]
   workflow_dispatch:
 
 permissions:
@@ -25,8 +26,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # The production site is served from the domain root (www.icoco.art), so
-      # vite.config keeps base '/'. GitHub Pages hosts this repo under
+      # Production (www.icoco.art) is served from the domain root, so
+      # vite.config keeps base '/'. GitHub Pages serves this repo under
       # /icoco-website/, so the preview build overrides the base to match.
       - run: npm run build -- --base=/icoco-website/
       # Deep links (/about, /news/...) are client-rendered; Pages serves

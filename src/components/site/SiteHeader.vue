@@ -31,13 +31,13 @@ watch(locale, async () => {
       <a href="/product" class="nav__link" :class="{'is-active': route.path === '/product'}" data-nav="products">{{ copy("Platform") }}</a>
       <a href="/news" class="nav__link" :class="{'is-active': route.path === '/news' || route.path.startsWith('/news/')}" data-nav="news">{{ copy("News") }}</a>
       <a href="/about" class="nav__link" :class="{'is-active': route.path === '/about'}" data-nav="about">{{ copy("About") }}</a>
+      <a href="/contact" class="nav__link">{{ copy("Request a demo") }}</a>
       <span class="nav__ink" id="navInk" aria-hidden="true"></span>
     </nav>
 
     <div class="nav__account">
-      <a :href="workspaceUrl" class="nav__login" target="_blank" rel="noopener noreferrer" :aria-label="copy(&quot;Log in in a new tab&quot;)">{{ copy("Log in") }}</a>
-      <a href="/contact" class="nav__cta">
-        <span>{{ copy("Request a demo") }}</span>
+      <a :href="workspaceUrl" class="nav__cta" target="_blank" rel="noopener noreferrer" :aria-label="copy(&quot;Log in or sign up in a new tab&quot;)">
+        <span>{{ copy("Log in / Sign up") }}</span>
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4V10" /></svg>
       </a>
     </div>

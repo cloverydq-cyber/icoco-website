@@ -62,17 +62,7 @@ onBeforeUnmount(() => {
 
 <!-- ============ CAPABILITIES ============ -->
 <section class="caps" id="capabilities">
-  <div class="wrap caps__head">
-    <div class="sec-head sec-head--split reveal is-in">
-      <div>
-        <div class="eyebrow"><span>01</span>{{ copy("Disciplines") }}</div>
-        <h2 class="h2">{{ copy("Six disciplines.") }}<br><span class="dim">{{ copy("One shared design intent.") }}</span></h2>
-      </div>
-      <p class="lede">{{ copy("Every tool in the workflow reads and writes the same intent, so a concept can move into geometry and engineering review without being rebuilt.") }}</p>
-    </div>
-  </div>
-
-  <div class="hero__cards wrap" id="heroCards">
+  <div class="hero__cards" id="heroCards">
     <article class="capcard">
       <div class="capcard__media"><img src="../assets/img/card-automotive.jpg" :alt="copy(&quot;Electric vehicle in a studio&quot;)" loading="lazy"></div>
       <div class="capcard__body">
@@ -126,23 +116,6 @@ onBeforeUnmount(() => {
         <p>{{ copy("Workflows that connect") }}<br>{{ copy("specialist tools.") }}</p>
       </div>
     </article>
-  </div>
-</section>
-
-<!-- ============ CLOSING CTA ============ -->
-<section class="close-band">
-  <div class="wrap close-band__inner">
-    <div class="close-band__copy">
-      <h2 class="h2">{{ copy("Bring the next program") }}<br>{{ copy("into one workflow.") }}</h2>
-      <p class="close-band__sub">{{ copy("Tell us where design intent gets lost today — tools, handoffs, review loops. We will show how ICOCO META closes the gap.") }}</p>
-    </div>
-    <div class="close-band__actions">
-      <a class="btn btn--primary" href="/contact">
-        {{ copy("Request a demo") }}
-        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
-      </a>
-      <a class="btn btn--ghost" href="/product">{{ copy("Explore the platform") }}</a>
-    </div>
   </div>
 </section>
 
