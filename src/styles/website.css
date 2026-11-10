@@ -552,9 +552,14 @@
   border:1px solid var(--line-2);background:#04060a;overflow:hidden}
 .icoco-marketing .contact__panel{position:relative;display:flex;flex-direction:column;
   padding:clamp(40px,4vw,58px) clamp(26px,4.4vw,84px) clamp(24px,2.8vw,38px);
+  /* the light lifts off the page colour and dissolves along the top/left edges,
+     so the panel has depth without reading as a lighter rectangle */
   background:
-    radial-gradient(120% 90% at 4% 0%,rgba(120,140,170,.12),rgba(4,6,10,0) 60%),
-    linear-gradient(170deg,#090c11 0%,#05070b 58%,#04060a 100%)}
+    linear-gradient(180deg,#04060a 0%,rgba(4,6,10,.72) 6%,rgba(4,6,10,0) 24%),
+    linear-gradient(90deg,#04060a 0%,rgba(4,6,10,.55) 4%,rgba(4,6,10,0) 17%),
+    linear-gradient(0deg,rgba(4,6,10,.85) 0%,rgba(4,6,10,0) 15%),
+    radial-gradient(130% 115% at 30% 24%,rgba(126,152,190,.155),rgba(4,6,10,0) 68%),
+    #04060a}
 .icoco-marketing .contact__panel>*{flex:0 0 auto}
 .icoco-marketing .contact__lead{margin-top:clamp(12px,3.6vh,46px);padding-bottom:clamp(4px,.8vw,10px)}
 .icoco-marketing .contact__title{font-size:clamp(40px,5.7vw,72px);line-height:1.06;letter-spacing:-.021em;color:#eef4fb;font-weight:300;
@@ -578,7 +583,11 @@
   color:#eaf1fa;outline:none;transition:border-color .35s,background .35s}
 /* single-line fields: the value / hint sits optically centred between label and rule */
 .icoco-marketing .cf-field input{height:clamp(38px,3.4vw,42px);padding:0}
-.icoco-marketing .cf-field textarea{resize:none;min-height:clamp(52px,4.6vw,60px);padding:8px 0 10px;line-height:1.62}
+/* the notes field rests at exactly the same height / baseline as the other three,
+   then opens up to two lines on focus */
+.icoco-marketing .cf-field textarea{resize:none;height:clamp(38px,3.4vw,42px);min-height:0;padding:.75em 0 0;line-height:1.5;
+  transition:height .45s cubic-bezier(.22,.61,.36,1),border-color .35s,background .35s}
+.icoco-marketing .cf-field textarea:focus{height:clamp(74px,6.4vw,88px)}
 .icoco-marketing .cf-field input::placeholder,.icoco-marketing .cf-field textarea::placeholder{color:rgba(132,154,182,.58);font-weight:300}
 .icoco-marketing .cf-field input:hover,.icoco-marketing .cf-field textarea:hover{border-bottom-color:rgba(160,186,214,.42)}
 .icoco-marketing .cf-field input:focus,.icoco-marketing .cf-field textarea:focus{border-bottom-color:rgba(143,228,255,.72);
