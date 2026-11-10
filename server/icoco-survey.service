@@ -1,0 +1,23 @@
+[Unit]
+Description=ICOCO META demo request collection service
+Documentation=file:/var/www/icoco-survey/server/README.md
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/icoco-survey
+EnvironmentFile=/etc/icoco-survey.env
+ExecStart=/usr/bin/node /var/www/icoco-survey/server/server.mjs
+Restart=always
+RestartSec=3
+# the service only needs its own data directory
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/icoco-survey
+
+[Install]
+WantedBy=multi-user.target

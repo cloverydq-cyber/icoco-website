@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ICOCO META — Demo requests</title>
+<style>
+  :root{
+    --bg:#04060a; --line:rgba(150,185,235,.13); --ink:#eef4fb;
+    --muted:rgba(150,172,200,.72); --cyan:#8fe4ff; --dim:rgba(126,148,176,.55);
+    --font:"Montserrat","Helvetica Neue",Arial,sans-serif;
+    --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}
+  body{min-height:100vh;padding:clamp(18px,3.4vw,44px) clamp(16px,3.6vw,48px) 64px}
+  .glow{position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(60% 45% at 8% 0%,rgba(40,90,170,.16),rgba(4,6,10,0) 62%),
+      radial-gradient(50% 40% at 100% 100%,rgba(30,80,160,.10),rgba(4,6,10,0) 60%)}
+  .shell{position:relative;z-index:1;max-width:1500px;margin:0 auto}
+
+  header{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .brand{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:rgba(200,220,244,.86)}
+  .brand b{color:#fff;font-weight:500}
+  .kicker{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin:8px 0 0}
+  h1{margin:14px 0 0;font-size:clamp(24px,2.6vw,34px);font-weight:300;letter-spacing:-.02em}
+  .tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .btn{appearance:none;cursor:pointer;border:1px solid rgba(150,185,235,.24);background:rgba(90,168,255,.05);
+    color:#dbe8f8;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    padding:11px 16px;transition:border-color .3s,color .3s,background .3s}
+  .btn:hover{border-color:rgba(143,228,255,.46);color:#fff;background:rgba(90,168,255,.09)}
+  .btn[disabled]{opacity:.45;cursor:default}
+  .btn--ghost{background:none}
+
+  .bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:18px 0 0}
+  .count{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .count b{color:var(--cyan);font-weight:500;font-size:13px;letter-spacing:.06em}
+  .search{flex:1 1 240px;max-width:360px;display:flex;align-items:center;gap:8px;
+    border-bottom:1px solid rgba(160,186,214,.22);padding:6px 0}
+  .search input{flex:1;background:none;border:0;outline:none;color:var(--ink);font-family:inherit;
+    font-size:12.5px;font-weight:300;letter-spacing:.01em}
+  .search input::placeholder{color:rgba(126,148,176,.45)}
+  .search svg{width:13px;height:13px;stroke:rgba(140,165,195,.7);fill:none;stroke-width:1.4}
+
+  .tablewrap{margin-top:20px;border:1px solid var(--line);overflow:auto;max-height:calc(100vh - 250px);
+    background:linear-gradient(180deg,rgba(8,11,17,.72),rgba(5,7,11,.5) 70%,rgba(4,6,10,.4))}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;font-weight:300;min-width:1040px}
+  thead th{position:sticky;top:0;z-index:2;text-align:left;padding:12px 14px;white-space:nowrap;
+    font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;
+    color:rgba(138,162,190,.85);background:#070a10;border-bottom:1px solid rgba(150,185,235,.18)}
+  tbody td{padding:13px 14px;vertical-align:top;border-bottom:1px solid rgba(150,185,235,.07);color:#dce8f6}
+  tbody tr:hover td{background:rgba(90,168,255,.04)}
+  tbody tr:last-child td{border-bottom:0}
+  .mono{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:rgba(190,210,232,.82);white-space:nowrap}
+  .name{color:#fff;font-weight:400}
+  .company{color:rgba(160,182,206,.9)}
+  .mail{color:var(--cyan);text-decoration:none;word-break:break-all}
+  .mail:hover{text-decoration:underline}
+  .types{display:flex;flex-wrap:wrap;gap:5px;max-width:220px}
+  .tag{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+    padding:4px 7px;border:1px solid rgba(143,228,255,.22);color:rgba(180,225,250,.92);white-space:nowrap}
+  .needs{max-width:360px;color:rgba(190,206,224,.86);line-height:1.55;white-space:pre-wrap;word-break:break-word}
+  .empty{padding:64px 20px;text-align:center;color:var(--muted);font-size:13px;font-weight:300}
+
+  .gate{max-width:432px;margin:min(16vh,140px) auto 0;padding:clamp(26px,3.4vw,38px);
+    border:1px solid var(--line);background:linear-gradient(170deg,#080b11,#05070b 62%,#04060a)}
+  .gate h2{margin:16px 0 0;font-size:22px;font-weight:300;letter-spacing:-.01em}
+  .gate p{margin:10px 0 0;font-size:12px;line-height:1.65;color:var(--muted);font-weight:300}
+  .gate form{margin-top:24px;display:flex;flex-direction:column;gap:14px}
+  .gate label{font-family:var(--mono);font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:rgba(138,162,190,.8)}
+  .gate input{background:transparent;border:0;border-bottom:1px solid rgba(160,186,214,.24);border-radius:0;
+    padding:9px 0;color:var(--ink);font-family:inherit;font-size:13px;font-weight:300;outline:none;width:100%}
+  .gate input:focus{border-bottom-color:rgba(143,228,255,.7)}
+  .gate .btn{margin-top:6px;justify-content:center;text-align:center}
+  .msg{margin:0;font-size:11.5px;color:rgba(255,164,158,.92);min-height:16px}
+
+  .hidden{display:none !important}
+  footer{margin-top:18px;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(120,140,165,.5)}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="shell">
+
+  <!-- login -->
+  <section class="gate" id="gate">
+    <div class="brand"><b>ICOCO</b> META</div>
+    <h2>Demo requests</h2>
+    <p>Internal summary of every form submitted on the site. Enter the team password to open it.</p>
+    <form id="loginForm">
+      <div>
+        <label for="pw">Password</label>
+        <input id="pw" type="password" autocomplete="current-password" autofocus />
+      </div>
+      <p class="msg" id="loginMsg" aria-live="polite"></p>
+      <button class="btn" type="submit" id="loginBtn"><span>Open dashboard</span></button>
+    </form>
+  </section>
+
+  <!-- dashboard -->
+  <section id="dash" class="hidden">
+    <header>
+      <div>
+        <div class="brand"><b>ICOCO</b> META</div>
+        <p class="kicker">Internal / demo requests</p>
+        <h1>Requests</h1>
+      </div>
+      <div class="tools">
+        <button class="btn btn--ghost" id="refreshBtn" type="button">Refresh</button>
+        <button class="btn btn--ghost" id="csvBtn" type="button">Export CSV</button>
+        <button class="btn" id="logoutBtn" type="button">Log out</button>
+      </div>
+    </header>
+
+    <div class="bar">
+      <span class="count"><b id="total">0</b> collected<i id="shown"></i></span>
+      <label class="search">
+        <svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.4"/><path d="M10.3 10.3L14 14"/></svg>
+        <input id="q" type="search" placeholder="Filter by name, company, email, need…" />
+      </label>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Received</th><th>Name</th><th>Company</th><th>Email</th><th>Phone</th>
+            <th>Project type</th><th>Business needs</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="empty hidden" id="empty">No requests yet — submissions will appear here the moment someone sends the form.</div>
+    </div>
+    <footer id="stamp"></footer>
+  </section>
+</div>
+
+<script>
+  const API = location.pathname.replace(/\/admin\/?$/, '') ; // e.g. /survey-api
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  let all = [];
+
+  function showDash() {
+    $('gate').classList.add('hidden');
+    $('dash').classList.remove('hidden');
+    load();
+  }
+
+  async function load() {
+    const res = await fetch(API + '/admin/data', { credentials: 'same-origin', headers: { Accept: 'application/json' } });
+    if (res.status === 401) { $('gate').classList.remove('hidden'); $('dash').classList.add('hidden'); return; }
+    const data = await res.json();
+    all = data.rows || [];
+    $('total').textContent = data.total ?? all.length;
+    render();
+    $('stamp').textContent = 'Updated ' + new Date().toLocaleString();
+  }
+
+  function render() {
+    const q = $('q').value.trim().toLowerCase();
+    const list = q
+      ? all.filter(r => [r.name, r.company, r.email, r.phone, r.needs, (r.projectType || []).join(' ')].join(' ').toLowerCase().includes(q))
+      : all;
+    $('shown').textContent = q ? ' · ' + list.length + ' matching' : '';
+    $('empty').classList.toggle('hidden', list.length > 0 || all.length > 0);
+    $('rows').innerHTML = list.map(r => {
+      const when = new Date(r.createdAt);
+      const date = when.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: '2-digit' });
+      const time = when.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+      const types = (r.projectType || []).map(t => '<span class="tag">' + esc(t) + '</span>').join('');
+      return '<tr>' +
+        '<td class="mono">' + esc(date) + '<br>' + esc(time) + '</td>' +
+        '<td class="name">' + esc(r.name) + '</td>' +
+        '<td class="company">' + esc(r.company || '—') + '</td>' +
+        '<td><a class="mail" href="mailto:' + esc(r.email) + '">' + esc(r.email) + '</a></td>' +
+        '<td class="mono">' + esc(r.phone || '—') + '</td>' +
+        '<td><div class="types">' + (types || '<span class="mono">—</span>') + '</div></td>' +
+        '<td class="needs">' + esc(r.needs || '—') + '</td>' +
+        '</tr>';
+    }).join('');
+  }
+
+  $('loginForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    $('loginMsg').textContent = '';
+    $('loginBtn').disabled = true;
+    try {
+      const res = await fetch(API + '/admin/login', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: $('pw').value }),
+      });
+      if (!res.ok) { $('loginMsg').textContent = res.status === 429 ? 'Too many attempts — wait a few minutes.' : 'Wrong password.'; return; }
+      $('pw').value = '';
+      showDash();
+    } catch {
+      $('loginMsg').textContent = 'Cannot reach the survey service.';
+    } finally {
+      $('loginBtn').disabled = false;
+    }
+  });
+
+  $('refreshBtn').addEventListener('click', load);
+  $('csvBtn').addEventListener('click', () => { location.href = API + '/admin/export.csv'; });
+  $('logoutBtn').addEventListener('click', async () => {
+    await fetch(API + '/admin/logout', { method: 'POST', credentials: 'same-origin' });
+    location.reload();
+  });
+  $('q').addEventListener('input', render);
+
+  load().catch(() => {});
+</script>
+</body>
+</html>
