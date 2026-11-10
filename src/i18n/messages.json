@@ -1130,5 +1130,65 @@
   "The Newsroom includes selected posts from ICOCO’s official channel, with publication dates and source links.": {
     "zh": "新闻中心收录 ICOCO 官方渠道的精选内容，并附发布日期与原始来源链接。",
     "it": "La sezione Notizie raccoglie post selezionati dai canali ufficiali ICOCO, con date di pubblicazione e link alle fonti."
+  },
+  "Name": {
+    "zh": "姓名",
+    "it": "Nome"
+  },
+  "Phone": {
+    "zh": "电话",
+    "it": "Telefono"
+  },
+  "Email": {
+    "zh": "邮箱",
+    "it": "Email"
+  },
+  "Notes": {
+    "zh": "备注",
+    "it": "Note"
+  },
+  "Your full name": {
+    "zh": "请输入姓名",
+    "it": "Nome e cognome"
+  },
+  "Country code + number": {
+    "zh": "国家码 + 号码",
+    "it": "Prefisso + numero"
+  },
+  "Workflow, constraints, expected outputs": {
+    "zh": "工作流、限制条件、期望产出",
+    "it": "Flusso di lavoro, vincoli, output attesi"
+  },
+  "Send request": {
+    "zh": "提交需求",
+    "it": "Invia richiesta"
+  },
+  "Sending…": {
+    "zh": "提交中…",
+    "it": "Invio…"
+  },
+  "Add your name and a valid email, then send again.": {
+    "zh": "请填写姓名和有效邮箱后重新提交。",
+    "it": "Inserisci nome ed email valida, poi invia di nuovo."
+  },
+  "Or write directly to": {
+    "zh": "或直接写信至",
+    "it": "Oppure scrivi a"
+  },
+  "Scan to chat on WhatsApp": {
+    "zh": "扫码通过 WhatsApp 联系",
+    "it": "Scansiona per scrivere su WhatsApp"
+  },
+  "Thank you — your request is in.": {
+    "zh": "已收到，感谢您的需求。",
+    "it": "Grazie — richiesta ricevuta."
+  },
+  "Enea or the ICOCO META team will reply within two working days.": {
+    "zh": "Enea 或 ICOCO META 团队将在两个工作日内回复。",
+    "it": "Enea o il team ICOCO META risponderà entro due giorni lavorativi."
+  },
+  "Send another request": {
+    "zh": "再提交一次",
+    "it": "Invia un'altra richiesta"
   }
 }
