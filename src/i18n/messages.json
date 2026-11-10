@@ -1190,5 +1190,37 @@
   "Send another request": {
     "zh": "再提交一次",
     "it": "Invia un'altra richiesta"
+  },
+  "Company or studio": {
+    "zh": "公司或工作室",
+    "it": "Azienda o studio"
+  },
+  "Project type": {
+    "zh": "项目类型",
+    "it": "Tipo di progetto"
+  },
+  "Styling": {
+    "zh": "造型设计",
+    "it": "Styling"
+  },
+  "Surface & Class-A": {
+    "zh": "曲面与 Class-A",
+    "it": "Superfici e Class-A"
+  },
+  "Engineering validation": {
+    "zh": "工程验证",
+    "it": "Validazione ingegneristica"
+  },
+  "Manufacturing": {
+    "zh": "制造",
+    "it": "Produzione"
+  },
+  "Other": {
+    "zh": "其他",
+    "it": "Altro"
+  },
+  "Could not send right now — please try again, or write to": {
+    "zh": "暂时发送失败，请再试一次，或直接写信至",
+    "it": "Invio non riuscito, riprova oppure scrivi a"
   }
 }

@@ -4,11 +4,21 @@ import { useMarketingLanguage } from '@/i18n/useMarketingLanguage'
 
 const { copy } = useMarketingLanguage()
 
-// 表单提交到 FormSubmit（无需后端）：首次提交后收件箱会收到一封激活邮件，点一次即可生效
-const ENDPOINT = 'https://formsubmit.co/ajax/enea.colombo@icona-designgroup.com'
+// Every submission goes into our own collection service (server/server.mjs):
+// on icoco.art nginx proxies /survey-api/ to the Node process on loopback, the
+// GitHub Pages preview posts to the production host instead. The rows show up
+// in the password-protected table at /survey-api/admin.
+const API_BASE = (() => {
+  const host = window.location.hostname
+  if (/(^|\.)icoco\.art$/.test(host)) return '/survey-api'
+  if (host === '127.0.0.1' || host === 'localhost') return 'http://127.0.0.1:8787/survey-api'
+  return 'https://www.icoco.art/survey-api'
+})()
 
-const form = reactive({ name: '', phone: '', email: '', notes: '' })
-const state = ref('idle') // idle | sending | done | error
+const PROJECT_TYPES = ['Styling', 'Surface & Class-A', 'Engineering validation', 'Manufacturing', 'Other']
+
+const form = reactive({ name: '', company: '', email: '', phone: '', projectType: [], notes: '' })
+const state = ref('idle') // idle | sending | done | invalid | error
 
 function valid() {
   return form.name.trim().length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())
@@ -16,25 +26,27 @@ function valid() {
 
 async function submit() {
   if (!valid()) {
-    state.value = 'error'
+    state.value = 'invalid'
     return
   }
   state.value = 'sending'
   try {
-    const res = await fetch(ENDPOINT, {
+    const res = await fetch(API_BASE + '/submissions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        _subject: 'ICOCO META — demo request',
-        _template: 'table',
-        Name: form.name.trim(),
-        Phone: form.phone.trim(),
-        Email: form.email.trim(),
-        Notes: form.notes.trim(),
-        Source: window.location.href,
+        name: form.name.trim(),
+        company: form.company.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        projectType: form.projectType,
+        needs: form.notes.trim(),
+        source: window.location.href,
+        locale: document.documentElement.lang || 'en',
       }),
     })
-    if (!res.ok) throw new Error('failed')
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok || !data.ok) throw new Error(data.error || 'failed')
     state.value = 'done'
   } catch (e) {
     state.value = 'error'
@@ -43,8 +55,10 @@ async function submit() {
 
 function reset() {
   form.name = ''
-  form.phone = ''
+  form.company = ''
   form.email = ''
+  form.phone = ''
+  form.projectType = []
   form.notes = ''
   state.value = 'idle'
 }
@@ -68,15 +82,36 @@ function reset() {
             <input v-model="form.name" type="text" name="name" autocomplete="name" :placeholder="copy('Your full name')" />
           </label>
           <label class="cf-field">
+            <span class="cf-label">{{ copy("Company") }}</span>
+            <input v-model="form.company" type="text" name="company" autocomplete="organization" :placeholder="copy('Company or studio')" />
+          </label>
+        </div>
+
+        <div class="cf-row">
+          <label class="cf-field">
+            <span class="cf-label">{{ copy("Email") }}</span>
+            <input v-model="form.email" type="email" name="email" autocomplete="email" placeholder="name@company.com" />
+          </label>
+          <label class="cf-field">
             <span class="cf-label">{{ copy("Phone") }}</span>
             <input v-model="form.phone" type="tel" name="phone" autocomplete="tel" :placeholder="copy('Country code + number')" />
           </label>
         </div>
 
-        <label class="cf-field">
-          <span class="cf-label">{{ copy("Email") }}</span>
-          <input v-model="form.email" type="email" name="email" autocomplete="email" placeholder="name@company.com" />
-        </label>
+        <div class="cf-field cf-types" role="group" :aria-label="copy('Project type')">
+          <span class="cf-label">{{ copy("Project type") }}</span>
+          <div class="cf-chipset">
+            <label
+              v-for="t in PROJECT_TYPES"
+              :key="t"
+              class="cf-chip"
+              :class="{ 'is-on': form.projectType.includes(t) }"
+            >
+              <input v-model="form.projectType" type="checkbox" :value="t" />
+              <span>{{ copy(t) }}</span>
+            </label>
+          </div>
+        </div>
 
         <label class="cf-field">
           <span class="cf-label">{{ copy("Notes") }}</span>
@@ -90,8 +125,9 @@ function reset() {
               <svg viewBox="0 0 16 16"><path d="M2.5 8h10M8.8 3.4L13.4 8l-4.6 4.6" /></svg>
             </span>
           </button>
-          <p class="cf-msg" :class="{'is-error': state === 'error'}" aria-live="polite">
-            <template v-if="state === 'error'">{{ copy("Add your name and a valid email, then send again.") }}</template>
+          <p class="cf-msg" :class="{ 'is-error': state === 'invalid' || state === 'error' }" aria-live="polite">
+            <template v-if="state === 'invalid'">{{ copy("Add your name and a valid email, then send again.") }}</template>
+            <template v-else-if="state === 'error'">{{ copy("Could not send right now — please try again, or write to") }} <a href="mailto:enea.colombo@icona-designgroup.com">enea.colombo@icona-designgroup.com</a></template>
             <template v-else>{{ copy("Or write directly to") }} <a href="mailto:enea.colombo@icona-designgroup.com">enea.colombo@icona-designgroup.com</a></template>
           </p>
         </div>
