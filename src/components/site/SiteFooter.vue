@@ -1,5 +1,6 @@
 <script setup>
 import { useMarketingLanguage } from '@/i18n/useMarketingLanguage'
+import { siteLink as link } from '@/lib/siteLink'
 
 import GlobalFooter from '@/components/GlobalFooter.vue'
 
@@ -17,27 +18,27 @@ const workspaceUrl = 'https://www.icoco.art/login'
       <div>
         <h4>{{ copy("Platform") }}</h4>
         <a :href="workspaceUrl" target="_blank" rel="noopener noreferrer" :aria-label="copy(&quot;Log in in a new tab&quot;)">{{ copy("Log in") }}</a>
-        <a href="/signup">{{ copy("Sign up") }}</a>
-        <a href="/product">{{ copy("Generative Styling") }}</a>
-        <a href="/product">{{ copy("Geometric & Surface") }}</a>
-        <a href="/product">{{ copy("Physics & Validation") }}</a>
+        <a :href="link('/signup')">{{ copy("Sign up") }}</a>
+        <a :href="link('/product')">{{ copy("Generative Styling") }}</a>
+        <a :href="link('/product')">{{ copy("Geometric & Surface") }}</a>
+        <a :href="link('/product')">{{ copy("Physics & Validation") }}</a>
       </div>
       <div>
         <h4>{{ copy("Company") }}</h4>
-        <a href="/about">{{ copy("About") }}</a>
-        <a href="/news">{{ copy("News") }}</a>
-        <a href="/contact">{{ copy("Contact") }}</a>
-        <a href="/company">{{ copy("Company profile") }}</a>
-        <a href="/careers">{{ copy("Careers") }}</a>
+        <a :href="link('/about')">{{ copy("About") }}</a>
+        <a :href="link('/news')">{{ copy("News") }}</a>
+        <a :href="link('/contact')">{{ copy("Contact") }}</a>
+        <a :href="link('/company')">{{ copy("Company profile") }}</a>
+        <a :href="link('/careers')">{{ copy("Careers") }}</a>
       </div>
       <div>
         <h4>{{ copy("Resources & quick links") }}</h4>
-        <a href="/resources">{{ copy("Guides & FAQ") }}</a>
-        <a href="/news#press">{{ copy("Press enquiries") }}</a>
+        <a :href="link('/resources')">{{ copy("Guides & FAQ") }}</a>
+        <a :href="link('/news#press')">{{ copy("Press enquiries") }}</a>
         <a href="https://www.icoco.art/privacy-policy" target="_blank" rel="noopener noreferrer">{{ copy("Privacy policy ↗") }}</a>
         <a href="https://www.icoco.art/user-agreement" target="_blank" rel="noopener noreferrer">{{ copy("User agreement ↗") }}</a>
-        <a href="/product#evidence">{{ copy("Evidence & acceptance") }}</a>
-        <a href="/contact">{{ copy("Discuss requirements") }}</a>
+        <a :href="link('/product#evidence')">{{ copy("Evidence & acceptance") }}</a>
+        <a :href="link('/contact')">{{ copy("Discuss requirements") }}</a>
       </div>
     </div>
   </div>

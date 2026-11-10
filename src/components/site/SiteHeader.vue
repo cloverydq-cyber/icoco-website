@@ -1,5 +1,6 @@
 <script setup>
 import { useMarketingLanguage } from '@/i18n/useMarketingLanguage'
+import { siteLink as link } from '@/lib/siteLink'
 
 import { ref, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
@@ -22,16 +23,16 @@ watch(locale, async () => {
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a class="nav__logo" href="/" :aria-label="copy(&quot;ICOCO META home&quot;)">
+    <a class="nav__logo" :href="link('/')" :aria-label="copy(&quot;ICOCO META home&quot;)">
       <img src="../../assets/img/logo.png" alt="ICOCO META" />
     </a>
 
     <nav class="nav__links" id="navLinks" :aria-label="copy(&quot;Main&quot;)">
-      <a href="/" class="nav__link" :class="{'is-active': route.path === '/'}" data-nav="home">{{ copy("Home") }}</a>
-      <a href="/product" class="nav__link" :class="{'is-active': route.path === '/product'}" data-nav="products">{{ copy("Platform") }}</a>
-      <a href="/news" class="nav__link" :class="{'is-active': route.path === '/news' || route.path.startsWith('/news/')}" data-nav="news">{{ copy("News") }}</a>
-      <a href="/about" class="nav__link" :class="{'is-active': route.path === '/about'}" data-nav="about">{{ copy("About") }}</a>
-      <a href="/contact" class="nav__link">{{ copy("Request a demo") }}</a>
+      <a :href="link('/')" class="nav__link" :class="{'is-active': route.path === '/'}" data-nav="home">{{ copy("Home") }}</a>
+      <a :href="link('/product')" class="nav__link" :class="{'is-active': route.path === '/product'}" data-nav="products">{{ copy("Platform") }}</a>
+      <a :href="link('/news')" class="nav__link" :class="{'is-active': route.path === '/news' || route.path.startsWith('/news/')}" data-nav="news">{{ copy("News") }}</a>
+      <a :href="link('/about')" class="nav__link" :class="{'is-active': route.path === '/about'}" data-nav="about">{{ copy("About") }}</a>
+      <a :href="link('/contact')" class="nav__link">{{ copy("Request a demo") }}</a>
       <span class="nav__ink" id="navInk" aria-hidden="true"></span>
     </nav>
 
@@ -51,11 +52,11 @@ watch(locale, async () => {
 </header>
 
 <div class="mobile-menu" :class="{'is-open':open}" @click="open = false">
-  <a href="/">{{ copy("Home") }}</a>
-  <a href="/product">{{ copy("Platform") }}</a>
-  <a href="/news">{{ copy("News") }}</a>
-  <a href="/about">{{ copy("About") }}</a>
-  <a href="/contact">{{ copy("Request a demo") }}</a>
+  <a :href="link('/')">{{ copy("Home") }}</a>
+  <a :href="link('/product')">{{ copy("Platform") }}</a>
+  <a :href="link('/news')">{{ copy("News") }}</a>
+  <a :href="link('/about')">{{ copy("About") }}</a>
+  <a :href="link('/contact')">{{ copy("Request a demo") }}</a>
   <a :href="workspaceUrl" target="_blank" rel="noopener noreferrer" :aria-label="copy(&quot;Log in or sign up in a new tab&quot;)">{{ copy("Log in / Sign up ↗") }}</a>
 </div>
 
