@@ -6,12 +6,14 @@ Nothing is emailed anywhere; the data lives in `server/data/submissions.json`
 (or `DATA_DIR`).
 
 ```
-node server/server.mjs            # http://127.0.0.1:8787/survey/
+node server/server.mjs            # admin table at http://127.0.0.1:8787/survey-api/admin
 ```
+
+The form itself is the contact page on the marketing site — the only entry
+point. `GET /` and `/survey/*` on this service just redirect to `/contact`.
 
 | Route | What it does |
 | --- | --- |
-| `GET /survey/` | the public form (served from `public/survey/index.html`) |
 | `POST /survey-api/submissions` | stores one request |
 | `GET /survey-api/admin` | password protected table (login form) |
 | `GET /survey-api/admin/export.csv` | full export, UTF-8 with BOM so Excel opens it cleanly |
@@ -48,11 +50,11 @@ to get the snippet printed instead of applied. Re-running is safe.
 
 ### Step by step
 
-1. Copy the two folders, keeping the relative layout:
+1. Copy the service folder:
 
    ```bash
    sudo mkdir -p /var/www/icoco-survey /var/lib/icoco-survey
-   sudo rsync -a server public /var/www/icoco-survey/
+   sudo rsync -a server /var/www/icoco-survey/
    sudo chown -R www-data:www-data /var/www/icoco-survey /var/lib/icoco-survey
    ```
 
@@ -90,7 +92,7 @@ to get the snippet printed instead of applied. Re-running is safe.
 
    ```bash
    curl -s https://www.icoco.art/survey-api/healthz
-   curl -s -o /dev/null -w '%{http_code}\n' https://www.icoco.art/survey/
+   curl -s -o /dev/null -w '%{http_code}\n' https://www.icoco.art/contact
    ```
 
    The admin table is then at `https://www.icoco.art/survey-api/admin`.

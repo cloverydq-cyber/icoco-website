@@ -6,7 +6,7 @@
 #   sudo bash install.sh 'MyPassword' --nginx
 #
 # What it does (Ubuntu / Debian, systemd, nginx already serving www.icoco.art):
-#   1. copies server/ + public/ to /var/www/icoco-survey
+#   1. copies server/ to /var/www/icoco-survey
 #   2. writes /etc/icoco-survey.env (admin password + session secret)
 #   3. installs and starts the systemd unit icoco-survey.service on 127.0.0.1:8787
 #   4. with --nginx, drops a /survey-api/ proxy block into the icoco.art vhost
@@ -45,13 +45,12 @@ NODE_MAJOR=$(node -p 'process.versions.node.split(".")[0]')
 NODE_BIN=$(command -v node)
 
 [ -f "$HERE/server/server.mjs" ] || die "run me from the repo checkout (server/server.mjs not found)"
-[ -f "$HERE/public/survey/index.html" ] || die "public/survey/index.html not found"
 
 say "creating $APP_DIR and $DATA_DIR"
 install -d -o www-data -g www-data "$DATA_DIR"
 install -d "$APP_DIR"
-rm -rf "$APP_DIR/server" "$APP_DIR/public"
-cp -r "$HERE/server" "$HERE/public" "$APP_DIR/"
+rm -rf "$APP_DIR/server"
+cp -r "$HERE/server" "$APP_DIR/"
 rm -rf "$APP_DIR/server/data"
 chown -R www-data:www-data "$APP_DIR"
 
@@ -117,7 +116,7 @@ cat <<EOF
 
 Done.
 
-  form      https://www.icoco.art/survey/
+  form      https://www.icoco.art/contact   (the main site's contact page)
   admin     https://www.icoco.art/survey-api/admin
   data      $DATA_DIR/submissions.json
   logs      journalctl -u $SERVICE -f

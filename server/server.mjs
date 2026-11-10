@@ -13,8 +13,10 @@
  *   POST /survey-api/admin/login|logout
  *   GET  /survey-api/admin/data         -> JSON rows (auth)
  *   GET  /survey-api/admin/export.csv   -> CSV download (auth)
- *   GET  /survey/                       -> the public form (served from public/survey)
  *   GET  /healthz
+ *
+ * There is no standalone form page: the contact page on the main site is the
+ * only entry point, and GET / or /survey/* simply redirects there.
  */
 import { createServer } from 'node:http'
 import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync } from 'node:fs'
@@ -23,7 +25,6 @@ import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const here = dirname(fileURLToPath(import.meta.url))
-const ROOT = resolve(here, '..')
 const PORT = Number(process.env.PORT || 8787)
 const HOST = process.env.HOST || '127.0.0.1'
 const DATA_DIR = resolve(process.env.DATA_DIR || join(here, 'data'))
@@ -253,11 +254,6 @@ function adminHtml() {
   return existsSync(file) ? readFileSync(file, 'utf8') : '<h1>admin.html missing</h1>'
 }
 
-function surveyHtml() {
-  const file = join(ROOT, 'public', 'survey', 'index.html')
-  return existsSync(file) ? readFileSync(file, 'utf8') : '<h1>survey page missing</h1>'
-}
-
 /* ------------------------------------------------------------------ server */
 const server = createServer(async (req, res) => {
   cors(req, res)
@@ -297,13 +293,12 @@ const server = createServer(async (req, res) => {
       return res.end(toCsv(rows))
     }
 
-    // public form, so `node server/server.mjs` alone is enough to try the flow
-    if (path === '/survey' || path === '/survey/' || path === '/survey/index.html') {
-      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' })
-      return res.end(surveyHtml())
-    }
-    if (path === '/' || path === '/index.html') {
-      res.writeHead(302, { Location: '/survey/' })
+    // there is no standalone form any more — the one on the main site's
+    // contact page is the single entry point; same origin, so /contact works
+    // behind the icoco.art nginx vhost
+    if (path === '/survey' || path === '/survey/' || path === '/survey/index.html' ||
+        path === '/' || path === '/index.html') {
+      res.writeHead(302, { Location: '/contact' })
       return res.end()
     }
     return send(res, 404, { ok: false, error: 'not found' })
@@ -315,7 +310,6 @@ const server = createServer(async (req, res) => {
 
 server.listen(PORT, HOST, () => {
   console.log(`[survey] listening on http://${HOST}:${PORT}`)
-  console.log(`[survey] form    http://${HOST}:${PORT}/survey/`)
   console.log(`[survey] admin   http://${HOST}:${PORT}/survey-api/admin`)
   console.log(`[survey] storage ${DATA_FILE} (${rows.length} rows)`)
   if (!ADMIN_PASSWORD) console.log('[survey] set ADMIN_PASSWORD before exposing this to the internet')

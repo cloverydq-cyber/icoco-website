@@ -21,6 +21,10 @@ const router = createRouter({
     // Hosts that expose the entry file directly (GitHub Pages, some CDNs) let
     // people land on /index.html -- that is the home page, not a 404.
     { path: '/index.html', redirect: '/' },
+    // The standalone survey form was retired; the contact page is the one
+    // entry point, so old /survey bookmarks and QR codes land there.
+    { path: '/survey', redirect: '/contact' },
+    { path: '/survey/', redirect: '/contact' },
     { path: '/:pathMatch(.*)*', name: 'site-not-found', component: () => import('../views/InfoPage.vue') },
   ],
 })
