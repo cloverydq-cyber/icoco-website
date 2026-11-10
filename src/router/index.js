@@ -18,8 +18,24 @@ const router = createRouter({
     { path: '/company', redirect: '/about' },
     { path: '/contact', name: 'site-contact', component: () => import('../views/ContactPage.vue') },
     ...['signup', 'careers'].map(page => ({ path: '/' + page, name: 'site-' + page, component: () => import('../views/InfoPage.vue') })),
+    // Hosts that expose the entry file directly (GitHub Pages, some CDNs) let
+    // people land on /index.html -- that is the home page, not a 404.
+    { path: '/index.html', redirect: '/' },
     { path: '/:pathMatch(.*)*', name: 'site-not-found', component: () => import('../views/InfoPage.vue') },
   ],
+})
+
+// When the app is hosted under a sub-path (the Pages preview lives at
+// /icoco-website/), a hand-written or bookmarked link can repeat the base
+// (/icoco-website/icoco-website/product). Strip the extra prefix instead of
+// showing the not-found page.
+const BASE_SEGMENT = import.meta.env.BASE_URL.replace(/^\/+|\/+$/g, '')
+router.beforeEach(to => {
+  if (!BASE_SEGMENT) return true
+  const doubled = `/${BASE_SEGMENT}`
+  if (to.path === doubled) return '/'
+  if (to.path.startsWith(doubled + '/')) return to.fullPath.slice(doubled.length)
+  return true
 })
 router.afterEach(to => {
   document.title = (to.name === 'site-home' ? 'ICOCO META' : String(to.name).replace(/^site-/, '').replaceAll('-', ' ')) + ' | Automotive Design & Engineering'
