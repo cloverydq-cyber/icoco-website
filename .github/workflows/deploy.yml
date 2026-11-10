@@ -25,7 +25,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build
+      # The production site is served from the domain root (www.icoco.art), so
+      # vite.config keeps base '/'. GitHub Pages hosts this repo under
+      # /icoco-website/, so the preview build overrides the base to match.
+      - run: npm run build -- --base=/icoco-website/
+      # Deep links (/about, /news/...) are client-rendered; Pages serves
+      # 404.html for unknown paths, so a copy of index.html keeps them working.
+      - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
