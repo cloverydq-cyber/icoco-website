@@ -84,19 +84,16 @@ function reset() {
         </label>
 
         <div class="cf-foot">
-          <div class="cf-action">
-            <button class="btn btn--primary cf-submit" type="submit" :disabled="state === 'sending'">
-              <span>{{ state === 'sending' ? copy("Sending…") : copy("Send request") }}</span>
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5L13 8l-4.5 4.5" /></svg>
-            </button>
-            <p class="cf-msg" :class="{'is-error': state === 'error'}" aria-live="polite">
-              <template v-if="state === 'error'">{{ copy("Add your name and a valid email, then send again.") }}</template>
-              <template v-else>{{ copy("Or write directly to") }} <a href="mailto:enea.colombo@icona-designgroup.com">enea.colombo@icona-designgroup.com</a></template>
-            </p>
-          </div>
-          <div class="contact__qr contact__qr--mini" :title="copy('Scan to chat on WhatsApp')">
-            <img src="../assets/img/contact-qr.png" :alt="copy('ICOCO META contact QR code')" />
-          </div>
+          <button class="cf-submit" type="submit" :disabled="state === 'sending'">
+            <span class="cf-submit__label">{{ state === 'sending' ? copy("Sending…") : copy("Send request") }}</span>
+            <span class="cf-submit__arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16"><path d="M2.5 8h10M8.8 3.4L13.4 8l-4.6 4.6" /></svg>
+            </span>
+          </button>
+          <p class="cf-msg" :class="{'is-error': state === 'error'}" aria-live="polite">
+            <template v-if="state === 'error'">{{ copy("Add your name and a valid email, then send again.") }}</template>
+            <template v-else>{{ copy("Or write directly to") }} <a href="mailto:enea.colombo@icona-designgroup.com">enea.colombo@icona-designgroup.com</a></template>
+          </p>
         </div>
       </form>
 
