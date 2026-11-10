@@ -641,6 +641,8 @@ ul{margin:0;padding:0;list-style:none}
 .cf-msg a{color:rgba(178,200,226,.92);text-decoration:none;border-bottom:1px solid rgba(172,196,222,.3);padding-bottom:1px}
 .cf-msg a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.55)}
 .cf-msg.is-error{color:rgba(255,164,158,.9)}
+/* idle: the live region stays in the DOM but takes no space, so the panel ends on the button */
+.cf-msg.is-empty{display:none}
 
 .cf-done{margin-top:0;padding-top:clamp(18px,2.2vw,28px);max-width:460px}
 /* the footer line keeps to the bottom of the panel once the form is gone */

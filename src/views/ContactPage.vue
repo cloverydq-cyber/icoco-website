@@ -125,10 +125,14 @@ function reset() {
               <svg viewBox="0 0 16 16"><path d="M2.5 8h10M8.8 3.4L13.4 8l-4.6 4.6" /></svg>
             </span>
           </button>
-          <p class="cf-msg" :class="{ 'is-error': state === 'invalid' || state === 'error' }" aria-live="polite">
+          <!-- the line only appears when something needs saying; it stays mounted so the live region announces -->
+          <p
+            class="cf-msg"
+            :class="{ 'is-error': state === 'invalid' || state === 'error', 'is-empty': state !== 'invalid' && state !== 'error' }"
+            aria-live="polite"
+          >
             <template v-if="state === 'invalid'">{{ copy("Add your name and a valid email, then send again.") }}</template>
-            <template v-else-if="state === 'error'">{{ copy("Could not send right now — please try again, or write to") }} <a href="mailto:enea.colombo@icona-designgroup.com">enea.colombo@icona-designgroup.com</a></template>
-            <template v-else>{{ copy("Or write directly to") }} <a href="mailto:enea.colombo@icona-designgroup.com">enea.colombo@icona-designgroup.com</a></template>
+            <template v-else-if="state === 'error'">{{ copy("Could not send right now — please try again.") }}</template>
           </p>
         </div>
       </form>
