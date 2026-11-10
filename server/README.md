@@ -33,6 +33,21 @@ nginx can proxy either `/survey-api/` or `/api/`.
 
 ## Deploy on the Aliyun box (47.101.145.62)
 
+### Fast path — one command
+
+Inside the repo checkout, on the server:
+
+```bash
+sudo bash server/install.sh 'a-long-password' --nginx
+```
+
+That copies the files, writes `/etc/icoco-survey.env`, installs and starts the
+systemd unit, verifies `127.0.0.1:8787/healthz`, and (with `--nginx`) inserts the
+`/survey-api/` proxy into the icoco.art vhost after backing it up. Drop `--nginx`
+to get the snippet printed instead of applied. Re-running is safe.
+
+### Step by step
+
 1. Copy the two folders, keeping the relative layout:
 
    ```bash
