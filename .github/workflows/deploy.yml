@@ -1,10 +1,11 @@
-# Deploy ICOCO website to GitHub Pages on every push to main,
-# and on pushes to collab-1108 so design iterations get a shareable preview.
+# Deploy ICOCO website to GitHub Pages on every push to main.
+# The github-pages environment only allows deployments from main (branch policy),
+# so listing other branches here only produces failing runs -- keep it to main.
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, collab-1108]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
